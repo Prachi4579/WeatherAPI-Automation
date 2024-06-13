@@ -22,32 +22,19 @@ public class Forecast5Day3hourTest extends Parameter {
 	@Test(testName = "Verify 5Days3hourForecast Data" , groups = {"TC-006","smoke","sanity"})
 	public  void forecast_5Day3Hour() throws IOException {
 
-		RequestSpecification req=RestAssured.given();
-		req.headers(headerParam);
-		logger.debug("header : " + headerParam);
-		req.param("appid", getConfiguration("appid"));
-		req.params(getAPIWeatherTestData().get("TC-006"));
-
-
-		Response response=req.get(getConfiguration("forecast_endpoint"));
-		logger.debug("response code : " + response.getStatusCode());
-		Assert.assertEquals(response.getStatusCode(),200);
+		setupParams("TC-006");
+		Response resp = request.get(getConfiguration("forecast_endpoint"));
+		assertResponse(resp, 200);
 
 	}
 
 	@Test(testName = "Verify 5Days3hourForecast PUT Method Data" , groups = {"TC-007","smoke","sanity"})
 	public  void forecast_5Day3HourPUTMethod() {
 
-		RequestSpecification req=RestAssured.given();
-		req.headers(headerParam);
-		logger.debug("header : " + headerParam);
-		req.param("appid", getConfiguration("appid"));
-		req.params(getAPIWeatherTestData().get("TC-007"));
 
-
-		Response response=req.put(getConfiguration("forecast_endpoint"));
-		logger.debug("response code : " + response.getStatusCode());
-		Assert.assertEquals(response.getStatusCode(),405);
+		setupParams("TC-007");
+		Response resp = request.put(getConfiguration("forecast_endpoint"));
+		assertResponse(resp, 405);
 	}
 
 }

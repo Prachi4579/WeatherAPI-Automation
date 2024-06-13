@@ -21,16 +21,9 @@ public class WeatherAPITest extends Parameter {
 	@Test(testName = "Verify Current Weather Valid key" , groups = {"TC_001","smoke","sanity"})
 	public  void currentWeatherValidKey(){
 
-		RequestSpecification request = RestAssured.given();
-		request.headers(headerParam);
-		logger.debug("header : " + headerParam);
-		request.param("appid", getConfiguration("appid"));
-		request.params(getAPIWeatherTestData().get("TC-001"));
-		//		logger.debug("param : " + param1);
+		setupParams("TC-001");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
-		logger.debug("response code : " + resp.getStatusCode());
-		Assert.assertEquals(resp.getStatusCode(), 200);
-
+		assertResponse(resp, 200);
 	}
 
 
@@ -38,45 +31,29 @@ public class WeatherAPITest extends Parameter {
 	public  void currentWeatherInValidKey() throws IOException{
 
 		//invalid key
-		RequestSpecification request = RestAssured.given();
-		request.headers(headerParam);
-		logger.debug("header : " + headerParam);
+
 		request.param("appid", "xyz");
 		request.params(getAPIWeatherTestData().get("TC-002"));
-		//		logger.debug("param : " + param1);
+
 		Response resp = request.get(getConfiguration("weather_endpoint"));
-		logger.debug("response code : " + resp.getStatusCode());
-		Assert.assertEquals(resp.getStatusCode(), 401);
+		assertResponse(resp, 401);
 	}
-	
+
 
 	@Test(testName="Verify Current Weather Invalid Latitude",groups= {"TC-003"})
 	public  void currentWeatherInValidLatitude() throws IOException {
-
-		RequestSpecification request = RestAssured.given();
-		request.headers(headerParam);
-		logger.debug("header : " + headerParam);
-		request.param("appid", getConfiguration("appid"));
-		request.params(getAPIWeatherTestData().get("TC-003"));
-		//		logger.debug("param : " + param2);
+		setupParams("TC-003");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
-		logger.debug("response code : " + resp.getStatusCode());
-		Assert.assertEquals(resp.getStatusCode(), 400);
+		assertResponse(resp, 400);
 	}
 
 
 	@Test(testName = "Verify Current Weather Invalid Longitude" , groups = {"TC-004","smoke","sanity"})
 	public  void currentWeatherInValidLongitude() throws IOException {
 
-		RequestSpecification request = RestAssured.given();
-		request.headers(headerParam);
-		logger.debug("header : " + headerParam);
-		request.param("appid", getConfiguration("appid"));
-		request.params(getAPIWeatherTestData().get("TC-004"));
-		
+		setupParams("TC-004");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
-		logger.debug("response code : " + resp.getStatusCode());
-		Assert.assertEquals(resp.getStatusCode(), 400);
+		assertResponse(resp, 400);
 
 	}
 
@@ -85,17 +62,9 @@ public class WeatherAPITest extends Parameter {
 	@Test(testName = "Verify Current Weather with PUT method" , groups = {"TC-005","smoke","sanity"})
 	public  void currentWeatherPUTMethod() throws IOException {
 
-		//put method
-		RequestSpecification request = RestAssured.given();
-		request.headers(headerParam);
-		logger.debug("header : " + headerParam);
-
-		request.param("appid", getConfiguration("appid"));
-		request.params(getAPIWeatherTestData().get("TC-005"));
-	
+		setupParams("TC-005");
 		Response resp = request.put(getConfiguration("weather_endpoint"));
-		logger.debug("response code : " + resp.getStatusCode());
-		Assert.assertEquals(resp.getStatusCode(), 405);
+		assertResponse(resp, 405);
 
 	}
 
