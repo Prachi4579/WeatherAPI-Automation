@@ -2,6 +2,7 @@ package weather;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import report.ListenertestNG;
 import utils.PropertiesReader;
 import static io.restassured.RestAssured.*;
 
@@ -13,12 +14,14 @@ import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+@Listeners(ListenertestNG.class)
 public class WeatherAPITest extends Parameter {
 	private static final Logger logger = LoggerFactory.getLogger(WeatherAPITest.class);
 
 
-	@Test(testName = "Verify Current Weather Valid key" , groups = {"TC_001","smoke","sanity"})
+	@Test(testName = "Verify Current Weather GET-Endpoint returning 200 OK -valid API key" , groups = {"TC_001","smoke","sanity"})
 	public  void currentWeatherValidKey(){
 
 		setupParams("TC-001");
@@ -27,7 +30,7 @@ public class WeatherAPITest extends Parameter {
 	}
 
 
-	@Test(testName = "Verify Current Weather Invalid key" , groups = {"TC-002","smoke","sanity"})
+	@Test(testName = "Verify Current Weather GET-Endpoint returning 401 Unauthorized-Invalid key" , groups = {"TC-002","smoke","sanity"})
 	public  void currentWeatherInValidKey() throws IOException{
 
 		//invalid key
@@ -40,7 +43,7 @@ public class WeatherAPITest extends Parameter {
 	}
 
 
-	@Test(testName="Verify Current Weather Invalid Latitude",groups= {"TC-003"})
+	@Test(testName="Verify Current Weather GET-Endpoint returning 400 Bad Request-Invalid Latitude",groups= {"TC-003"})
 	public  void currentWeatherInValidLatitude() throws IOException {
 		setupParams("TC-003");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
@@ -48,7 +51,7 @@ public class WeatherAPITest extends Parameter {
 	}
 
 
-	@Test(testName = "Verify Current Weather Invalid Longitude" , groups = {"TC-004","smoke","sanity"})
+	@Test(testName = "Verify Current Weather GET-Endpoint returning 400 Bad Request-Invalid Longitude" , groups = {"TC-004","smoke","sanity"})
 	public  void currentWeatherInValidLongitude() throws IOException {
 
 		setupParams("TC-004");
@@ -59,7 +62,7 @@ public class WeatherAPITest extends Parameter {
 
 
 
-	@Test(testName = "Verify Current Weather with PUT method" , groups = {"TC-005","smoke","sanity"})
+	@Test(testName = "Verify Current Weather PUT-Endpoint returning 405 Method Not Allowed" , groups = {"TC-005","smoke","sanity"})
 	public  void currentWeatherPUTMethod() throws IOException {
 
 		setupParams("TC-005");
