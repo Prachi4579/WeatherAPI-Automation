@@ -27,6 +27,7 @@ public class WeatherAPITest extends Parameter {
 		setupParams("TC-001");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp, 200);
+		//Assert.assertEquals("The response code is " + resp, "200");
 	}
 
 
@@ -40,6 +41,7 @@ public class WeatherAPITest extends Parameter {
 
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp, 401);
+		Assert.assertEquals("The response code is " + resp, "401");
 	}
 
 

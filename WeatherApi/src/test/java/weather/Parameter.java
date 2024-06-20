@@ -33,33 +33,32 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import report.ListenertestNG;
+import resources.ExtentReportNG;
 import utils.ExcelReaderUtils;
 import utils.PropertiesReader;
 
-public class Parameter extends ExcelReaderUtils implements ITestListener{
-
+public class Parameter extends ExcelReaderUtils {
 
 	private static final Logger logger = LoggerFactory.getLogger(WeatherAPITest.class);
 	RequestSpecification request;
 	Map<String, Object> headerParam = new HashMap<String, Object>();
 	String apiKey = PropertiesReader.getEndPoint().getProperty("apikey");
 
-
-	public Map<String,Map<String,String>> getAPIWeatherTestData() {
-		String dataExcelPath = System.getProperty("user.dir")+"/src/test/resources/DataExcelRead.xlsx";
+	public Map<String, Map<String, String>> getAPIWeatherTestData() {
+		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
 		String sheetName = "WeatherAPITestParameters";
-		Map<String,Map<String,String>> testData = getWeatherAPIData(dataExcelPath, sheetName);
+		Map<String, Map<String, String>> testData = getWeatherAPIData(dataExcelPath, sheetName);
 //		logger.debug("API Weather Test Data: {}", testData);
 		return testData;
 	}
 
 	public String getConfiguration(String key) {
-		String dataExcelPath = System.getProperty("user.dir")+"/src/test/resources/DataExcelRead.xlsx";
+		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
 		String sheetName = "Configuration";
-		Map<String,Map<String,String>> testData = getWeatherAPIData(dataExcelPath, sheetName);
+		Map<String, Map<String, String>> testData = getWeatherAPIData(dataExcelPath, sheetName);
 //		logger.debug(sheetName);
-		test.createNode("Configuration")
-		.info("Test Data : " + testData.get(key));
+		lg.test1.createNode("Configuration").info("Test Data : " + testData.get(key));
 		return testData.get(key).get("paramValue");
 
 	}
@@ -72,78 +71,56 @@ public class Parameter extends ExcelReaderUtils implements ITestListener{
 
 	}
 
+	static ListenertestNG lg = new ListenertestNG();
+
 
 	@BeforeMethod
 	public void setup(Method method) {
 		request = RestAssured.given();
-		request.headers(headerParam);	
-		test=extent.createTest(method.getName());
-		test.info("base URI " + RestAssured.baseURI);
+		request.headers(headerParam);
+		lg.onTestStart(method.getName());
+		lg.test1.getStatus();
+//		lg.test1 = extent.createTest(method.getName());
+		lg.test1.info("base URI " + RestAssured.baseURI);
 
 	}
 
 	public void setupParams(String testcaseId) {
 		request.param("appid", getConfiguration("appid"));
 		request.params(getAPIWeatherTestData().get(testcaseId));
-		test.createNode("Request Param")
-		.info("Test Data : " +  getAPIWeatherTestData().get(testcaseId));
-		test.info("Param added " + getAPIWeatherTestData().get(testcaseId));
-
+		lg.test1.createNode("Request Param").info("Test Data : " + getAPIWeatherTestData().get(testcaseId));
+		lg.test1.info("Param added " + getAPIWeatherTestData().get(testcaseId));
 
 	}
 
 	public static void assertResponse(Response res, int expected) {
 //		logger.info("Response code : " +res.getStatusCode());
-		if(res.getStatusCode() ==  expected) {
-			test.pass("Response code match , Actual : "+ res.getStatusCode() + " , expected : "+expected);
-		}else {
-			test.fail("Response code not match , Actual : "+ res.getStatusCode() + " , expected : "+expected);
+		if (res.getStatusCode() == expected) {
+			lg.test1.pass("Response code match , Actual : " + res.getStatusCode() + " , expected : " + expected);
+		} else {
+			lg.test1.fail("Response code not match , Actual : " + res.getStatusCode() + " , expected : " + expected);
 		}
 		Assert.assertEquals(res.getStatusCode(), expected);
 	}
 
 
-	static ExtentReports extent ;
-	static ExtentTest test ;
+
 	@BeforeSuite
 	public static void suiteSetUp() {
-		extent = new ExtentReports();
 
-		DateTimeFormatter date = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-		DateTimeFormatter time = DateTimeFormatter.ofPattern("hh_mm_a");
-		LocalDateTime localDateTime = LocalDateTime.now();
-		String formattedDate = date.format(localDateTime);
-		String formattedTime = time.format(localDateTime);
+		ExtentReportNG.getReportObject();
 
-		String dateFolderPath = System.getProperty("user.dir") + "/report/" + formattedDate;
-		String timeFolderPath = dateFolderPath + "/" + formattedTime+"Report";
-		String reportPath = timeFolderPath + "/Report.html";
-		ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
-
-		spark.config().setTheme(Theme.STANDARD);
-		spark.config().setDocumentTitle("Weather Automation Report");
-		spark.config().setReportName("Weather API Test Report");
-
-		extent.attachReporter(spark);
-
-	}
-	@Override
-	public void onTestStart(ITestResult result) {
-		ExtentTest test=extent.createTest(result.getTestClass().getName()+"::"+result.getMethod().getMethodName());
-		
-		
 	}
 
 	@AfterSuite
 	public static void suiteTearDown() {
-		extent.flush();
+		ExtentReportNG ex = new ExtentReportNG();
+		ex.extent.setSystemInfo("Tester", "Prachi Sharma");
+		ex.extent.setSystemInfo("OS", "Windows11");
+		ex.extent.flush();
+		
+		
+
 	}
 
-
-
-
-}  
-
-
-
-
+}

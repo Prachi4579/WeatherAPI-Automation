@@ -1,22 +1,14 @@
 package weather;
 
-import static io.restassured.RestAssured.given;
 
-import java.io.IOException;
-import java.net.http.WebSocket.Listener;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import report.ListenertestNG;
-import utils.PropertiesReader;
 
 @Listeners(ListenertestNG.class)
 public class AirPollutionAPITest extends Parameter {

@@ -71,26 +71,3 @@ public class ExcelReaderUtils{
 	}
 }
 
-
-/*
- * 
- * Map<String,Map> 
- *   {
- *   {TC-01 = 
- *   	{Testcases=TC-01, lat=21.14, lon=78.48, lang=hi, units=metric}}
- *   TC-02 =
- *    {Testcases=TC-02, lat=21.14....}
- *   TC-03 =
- *    {Testcases=TC-03, lat=350009}
- *   
- *   
- *   }
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- */
-
