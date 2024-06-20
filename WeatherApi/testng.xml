@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ListenerExecution">
+	<listeners>
+        <listener class-name="report.ListenertestNG"></listener>
+    </listeners>
+
+	<test name="ExecutingListeners" >   <!--parallel="classes" thread-count="10"-->
+		<classes>
+			<class name="weather.AirPollutionAPITest">
+				<methods>
+					<include name="verifyAirPollutionEndpoint"></include>
+					<include name="verifyPutCallAirPollutionEndpoint"></include>
+					<include name="verifyPostCallAirPollutionEndpoint"></include>
+
+				</methods>
+			</class>
+			<class name="weather.WeatherAPITest">
+				<methods>
+					<include name="currentWeatherValidKey"></include>
+					<include name="currentWeatherInValidKey"></include>
+					<include name="currentWeatherInValidLatitude"></include>
+					<include name="currentWeatherInValidLongitude"></include>
+					<include name="currentWeatherPUTMethod"></include>
+				</methods>
+			</class>
+			<class name="weather.Forecast5Day3hourTest">
+				<methods>
+					<include name="forecast_5Day3Hour"></include>
+					<include name="forecast_5Day3HourPUTMethod"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
