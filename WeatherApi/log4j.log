@@ -1,1577 +1,210 @@
-2024-06-20 11:12:41,038 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:12:41,024 DEBUG - Connection 0.0.0.0:55118<->178.128.122.9:443 closed
-2024-06-20 11:12:41,039 DEBUG - >> GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-004&lon=104555566.9&units=metric&lang=hi&lat=350009.86 HTTP/1.1
-2024-06-20 11:12:41,040 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:12:41,041 DEBUG - >> Server: openresty
-2024-06-20 11:12:41,041 DEBUG - >> Accept: */*
-2024-06-20 11:12:41,041 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:12:41,041 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:12:41,042 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:12:41,042 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:12:41,106 DEBUG -  << "HTTP/1.1 400 Bad Request[\r][\n]"
-2024-06-20 11:12:41,106 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:12:41,106 DEBUG -  << "Date: Thu, 20 Jun 2024 05:42:42 GMT[\r][\n]"
-2024-06-20 11:12:41,106 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:12:41,106 DEBUG -  << "Content-Length: 40[\r][\n]"
-2024-06-20 11:12:41,106 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:12:41,106 DEBUG -  << "X-Cache-Key: /data/2.5/weather?Identifier=TC-004&lang=hi&lat=350009.86&lon=104555566.9&units=metric[\r][\n]"
-2024-06-20 11:12:41,106 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:12:41,106 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:12:41,106 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:12:41,106 DEBUG -  << "[\r][\n]"
-2024-06-20 11:12:41,106 DEBUG - Receiving response: HTTP/1.1 400 Bad Request
-2024-06-20 11:12:41,106 DEBUG - << HTTP/1.1 400 Bad Request
-2024-06-20 11:12:41,106 DEBUG - << Server: openresty
-2024-06-20 11:12:41,106 DEBUG - << Date: Thu, 20 Jun 2024 05:42:42 GMT
-2024-06-20 11:12:41,106 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:12:41,106 DEBUG - << Content-Length: 40
-2024-06-20 11:12:41,106 DEBUG - << Connection: keep-alive
-2024-06-20 11:12:41,106 DEBUG - << X-Cache-Key: /data/2.5/weather?Identifier=TC-004&lang=hi&lat=350009.86&lon=104555566.9&units=metric
-2024-06-20 11:12:41,106 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:12:41,106 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:12:41,106 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:12:41,106 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:12:41,106 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:12:41,106 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:12:41,207 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:12:41,207 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:12:41,507 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:12:41,507 DEBUG - Auth cache not set in the context
-2024-06-20 11:12:41,508 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:12:41,508 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:12:41,509 DEBUG - Attempt 1 to execute request
-2024-06-20 11:12:41,509 DEBUG - Sending request: PUT /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-005&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:12:41,509 DEBUG -  >> "PUT /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-005&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:12:41,510 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:12:41,510 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:12:41,511 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:12:41,511 DEBUG -  >> "Content-Length: 0[\r][\n]"
-2024-06-20 11:12:41,511 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:12:41,511 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:12:41,511 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:12:41,511 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:12:41,511 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:12:41,511 DEBUG - >> PUT /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-005&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:12:41,511 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:12:41,511 DEBUG - >> Server: openresty
-2024-06-20 11:12:41,511 DEBUG - >> Accept: */*
-2024-06-20 11:12:41,511 DEBUG - >> Content-Length: 0
-2024-06-20 11:12:41,511 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:12:41,511 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:12:41,511 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:12:41,511 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:12:41,575 DEBUG -  << "HTTP/1.1 405 Method Not Allowed[\r][\n]"
-2024-06-20 11:12:41,575 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:12:41,575 DEBUG -  << "Date: Thu, 20 Jun 2024 05:42:42 GMT[\r][\n]"
-2024-06-20 11:12:41,576 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:12:41,576 DEBUG -  << "Content-Length: 40[\r][\n]"
-2024-06-20 11:12:41,576 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:12:41,576 DEBUG -  << "X-Cache-Key: /data/2.5/weather?Identifier=TC-005&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
-2024-06-20 11:12:41,576 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:12:41,576 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:12:41,576 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:12:41,576 DEBUG -  << "[\r][\n]"
-2024-06-20 11:12:41,577 DEBUG - Receiving response: HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:12:41,577 DEBUG - << HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:12:41,577 DEBUG - << Server: openresty
-2024-06-20 11:12:41,577 DEBUG - << Date: Thu, 20 Jun 2024 05:42:42 GMT
-2024-06-20 11:12:41,578 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:12:41,578 DEBUG - << Content-Length: 40
-2024-06-20 11:12:41,578 DEBUG - << Connection: keep-alive
-2024-06-20 11:12:41,578 DEBUG - << X-Cache-Key: /data/2.5/weather?Identifier=TC-005&lang=hi&lat=21.14&lon=78.48&units=metric
-2024-06-20 11:12:41,578 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:12:41,578 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:12:41,578 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:12:41,578 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:12:41,578 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:12:41,578 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:12:41,657 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:12:41,657 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:12:41,960 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:12:41,960 DEBUG - Auth cache not set in the context
-2024-06-20 11:12:41,960 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:12:41,960 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:12:41,960 DEBUG - Attempt 1 to execute request
-2024-06-20 11:12:41,960 DEBUG - Sending request: GET /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-006&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:12:41,960 DEBUG -  >> "GET /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-006&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:12:41,960 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:12:41,960 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:12:41,960 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:12:41,960 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:12:41,960 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:12:41,960 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:12:41,960 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:12:41,960 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:12:41,960 DEBUG - >> GET /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-006&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:12:41,960 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:12:41,960 DEBUG - >> Server: openresty
-2024-06-20 11:12:41,960 DEBUG - >> Accept: */*
-2024-06-20 11:12:41,960 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:12:41,960 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:12:41,960 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:12:41,960 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:12:42,107 DEBUG -  << "HTTP/1.1 200 OK[\r][\n]"
-2024-06-20 11:12:42,107 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:12:42,107 DEBUG -  << "Date: Thu, 20 Jun 2024 05:42:43 GMT[\r][\n]"
-2024-06-20 11:12:42,107 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:12:42,107 DEBUG -  << "Content-Length: 16898[\r][\n]"
-2024-06-20 11:12:42,107 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:12:42,107 DEBUG -  << "X-Cache-Key: /data/2.5/forecast?Identifier=TC-006&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
-2024-06-20 11:12:42,107 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:12:42,107 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:12:42,107 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:12:42,107 DEBUG -  << "[\r][\n]"
-2024-06-20 11:12:42,107 DEBUG - Receiving response: HTTP/1.1 200 OK
-2024-06-20 11:12:42,107 DEBUG - << HTTP/1.1 200 OK
-2024-06-20 11:12:42,107 DEBUG - << Server: openresty
-2024-06-20 11:12:42,107 DEBUG - << Date: Thu, 20 Jun 2024 05:42:43 GMT
-2024-06-20 11:12:42,107 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:12:42,107 DEBUG - << Content-Length: 16898
-2024-06-20 11:12:42,107 DEBUG - << Connection: keep-alive
-2024-06-20 11:12:42,107 DEBUG - << X-Cache-Key: /data/2.5/forecast?Identifier=TC-006&lang=hi&lat=21.14&lon=78.48&units=metric
-2024-06-20 11:12:42,107 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:12:42,107 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:12:42,107 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:12:42,107 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:12:42,107 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:12:42,107 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:12:42,206 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:12:42,206 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:12:42,490 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:12:42,490 DEBUG - Auth cache not set in the context
-2024-06-20 11:12:42,490 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:12:42,491 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:12:42,491 DEBUG - Attempt 1 to execute request
-2024-06-20 11:12:42,491 DEBUG - Sending request: PUT /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-007&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:12:42,492 DEBUG -  >> "PUT /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-007&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:12:42,492 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:12:42,493 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:12:42,493 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:12:42,493 DEBUG -  >> "Content-Length: 0[\r][\n]"
-2024-06-20 11:12:42,494 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:12:42,494 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:12:42,494 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:12:42,494 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:12:42,494 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:12:42,494 DEBUG - >> PUT /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-007&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:12:42,494 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:12:42,494 DEBUG - >> Server: openresty
-2024-06-20 11:12:42,494 DEBUG - >> Accept: */*
-2024-06-20 11:12:42,494 DEBUG - >> Content-Length: 0
-2024-06-20 11:12:42,494 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:12:42,494 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:12:42,494 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:12:42,494 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:12:42,555 DEBUG -  << "HTTP/1.1 405 Method Not Allowed[\r][\n]"
-2024-06-20 11:12:42,556 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:12:42,556 DEBUG -  << "Date: Thu, 20 Jun 2024 05:42:43 GMT[\r][\n]"
-2024-06-20 11:12:42,557 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:12:42,557 DEBUG -  << "Content-Length: 40[\r][\n]"
-2024-06-20 11:12:42,558 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:12:42,558 DEBUG -  << "X-Cache-Key: /data/2.5/forecast?Identifier=TC-007&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
-2024-06-20 11:12:42,558 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:12:42,558 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:12:42,559 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:12:42,559 DEBUG -  << "[\r][\n]"
-2024-06-20 11:12:42,560 DEBUG - Receiving response: HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:12:42,560 DEBUG - << HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:12:42,560 DEBUG - << Server: openresty
-2024-06-20 11:12:42,560 DEBUG - << Date: Thu, 20 Jun 2024 05:42:43 GMT
-2024-06-20 11:12:42,560 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:12:42,560 DEBUG - << Content-Length: 40
-2024-06-20 11:12:42,560 DEBUG - << Connection: keep-alive
-2024-06-20 11:12:42,560 DEBUG - << X-Cache-Key: /data/2.5/forecast?Identifier=TC-007&lang=hi&lat=21.14&lon=78.48&units=metric
-2024-06-20 11:12:42,560 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:12:42,560 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:12:42,560 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:12:42,560 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:12:42,560 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:12:42,560 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:12:42,672 DEBUG - Couldn't find template in cache for "spark/spark.spa.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:42,672 DEBUG - TemplateLoader.findTemplateSource("spark/spark.spa_en_IN.ftl"): Not found
-2024-06-20 11:12:42,690 DEBUG - Connection 0.0.0.0:55124<->178.128.122.9:443 closed
-2024-06-20 11:12:42,690 DEBUG - TemplateLoader.findTemplateSource("spark/spark.spa_en.ftl"): Not found
-2024-06-20 11:12:42,690 DEBUG - Connection 0.0.0.0:55121<->178.128.122.9:443 closed
-2024-06-20 11:12:42,690 DEBUG - TemplateLoader.findTemplateSource("spark/spark.spa.ftl"): Found
-2024-06-20 11:12:42,690 DEBUG - Loading template for "spark/spark.spa.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/spark.spa.ftl"
-2024-06-20 11:12:42,790 DEBUG - Couldn't find template in cache for "commons/commons-variables.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:42,791 DEBUG - TemplateLoader.findTemplateSource("commons/commons-variables_en_IN.ftl"): Not found
-2024-06-20 11:12:42,791 DEBUG - TemplateLoader.findTemplateSource("commons/commons-variables_en.ftl"): Not found
-2024-06-20 11:12:42,791 DEBUG - TemplateLoader.findTemplateSource("commons/commons-variables.ftl"): Found
-2024-06-20 11:12:42,791 DEBUG - Loading template for "commons/commons-variables.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-variables.ftl"
-2024-06-20 11:12:42,891 DEBUG - Couldn't find template in cache for "commons/commons-macros.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:42,891 DEBUG - TemplateLoader.findTemplateSource("commons/commons-macros_en_IN.ftl"): Not found
-2024-06-20 11:12:42,891 DEBUG - TemplateLoader.findTemplateSource("commons/commons-macros_en.ftl"): Not found
-2024-06-20 11:12:42,891 DEBUG - TemplateLoader.findTemplateSource("commons/commons-macros.ftl"): Found
-2024-06-20 11:12:42,891 DEBUG - Loading template for "commons/commons-macros.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-macros.ftl"
-2024-06-20 11:12:42,908 DEBUG - Couldn't find template in cache for "spark/macros/attributes.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:42,909 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attributes_en_IN.ftl"): Not found
-2024-06-20 11:12:42,909 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attributes_en.ftl"): Not found
-2024-06-20 11:12:42,910 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attributes.ftl"): Found
-2024-06-20 11:12:42,910 DEBUG - Loading template for "spark/macros/attributes.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/attributes.ftl"
-2024-06-20 11:12:42,914 DEBUG - Couldn't find template in cache for "spark/macros/log.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:42,914 DEBUG - TemplateLoader.findTemplateSource("spark/macros/log_en_IN.ftl"): Not found
-2024-06-20 11:12:42,915 DEBUG - TemplateLoader.findTemplateSource("spark/macros/log_en.ftl"): Not found
-2024-06-20 11:12:42,915 DEBUG - TemplateLoader.findTemplateSource("spark/macros/log.ftl"): Found
-2024-06-20 11:12:42,915 DEBUG - Loading template for "spark/macros/log.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/log.ftl"
-2024-06-20 11:12:42,917 DEBUG - Couldn't find template in cache for "spark/macros/recurse_nodes.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:42,918 DEBUG - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en_IN.ftl"): Not found
-2024-06-20 11:12:42,918 DEBUG - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en.ftl"): Not found
-2024-06-20 11:12:42,918 DEBUG - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes.ftl"): Found
-2024-06-20 11:12:42,919 DEBUG - Loading template for "spark/macros/recurse_nodes.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/recurse_nodes.ftl"
-2024-06-20 11:12:42,930 DEBUG - "spark/macros/log.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:12:42,930 DEBUG - Couldn't find template in cache for "spark/macros/attr-common.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:42,931 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attr-common_en_IN.ftl"): Not found
-2024-06-20 11:12:42,931 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attr-common_en.ftl"): Not found
-2024-06-20 11:12:42,932 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attr-common.ftl"): Found
-2024-06-20 11:12:42,932 DEBUG - Loading template for "spark/macros/attr-common.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/attr-common.ftl"
-2024-06-20 11:12:42,942 DEBUG - Couldn't find template in cache for "spark/partials/head.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:42,942 DEBUG - TemplateLoader.findTemplateSource("spark/partials/head_en_IN.ftl"): Not found
-2024-06-20 11:12:42,942 DEBUG - TemplateLoader.findTemplateSource("spark/partials/head_en.ftl"): Not found
-2024-06-20 11:12:42,942 DEBUG - TemplateLoader.findTemplateSource("spark/partials/head.ftl"): Found
-2024-06-20 11:12:42,942 DEBUG - Loading template for "spark/partials/head.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/head.ftl"
-2024-06-20 11:12:42,942 DEBUG - Couldn't find template in cache for "commons/commons-inject-css.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:42,942 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-css_en_IN.ftl"): Not found
-2024-06-20 11:12:42,942 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-css_en.ftl"): Not found
-2024-06-20 11:12:42,942 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-css.ftl"): Found
-2024-06-20 11:12:42,942 DEBUG - Loading template for "commons/commons-inject-css.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-inject-css.ftl"
-2024-06-20 11:12:42,954 DEBUG - Couldn't find template in cache for "spark/partials/navbar.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:42,955 DEBUG - TemplateLoader.findTemplateSource("spark/partials/navbar_en_IN.ftl"): Not found
-2024-06-20 11:12:42,958 DEBUG - TemplateLoader.findTemplateSource("spark/partials/navbar_en.ftl"): Not found
-2024-06-20 11:12:42,958 DEBUG - TemplateLoader.findTemplateSource("spark/partials/navbar.ftl"): Found
-2024-06-20 11:12:42,958 DEBUG - Loading template for "spark/partials/navbar.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/navbar.ftl"
-2024-06-20 11:12:42,974 DEBUG - Couldn't find template in cache for "spark/partials/sidenav.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:42,974 DEBUG - TemplateLoader.findTemplateSource("spark/partials/sidenav_en_IN.ftl"): Not found
-2024-06-20 11:12:42,974 DEBUG - TemplateLoader.findTemplateSource("spark/partials/sidenav_en.ftl"): Not found
-2024-06-20 11:12:42,974 DEBUG - TemplateLoader.findTemplateSource("spark/partials/sidenav.ftl"): Found
-2024-06-20 11:12:42,974 DEBUG - Loading template for "spark/partials/sidenav.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/sidenav.ftl"
-2024-06-20 11:12:42,992 DEBUG - Couldn't find template in cache for "spark/partials/test.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:42,992 DEBUG - TemplateLoader.findTemplateSource("spark/partials/test_en_IN.ftl"): Not found
-2024-06-20 11:12:42,992 DEBUG - TemplateLoader.findTemplateSource("spark/partials/test_en.ftl"): Not found
-2024-06-20 11:12:42,992 DEBUG - TemplateLoader.findTemplateSource("spark/partials/test.ftl"): Found
-2024-06-20 11:12:42,992 DEBUG - Loading template for "spark/partials/test.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/test.ftl"
-2024-06-20 11:12:43,009 DEBUG - Couldn't find template in cache for "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:43,009 DEBUG - TemplateLoader.findTemplateSource("spark/partials/standard-content_en_IN.ftl"): Not found
-2024-06-20 11:12:43,015 DEBUG - TemplateLoader.findTemplateSource("spark/partials/standard-content_en.ftl"): Not found
-2024-06-20 11:12:43,016 DEBUG - TemplateLoader.findTemplateSource("spark/partials/standard-content.ftl"): Found
-2024-06-20 11:12:43,016 DEBUG - Loading template for "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/standard-content.ftl"
-2024-06-20 11:12:43,033 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:12:43,042 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:12:43,050 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:12:43,054 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:12:43,060 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:12:43,060 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:12:43,060 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:12:43,076 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:12:43,076 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:12:43,081 DEBUG - Couldn't find template in cache for "spark/partials/exception.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:43,082 DEBUG - TemplateLoader.findTemplateSource("spark/partials/exception_en_IN.ftl"): Not found
-2024-06-20 11:12:43,082 DEBUG - TemplateLoader.findTemplateSource("spark/partials/exception_en.ftl"): Not found
-2024-06-20 11:12:43,083 DEBUG - TemplateLoader.findTemplateSource("spark/partials/exception.ftl"): Found
-2024-06-20 11:12:43,083 DEBUG - Loading template for "spark/partials/exception.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/exception.ftl"
-2024-06-20 11:12:43,089 DEBUG - Couldn't find template in cache for "spark/partials/category.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:43,089 DEBUG - TemplateLoader.findTemplateSource("spark/partials/category_en_IN.ftl"): Not found
-2024-06-20 11:12:43,090 DEBUG - TemplateLoader.findTemplateSource("spark/partials/category_en.ftl"): Not found
-2024-06-20 11:12:43,090 DEBUG - TemplateLoader.findTemplateSource("spark/partials/category.ftl"): Found
-2024-06-20 11:12:43,091 DEBUG - Loading template for "spark/partials/category.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/category.ftl"
-2024-06-20 11:12:43,092 DEBUG - Couldn't find template in cache for "spark/partials/device.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:43,093 DEBUG - TemplateLoader.findTemplateSource("spark/partials/device_en_IN.ftl"): Not found
-2024-06-20 11:12:43,093 DEBUG - TemplateLoader.findTemplateSource("spark/partials/device_en.ftl"): Not found
-2024-06-20 11:12:43,094 DEBUG - TemplateLoader.findTemplateSource("spark/partials/device.ftl"): Found
-2024-06-20 11:12:43,094 DEBUG - Loading template for "spark/partials/device.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/device.ftl"
-2024-06-20 11:12:43,095 DEBUG - Couldn't find template in cache for "spark/partials/author.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:43,095 DEBUG - TemplateLoader.findTemplateSource("spark/partials/author_en_IN.ftl"): Not found
-2024-06-20 11:12:43,095 DEBUG - TemplateLoader.findTemplateSource("spark/partials/author_en.ftl"): Not found
-2024-06-20 11:12:43,096 DEBUG - TemplateLoader.findTemplateSource("spark/partials/author.ftl"): Found
-2024-06-20 11:12:43,096 DEBUG - Loading template for "spark/partials/author.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/author.ftl"
-2024-06-20 11:12:43,096 DEBUG - Couldn't find template in cache for "spark/partials/log.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:43,097 DEBUG - TemplateLoader.findTemplateSource("spark/partials/log_en_IN.ftl"): Not found
-2024-06-20 11:12:43,097 DEBUG - TemplateLoader.findTemplateSource("spark/partials/log_en.ftl"): Not found
-2024-06-20 11:12:43,097 DEBUG - TemplateLoader.findTemplateSource("spark/partials/log.ftl"): Found
-2024-06-20 11:12:43,097 DEBUG - Loading template for "spark/partials/log.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/log.ftl"
-2024-06-20 11:12:43,098 DEBUG - Couldn't find template in cache for "spark/partials/dashboard.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:43,099 DEBUG - TemplateLoader.findTemplateSource("spark/partials/dashboard_en_IN.ftl"): Not found
-2024-06-20 11:12:43,099 DEBUG - TemplateLoader.findTemplateSource("spark/partials/dashboard_en.ftl"): Not found
-2024-06-20 11:12:43,099 DEBUG - TemplateLoader.findTemplateSource("spark/partials/dashboard.ftl"): Found
-2024-06-20 11:12:43,099 DEBUG - Loading template for "spark/partials/dashboard.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/dashboard.ftl"
-2024-06-20 11:12:43,125 DEBUG - Couldn't find template in cache for "spark/partials/scripts.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:43,138 DEBUG - TemplateLoader.findTemplateSource("spark/partials/scripts_en_IN.ftl"): Not found
-2024-06-20 11:12:43,139 DEBUG - TemplateLoader.findTemplateSource("spark/partials/scripts_en.ftl"): Not found
-2024-06-20 11:12:43,140 DEBUG - TemplateLoader.findTemplateSource("spark/partials/scripts.ftl"): Found
-2024-06-20 11:12:43,140 DEBUG - Loading template for "spark/partials/scripts.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/scripts.ftl"
-2024-06-20 11:12:43,141 DEBUG - Couldn't find template in cache for "commons/commons-inject-js.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:12:43,141 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-js_en_IN.ftl"): Not found
-2024-06-20 11:12:43,141 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-js_en.ftl"): Not found
-2024-06-20 11:12:43,141 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-js.ftl"): Found
-2024-06-20 11:12:43,141 DEBUG - Loading template for "commons/commons-inject-js.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-inject-js.ftl"
-2024-06-20 11:25:34,674 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:25:34,695 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:25:35,104 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:25:35,105 DEBUG - Auth cache not set in the context
-2024-06-20 11:25:35,105 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:25:35,107 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:25:35,107 DEBUG - Attempt 1 to execute request
-2024-06-20 11:25:35,107 DEBUG - Sending request: GET /data/2.5/air_pollution?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-008&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:25:35,108 DEBUG -  >> "GET /data/2.5/air_pollution?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-008&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:25:35,109 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:35,109 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:25:35,110 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:25:35,110 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:25:35,110 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:25:35,110 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:25:35,110 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:25:35,111 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:25:35,111 DEBUG - >> GET /data/2.5/air_pollution?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-008&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:25:35,111 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:35,111 DEBUG - >> Server: openresty
-2024-06-20 11:25:35,111 DEBUG - >> Accept: */*
-2024-06-20 11:25:35,112 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:25:35,112 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:25:35,112 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:25:35,112 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:25:35,315 DEBUG -  << "HTTP/1.1 200 OK[\r][\n]"
-2024-06-20 11:25:35,318 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:25:35,318 DEBUG -  << "Date: Thu, 20 Jun 2024 05:55:36 GMT[\r][\n]"
-2024-06-20 11:25:35,318 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:35,319 DEBUG -  << "Content-Length: 186[\r][\n]"
-2024-06-20 11:25:35,319 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:25:35,319 DEBUG -  << "X-Cache-Key: /data/2.5/air_pollution?Identifier=TC-008&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
-2024-06-20 11:25:35,320 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:25:35,320 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:25:35,320 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:25:35,320 DEBUG -  << "[\r][\n]"
-2024-06-20 11:25:35,322 DEBUG - Receiving response: HTTP/1.1 200 OK
-2024-06-20 11:25:35,323 DEBUG - << HTTP/1.1 200 OK
-2024-06-20 11:25:35,323 DEBUG - << Server: openresty
-2024-06-20 11:25:35,323 DEBUG - << Date: Thu, 20 Jun 2024 05:55:36 GMT
-2024-06-20 11:25:35,323 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:35,324 DEBUG - << Content-Length: 186
-2024-06-20 11:25:35,324 DEBUG - << Connection: keep-alive
-2024-06-20 11:25:35,324 DEBUG - << X-Cache-Key: /data/2.5/air_pollution?Identifier=TC-008&lang=hi&lat=21.14&lon=78.48&units=metric
-2024-06-20 11:25:35,324 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:25:35,324 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:25:35,324 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:25:35,331 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:25:35,342 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:25:35,343 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:25:35,565 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:25:35,565 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:25:35,885 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:25:35,885 DEBUG - Auth cache not set in the context
-2024-06-20 11:25:35,885 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:25:35,885 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:25:35,886 DEBUG - Attempt 1 to execute request
-2024-06-20 11:25:35,886 DEBUG - Sending request: PUT /data/2.5/air_pollution?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-009&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:25:35,886 DEBUG -  >> "PUT /data/2.5/air_pollution?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-009&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:25:35,886 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:35,887 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:25:35,887 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:25:35,887 DEBUG -  >> "Content-Length: 0[\r][\n]"
-2024-06-20 11:25:35,887 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:25:35,887 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:25:35,888 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:25:35,888 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:25:35,888 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:25:35,888 DEBUG - >> PUT /data/2.5/air_pollution?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-009&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:25:35,888 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:35,888 DEBUG - >> Server: openresty
-2024-06-20 11:25:35,889 DEBUG - >> Accept: */*
-2024-06-20 11:25:35,889 DEBUG - >> Content-Length: 0
-2024-06-20 11:25:35,889 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:25:35,889 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:25:35,889 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:25:35,890 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:25:36,045 DEBUG -  << "HTTP/1.1 405 Method Not Allowed[\r][\n]"
-2024-06-20 11:25:36,045 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:25:36,046 DEBUG -  << "Date: Thu, 20 Jun 2024 05:55:36 GMT[\r][\n]"
-2024-06-20 11:25:36,046 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:36,047 DEBUG -  << "Content-Length: 40[\r][\n]"
-2024-06-20 11:25:36,047 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:25:36,047 DEBUG -  << "X-Cache-Key: /data/2.5/air_pollution?Identifier=TC-009&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
-2024-06-20 11:25:36,048 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:25:36,048 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:25:36,049 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:25:36,049 DEBUG -  << "[\r][\n]"
-2024-06-20 11:25:36,050 DEBUG - Receiving response: HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:25:36,050 DEBUG - << HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:25:36,050 DEBUG - << Server: openresty
-2024-06-20 11:25:36,051 DEBUG - << Date: Thu, 20 Jun 2024 05:55:36 GMT
-2024-06-20 11:25:36,051 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:36,051 DEBUG - << Content-Length: 40
-2024-06-20 11:25:36,051 DEBUG - << Connection: keep-alive
-2024-06-20 11:25:36,052 DEBUG - << X-Cache-Key: /data/2.5/air_pollution?Identifier=TC-009&lang=hi&lat=21.14&lon=78.48&units=metric
-2024-06-20 11:25:36,052 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:25:36,053 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:25:36,053 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:25:36,054 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:25:36,054 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:25:36,055 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:25:36,295 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:25:36,296 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:25:36,679 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:25:36,680 DEBUG - Auth cache not set in the context
-2024-06-20 11:25:36,680 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:25:36,680 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:25:36,681 DEBUG - Attempt 1 to execute request
-2024-06-20 11:25:36,681 DEBUG - Sending request: POST /data/2.5/air_pollution HTTP/1.1
-2024-06-20 11:25:36,682 DEBUG -  >> "POST /data/2.5/air_pollution HTTP/1.1[\r][\n]"
-2024-06-20 11:25:36,682 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:25:36,683 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:25:36,683 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:36,683 DEBUG -  >> "Content-Length: 97[\r][\n]"
-2024-06-20 11:25:36,684 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:25:36,684 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:25:36,684 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:25:36,685 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:25:36,685 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:25:36,685 DEBUG - >> POST /data/2.5/air_pollution HTTP/1.1
-2024-06-20 11:25:36,685 DEBUG - >> Server: openresty
-2024-06-20 11:25:36,686 DEBUG - >> Accept: */*
-2024-06-20 11:25:36,686 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:36,686 DEBUG - >> Content-Length: 97
-2024-06-20 11:25:36,687 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:25:36,687 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:25:36,687 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:25:36,687 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:25:36,688 DEBUG -  >> "appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-001&lon=78.48&units=metric&lang=hi&lat=21.14"
-2024-06-20 11:25:36,866 DEBUG -  << "HTTP/1.1 401 Unauthorized[\r][\n]"
-2024-06-20 11:25:36,867 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:25:36,867 DEBUG -  << "Date: Thu, 20 Jun 2024 05:55:37 GMT[\r][\n]"
-2024-06-20 11:25:36,867 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:36,867 DEBUG -  << "Content-Length: 108[\r][\n]"
-2024-06-20 11:25:36,868 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:25:36,868 DEBUG -  << "X-Cache-Key: /data/2.5/air_pollution?[\r][\n]"
-2024-06-20 11:25:36,868 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:25:36,869 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:25:36,869 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:25:36,869 DEBUG -  << "[\r][\n]"
-2024-06-20 11:25:36,870 DEBUG - Receiving response: HTTP/1.1 401 Unauthorized
-2024-06-20 11:25:36,870 DEBUG - << HTTP/1.1 401 Unauthorized
-2024-06-20 11:25:36,870 DEBUG - << Server: openresty
-2024-06-20 11:25:36,870 DEBUG - << Date: Thu, 20 Jun 2024 05:55:37 GMT
-2024-06-20 11:25:36,871 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:36,871 DEBUG - << Content-Length: 108
-2024-06-20 11:25:36,871 DEBUG - << Connection: keep-alive
-2024-06-20 11:25:36,871 DEBUG - << X-Cache-Key: /data/2.5/air_pollution?
-2024-06-20 11:25:36,871 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:25:36,872 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:25:36,872 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:25:36,873 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:25:36,873 DEBUG - Authentication required
-2024-06-20 11:25:36,873 DEBUG - api.openweathermap.org:443 requested authentication
-2024-06-20 11:25:36,874 DEBUG - Response contains no authentication challenges
-2024-06-20 11:25:36,874 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:25:36,874 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:25:36,985 DEBUG - Connection 0.0.0.0:55367<->95.85.41.12:443 closed
-2024-06-20 11:25:37,093 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:25:37,093 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:25:37,432 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:25:37,433 DEBUG - Auth cache not set in the context
-2024-06-20 11:25:37,433 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:25:37,433 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:25:37,433 DEBUG - Attempt 1 to execute request
-2024-06-20 11:25:37,433 DEBUG - Sending request: GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-001&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:25:37,434 DEBUG -  >> "GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-001&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:25:37,434 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:37,434 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:25:37,434 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:25:37,434 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:25:37,435 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:25:37,435 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:25:37,435 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:25:37,435 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:25:37,436 DEBUG - >> GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-001&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:25:37,436 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:37,436 DEBUG - >> Server: openresty
-2024-06-20 11:25:37,436 DEBUG - >> Accept: */*
-2024-06-20 11:25:37,436 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:25:37,437 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:25:37,437 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:25:37,437 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:25:37,645 DEBUG -  << "HTTP/1.1 200 OK[\r][\n]"
-2024-06-20 11:25:37,646 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:25:37,646 DEBUG -  << "Date: Thu, 20 Jun 2024 05:55:38 GMT[\r][\n]"
-2024-06-20 11:25:37,647 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:37,647 DEBUG -  << "Content-Length: 505[\r][\n]"
-2024-06-20 11:25:37,648 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:25:37,648 DEBUG -  << "X-Cache-Key: /data/2.5/weather?Identifier=TC-001&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
-2024-06-20 11:25:37,649 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:25:37,649 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:25:37,650 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:25:37,650 DEBUG -  << "[\r][\n]"
-2024-06-20 11:25:37,651 DEBUG - Receiving response: HTTP/1.1 200 OK
-2024-06-20 11:25:37,651 DEBUG - << HTTP/1.1 200 OK
-2024-06-20 11:25:37,651 DEBUG - << Server: openresty
-2024-06-20 11:25:37,652 DEBUG - << Date: Thu, 20 Jun 2024 05:55:38 GMT
-2024-06-20 11:25:37,652 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:37,653 DEBUG - << Content-Length: 505
-2024-06-20 11:25:37,653 DEBUG - << Connection: keep-alive
-2024-06-20 11:25:37,654 DEBUG - << X-Cache-Key: /data/2.5/weather?Identifier=TC-001&lang=hi&lat=21.14&lon=78.48&units=metric
-2024-06-20 11:25:37,654 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:25:37,655 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:25:37,655 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:25:37,655 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:25:37,656 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:25:37,657 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:25:37,762 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:25:37,762 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:25:38,108 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:25:38,108 DEBUG - Auth cache not set in the context
-2024-06-20 11:25:38,108 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:25:38,108 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:25:38,108 DEBUG - Attempt 1 to execute request
-2024-06-20 11:25:38,109 DEBUG - Sending request: GET /data/2.5/weather?appid=xyz&Identifier=TC-002&lon=79.08&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:25:38,109 DEBUG -  >> "GET /data/2.5/weather?appid=xyz&Identifier=TC-002&lon=79.08&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:25:38,109 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:38,109 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:25:38,109 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:25:38,109 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:25:38,109 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:25:38,110 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:25:38,110 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:25:38,110 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:25:38,110 DEBUG - >> GET /data/2.5/weather?appid=xyz&Identifier=TC-002&lon=79.08&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:25:38,110 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:38,110 DEBUG - >> Server: openresty
-2024-06-20 11:25:38,110 DEBUG - >> Accept: */*
-2024-06-20 11:25:38,110 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:25:38,110 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:25:38,111 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:25:38,111 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:25:38,293 DEBUG -  << "HTTP/1.1 401 Unauthorized[\r][\n]"
-2024-06-20 11:25:38,294 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:25:38,294 DEBUG -  << "Date: Thu, 20 Jun 2024 05:55:39 GMT[\r][\n]"
-2024-06-20 11:25:38,294 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:38,295 DEBUG -  << "Content-Length: 108[\r][\n]"
-2024-06-20 11:25:38,295 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:25:38,295 DEBUG -  << "X-Cache-Key: /data/2.5/weather?Identifier=TC-002&lang=hi&lat=21.14&lon=79.08&units=metric[\r][\n]"
-2024-06-20 11:25:38,295 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:25:38,296 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:25:38,296 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:25:38,296 DEBUG -  << "[\r][\n]"
-2024-06-20 11:25:38,296 DEBUG - Receiving response: HTTP/1.1 401 Unauthorized
-2024-06-20 11:25:38,296 DEBUG - << HTTP/1.1 401 Unauthorized
-2024-06-20 11:25:38,296 DEBUG - << Server: openresty
-2024-06-20 11:25:38,297 DEBUG - << Date: Thu, 20 Jun 2024 05:55:39 GMT
-2024-06-20 11:25:38,297 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:38,297 DEBUG - << Content-Length: 108
-2024-06-20 11:25:38,297 DEBUG - << Connection: keep-alive
-2024-06-20 11:25:38,297 DEBUG - << X-Cache-Key: /data/2.5/weather?Identifier=TC-002&lang=hi&lat=21.14&lon=79.08&units=metric
-2024-06-20 11:25:38,297 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:25:38,297 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:25:38,297 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:25:38,297 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:25:38,297 DEBUG - Authentication required
-2024-06-20 11:25:38,297 DEBUG - api.openweathermap.org:443 requested authentication
-2024-06-20 11:25:38,298 DEBUG - Response contains no authentication challenges
-2024-06-20 11:25:38,298 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:25:38,298 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:25:38,465 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:25:38,465 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:25:38,805 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:25:38,805 DEBUG - Auth cache not set in the context
-2024-06-20 11:25:38,805 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:25:38,806 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:25:38,806 DEBUG - Attempt 1 to execute request
-2024-06-20 11:25:38,806 DEBUG - Sending request: GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-003&lon=104555566.9&units=standard&lang=ja&lat=350009.86 HTTP/1.1
-2024-06-20 11:25:38,806 DEBUG -  >> "GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-003&lon=104555566.9&units=standard&lang=ja&lat=350009.86 HTTP/1.1[\r][\n]"
-2024-06-20 11:25:38,806 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:38,806 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:25:38,806 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:25:38,806 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:25:38,807 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:25:38,807 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:25:38,807 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:25:38,807 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:25:38,807 DEBUG - >> GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-003&lon=104555566.9&units=standard&lang=ja&lat=350009.86 HTTP/1.1
-2024-06-20 11:25:38,807 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:38,807 DEBUG - >> Server: openresty
-2024-06-20 11:25:38,807 DEBUG - >> Accept: */*
-2024-06-20 11:25:38,807 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:25:38,808 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:25:38,808 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:25:38,808 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:25:38,975 DEBUG -  << "HTTP/1.1 400 Bad Request[\r][\n]"
-2024-06-20 11:25:38,975 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:25:38,976 DEBUG -  << "Date: Thu, 20 Jun 2024 05:55:39 GMT[\r][\n]"
-2024-06-20 11:25:38,976 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:38,976 DEBUG -  << "Content-Length: 40[\r][\n]"
-2024-06-20 11:25:38,976 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:25:38,977 DEBUG -  << "X-Cache-Key: /data/2.5/weather?Identifier=TC-003&lang=ja&lat=350009.86&lon=104555566.9&units=standard[\r][\n]"
-2024-06-20 11:25:38,977 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:25:38,977 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:25:38,977 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:25:38,977 DEBUG -  << "[\r][\n]"
-2024-06-20 11:25:38,978 DEBUG - Receiving response: HTTP/1.1 400 Bad Request
-2024-06-20 11:25:38,978 DEBUG - << HTTP/1.1 400 Bad Request
-2024-06-20 11:25:38,978 DEBUG - << Server: openresty
-2024-06-20 11:25:38,978 DEBUG - << Date: Thu, 20 Jun 2024 05:55:39 GMT
-2024-06-20 11:25:38,978 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:38,978 DEBUG - << Content-Length: 40
-2024-06-20 11:25:38,978 DEBUG - << Connection: keep-alive
-2024-06-20 11:25:38,978 DEBUG - << X-Cache-Key: /data/2.5/weather?Identifier=TC-003&lang=ja&lat=350009.86&lon=104555566.9&units=standard
-2024-06-20 11:25:38,978 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:25:38,978 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:25:38,979 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:25:38,979 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:25:38,981 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:25:38,981 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:25:39,123 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:25:39,123 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:25:39,422 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:25:39,422 DEBUG - Auth cache not set in the context
-2024-06-20 11:25:39,422 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:25:39,422 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:25:39,423 DEBUG - Attempt 1 to execute request
-2024-06-20 11:25:39,423 DEBUG - Sending request: GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-004&lon=104555566.9&units=metric&lang=hi&lat=350009.86 HTTP/1.1
-2024-06-20 11:25:39,423 DEBUG -  >> "GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-004&lon=104555566.9&units=metric&lang=hi&lat=350009.86 HTTP/1.1[\r][\n]"
-2024-06-20 11:25:39,423 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:39,423 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:25:39,423 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:25:39,423 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:25:39,423 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:25:39,423 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:25:39,423 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:25:39,423 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:25:39,423 DEBUG - >> GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-004&lon=104555566.9&units=metric&lang=hi&lat=350009.86 HTTP/1.1
-2024-06-20 11:25:39,424 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:39,424 DEBUG - >> Server: openresty
-2024-06-20 11:25:39,424 DEBUG - >> Accept: */*
-2024-06-20 11:25:39,424 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:25:39,424 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:25:39,424 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:25:39,424 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:25:39,569 DEBUG -  << "HTTP/1.1 400 Bad Request[\r][\n]"
-2024-06-20 11:25:39,569 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:25:39,569 DEBUG -  << "Date: Thu, 20 Jun 2024 05:55:40 GMT[\r][\n]"
-2024-06-20 11:25:39,569 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:39,569 DEBUG -  << "Content-Length: 40[\r][\n]"
-2024-06-20 11:25:39,569 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:25:39,569 DEBUG -  << "X-Cache-Key: /data/2.5/weather?Identifier=TC-004&lang=hi&lat=350009.86&lon=104555566.9&units=metric[\r][\n]"
-2024-06-20 11:25:39,569 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:25:39,569 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:25:39,569 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:25:39,570 DEBUG -  << "[\r][\n]"
-2024-06-20 11:25:39,570 DEBUG - Receiving response: HTTP/1.1 400 Bad Request
-2024-06-20 11:25:39,570 DEBUG - << HTTP/1.1 400 Bad Request
-2024-06-20 11:25:39,570 DEBUG - << Server: openresty
-2024-06-20 11:25:39,570 DEBUG - << Date: Thu, 20 Jun 2024 05:55:40 GMT
-2024-06-20 11:25:39,570 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:39,570 DEBUG - << Content-Length: 40
-2024-06-20 11:25:39,570 DEBUG - << Connection: keep-alive
-2024-06-20 11:25:39,570 DEBUG - << X-Cache-Key: /data/2.5/weather?Identifier=TC-004&lang=hi&lat=350009.86&lon=104555566.9&units=metric
-2024-06-20 11:25:39,570 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:25:39,570 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:25:39,570 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:25:39,570 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:25:39,570 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:25:39,570 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:25:39,613 DEBUG - Connection 0.0.0.0:55371<->95.85.41.12:443 closed
-2024-06-20 11:25:39,614 DEBUG - Connection 0.0.0.0:55370<->95.85.41.12:443 closed
-2024-06-20 11:25:39,615 DEBUG - Connection 0.0.0.0:55369<->95.85.41.12:443 closed
-2024-06-20 11:25:39,616 DEBUG - Connection 0.0.0.0:55372<->95.85.41.12:443 closed
-2024-06-20 11:25:39,726 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:25:39,726 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:25:40,055 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:25:40,055 DEBUG - Auth cache not set in the context
-2024-06-20 11:25:40,055 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:25:40,055 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:25:40,055 DEBUG - Attempt 1 to execute request
-2024-06-20 11:25:40,055 DEBUG - Sending request: PUT /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-005&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:25:40,055 DEBUG -  >> "PUT /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-005&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:25:40,055 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:40,055 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:25:40,055 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:25:40,055 DEBUG -  >> "Content-Length: 0[\r][\n]"
-2024-06-20 11:25:40,056 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:25:40,056 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:25:40,056 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:25:40,056 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:25:40,056 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:25:40,056 DEBUG - >> PUT /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-005&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:25:40,056 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:40,056 DEBUG - >> Server: openresty
-2024-06-20 11:25:40,056 DEBUG - >> Accept: */*
-2024-06-20 11:25:40,056 DEBUG - >> Content-Length: 0
-2024-06-20 11:25:40,056 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:25:40,056 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:25:40,056 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:25:40,056 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:25:40,216 DEBUG -  << "HTTP/1.1 405 Method Not Allowed[\r][\n]"
-2024-06-20 11:25:40,217 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:25:40,217 DEBUG -  << "Date: Thu, 20 Jun 2024 05:55:41 GMT[\r][\n]"
-2024-06-20 11:25:40,217 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:40,217 DEBUG -  << "Content-Length: 40[\r][\n]"
-2024-06-20 11:25:40,218 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:25:40,218 DEBUG -  << "X-Cache-Key: /data/2.5/weather?Identifier=TC-005&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
-2024-06-20 11:25:40,218 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:25:40,218 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:25:40,219 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:25:40,219 DEBUG -  << "[\r][\n]"
-2024-06-20 11:25:40,219 DEBUG - Receiving response: HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:25:40,219 DEBUG - << HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:25:40,219 DEBUG - << Server: openresty
-2024-06-20 11:25:40,219 DEBUG - << Date: Thu, 20 Jun 2024 05:55:41 GMT
-2024-06-20 11:25:40,219 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:40,219 DEBUG - << Content-Length: 40
-2024-06-20 11:25:40,219 DEBUG - << Connection: keep-alive
-2024-06-20 11:25:40,219 DEBUG - << X-Cache-Key: /data/2.5/weather?Identifier=TC-005&lang=hi&lat=21.14&lon=78.48&units=metric
-2024-06-20 11:25:40,219 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:25:40,219 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:25:40,219 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:25:40,220 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:25:40,220 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:25:40,220 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:25:40,339 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:25:40,339 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:25:40,693 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:25:40,693 DEBUG - Auth cache not set in the context
-2024-06-20 11:25:40,693 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:25:40,693 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:25:40,693 DEBUG - Attempt 1 to execute request
-2024-06-20 11:25:40,693 DEBUG - Sending request: GET /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-006&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:25:40,693 DEBUG -  >> "GET /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-006&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:25:40,694 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:40,694 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:25:40,694 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:25:40,694 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:25:40,695 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:25:40,695 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:25:40,695 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:25:40,695 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:25:40,695 DEBUG - >> GET /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-006&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:25:40,695 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:40,696 DEBUG - >> Server: openresty
-2024-06-20 11:25:40,696 DEBUG - >> Accept: */*
-2024-06-20 11:25:40,696 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:25:40,696 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:25:40,696 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:25:40,696 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:25:41,032 DEBUG -  << "HTTP/1.1 200 OK[\r][\n]"
-2024-06-20 11:25:41,033 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:25:41,033 DEBUG -  << "Date: Thu, 20 Jun 2024 05:55:41 GMT[\r][\n]"
-2024-06-20 11:25:41,033 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:41,033 DEBUG -  << "Content-Length: 16990[\r][\n]"
-2024-06-20 11:25:41,034 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:25:41,034 DEBUG -  << "X-Cache-Key: /data/2.5/forecast?Identifier=TC-006&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
-2024-06-20 11:25:41,034 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:25:41,034 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:25:41,034 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:25:41,034 DEBUG -  << "[\r][\n]"
-2024-06-20 11:25:41,034 DEBUG - Receiving response: HTTP/1.1 200 OK
-2024-06-20 11:25:41,034 DEBUG - << HTTP/1.1 200 OK
-2024-06-20 11:25:41,034 DEBUG - << Server: openresty
-2024-06-20 11:25:41,034 DEBUG - << Date: Thu, 20 Jun 2024 05:55:41 GMT
-2024-06-20 11:25:41,035 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:41,035 DEBUG - << Content-Length: 16990
-2024-06-20 11:25:41,035 DEBUG - << Connection: keep-alive
-2024-06-20 11:25:41,035 DEBUG - << X-Cache-Key: /data/2.5/forecast?Identifier=TC-006&lang=hi&lat=21.14&lon=78.48&units=metric
-2024-06-20 11:25:41,035 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:25:41,035 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:25:41,035 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:25:41,035 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:25:41,035 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:25:41,035 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:25:41,136 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:25:41,136 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:25:41,447 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:25:41,447 DEBUG - Auth cache not set in the context
-2024-06-20 11:25:41,447 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:25:41,447 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:25:41,447 DEBUG - Attempt 1 to execute request
-2024-06-20 11:25:41,447 DEBUG - Sending request: PUT /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-007&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:25:41,448 DEBUG -  >> "PUT /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-007&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:25:41,448 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:41,448 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:25:41,448 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:25:41,448 DEBUG -  >> "Content-Length: 0[\r][\n]"
-2024-06-20 11:25:41,448 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:25:41,448 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:25:41,448 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:25:41,448 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:25:41,448 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:25:41,448 DEBUG - >> PUT /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-007&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:25:41,448 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:41,448 DEBUG - >> Server: openresty
-2024-06-20 11:25:41,448 DEBUG - >> Accept: */*
-2024-06-20 11:25:41,448 DEBUG - >> Content-Length: 0
-2024-06-20 11:25:41,448 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:25:41,448 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:25:41,448 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:25:41,448 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:25:41,593 DEBUG -  << "HTTP/1.1 405 Method Not Allowed[\r][\n]"
-2024-06-20 11:25:41,594 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:25:41,594 DEBUG -  << "Date: Thu, 20 Jun 2024 05:55:42 GMT[\r][\n]"
-2024-06-20 11:25:41,594 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:25:41,594 DEBUG -  << "Content-Length: 40[\r][\n]"
-2024-06-20 11:25:41,594 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:25:41,595 DEBUG -  << "X-Cache-Key: /data/2.5/forecast?Identifier=TC-007&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
-2024-06-20 11:25:41,595 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:25:41,595 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:25:41,596 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:25:41,596 DEBUG -  << "[\r][\n]"
-2024-06-20 11:25:41,596 DEBUG - Receiving response: HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:25:41,596 DEBUG - << HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:25:41,597 DEBUG - << Server: openresty
-2024-06-20 11:25:41,597 DEBUG - << Date: Thu, 20 Jun 2024 05:55:42 GMT
-2024-06-20 11:25:41,597 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:25:41,597 DEBUG - << Content-Length: 40
-2024-06-20 11:25:41,597 DEBUG - << Connection: keep-alive
-2024-06-20 11:25:41,597 DEBUG - << X-Cache-Key: /data/2.5/forecast?Identifier=TC-007&lang=hi&lat=21.14&lon=78.48&units=metric
-2024-06-20 11:25:41,597 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:25:41,597 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:25:41,597 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:25:41,597 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:25:41,598 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:25:41,598 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:25:41,674 DEBUG - Couldn't find template in cache for "spark/spark.spa.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:41,675 DEBUG - TemplateLoader.findTemplateSource("spark/spark.spa_en_IN.ftl"): Not found
-2024-06-20 11:25:41,676 DEBUG - TemplateLoader.findTemplateSource("spark/spark.spa_en.ftl"): Not found
-2024-06-20 11:25:41,678 DEBUG - TemplateLoader.findTemplateSource("spark/spark.spa.ftl"): Found
-2024-06-20 11:25:41,679 DEBUG - Loading template for "spark/spark.spa.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/spark.spa.ftl"
-2024-06-20 11:25:41,809 DEBUG - Couldn't find template in cache for "commons/commons-variables.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:41,809 DEBUG - TemplateLoader.findTemplateSource("commons/commons-variables_en_IN.ftl"): Not found
-2024-06-20 11:25:41,809 DEBUG - TemplateLoader.findTemplateSource("commons/commons-variables_en.ftl"): Not found
-2024-06-20 11:25:41,810 DEBUG - TemplateLoader.findTemplateSource("commons/commons-variables.ftl"): Found
-2024-06-20 11:25:41,810 DEBUG - Loading template for "commons/commons-variables.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-variables.ftl"
-2024-06-20 11:25:41,927 DEBUG - Connection 0.0.0.0:55374<->95.85.41.12:443 closed
-2024-06-20 11:25:41,964 DEBUG - Couldn't find template in cache for "commons/commons-macros.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:41,964 DEBUG - TemplateLoader.findTemplateSource("commons/commons-macros_en_IN.ftl"): Not found
-2024-06-20 11:25:41,965 DEBUG - TemplateLoader.findTemplateSource("commons/commons-macros_en.ftl"): Not found
-2024-06-20 11:25:41,965 DEBUG - TemplateLoader.findTemplateSource("commons/commons-macros.ftl"): Found
-2024-06-20 11:25:41,965 DEBUG - Loading template for "commons/commons-macros.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-macros.ftl"
-2024-06-20 11:25:41,976 DEBUG - Couldn't find template in cache for "spark/macros/attributes.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:41,977 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attributes_en_IN.ftl"): Not found
-2024-06-20 11:25:41,978 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attributes_en.ftl"): Not found
-2024-06-20 11:25:41,978 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attributes.ftl"): Found
-2024-06-20 11:25:41,979 DEBUG - Loading template for "spark/macros/attributes.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/attributes.ftl"
-2024-06-20 11:25:41,982 DEBUG - Couldn't find template in cache for "spark/macros/log.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:41,983 DEBUG - TemplateLoader.findTemplateSource("spark/macros/log_en_IN.ftl"): Not found
-2024-06-20 11:25:41,984 DEBUG - TemplateLoader.findTemplateSource("spark/macros/log_en.ftl"): Not found
-2024-06-20 11:25:41,984 DEBUG - TemplateLoader.findTemplateSource("spark/macros/log.ftl"): Found
-2024-06-20 11:25:41,984 DEBUG - Loading template for "spark/macros/log.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/log.ftl"
-2024-06-20 11:25:41,989 DEBUG - Couldn't find template in cache for "spark/macros/recurse_nodes.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:41,989 DEBUG - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en_IN.ftl"): Not found
-2024-06-20 11:25:41,990 DEBUG - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en.ftl"): Not found
-2024-06-20 11:25:41,991 DEBUG - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes.ftl"): Found
-2024-06-20 11:25:41,991 DEBUG - Loading template for "spark/macros/recurse_nodes.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/recurse_nodes.ftl"
-2024-06-20 11:25:41,999 DEBUG - "spark/macros/log.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:25:42,000 DEBUG - Couldn't find template in cache for "spark/macros/attr-common.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:42,000 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attr-common_en_IN.ftl"): Not found
-2024-06-20 11:25:42,001 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attr-common_en.ftl"): Not found
-2024-06-20 11:25:42,001 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attr-common.ftl"): Found
-2024-06-20 11:25:42,002 DEBUG - Loading template for "spark/macros/attr-common.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/attr-common.ftl"
-2024-06-20 11:25:42,015 DEBUG - Couldn't find template in cache for "spark/partials/head.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:42,016 DEBUG - TemplateLoader.findTemplateSource("spark/partials/head_en_IN.ftl"): Not found
-2024-06-20 11:25:42,016 DEBUG - TemplateLoader.findTemplateSource("spark/partials/head_en.ftl"): Not found
-2024-06-20 11:25:42,017 DEBUG - TemplateLoader.findTemplateSource("spark/partials/head.ftl"): Found
-2024-06-20 11:25:42,017 DEBUG - Loading template for "spark/partials/head.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/head.ftl"
-2024-06-20 11:25:42,022 DEBUG - Couldn't find template in cache for "commons/commons-inject-css.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:42,023 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-css_en_IN.ftl"): Not found
-2024-06-20 11:25:42,023 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-css_en.ftl"): Not found
-2024-06-20 11:25:42,024 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-css.ftl"): Found
-2024-06-20 11:25:42,024 DEBUG - Loading template for "commons/commons-inject-css.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-inject-css.ftl"
-2024-06-20 11:25:42,025 DEBUG - Couldn't find template in cache for "spark/partials/navbar.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:42,026 DEBUG - TemplateLoader.findTemplateSource("spark/partials/navbar_en_IN.ftl"): Not found
-2024-06-20 11:25:42,027 DEBUG - TemplateLoader.findTemplateSource("spark/partials/navbar_en.ftl"): Not found
-2024-06-20 11:25:42,027 DEBUG - TemplateLoader.findTemplateSource("spark/partials/navbar.ftl"): Found
-2024-06-20 11:25:42,027 DEBUG - Loading template for "spark/partials/navbar.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/navbar.ftl"
-2024-06-20 11:25:42,058 DEBUG - Couldn't find template in cache for "spark/partials/sidenav.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:42,058 DEBUG - TemplateLoader.findTemplateSource("spark/partials/sidenav_en_IN.ftl"): Not found
-2024-06-20 11:25:42,059 DEBUG - TemplateLoader.findTemplateSource("spark/partials/sidenav_en.ftl"): Not found
-2024-06-20 11:25:42,059 DEBUG - TemplateLoader.findTemplateSource("spark/partials/sidenav.ftl"): Found
-2024-06-20 11:25:42,060 DEBUG - Loading template for "spark/partials/sidenav.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/sidenav.ftl"
-2024-06-20 11:25:42,088 DEBUG - Couldn't find template in cache for "spark/partials/test.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:42,089 DEBUG - TemplateLoader.findTemplateSource("spark/partials/test_en_IN.ftl"): Not found
-2024-06-20 11:25:42,089 DEBUG - TemplateLoader.findTemplateSource("spark/partials/test_en.ftl"): Not found
-2024-06-20 11:25:42,089 DEBUG - TemplateLoader.findTemplateSource("spark/partials/test.ftl"): Found
-2024-06-20 11:25:42,090 DEBUG - Loading template for "spark/partials/test.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/test.ftl"
-2024-06-20 11:25:42,112 DEBUG - Couldn't find template in cache for "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:42,113 DEBUG - TemplateLoader.findTemplateSource("spark/partials/standard-content_en_IN.ftl"): Not found
-2024-06-20 11:25:42,113 DEBUG - TemplateLoader.findTemplateSource("spark/partials/standard-content_en.ftl"): Not found
-2024-06-20 11:25:42,113 DEBUG - TemplateLoader.findTemplateSource("spark/partials/standard-content.ftl"): Found
-2024-06-20 11:25:42,113 DEBUG - Loading template for "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/standard-content.ftl"
-2024-06-20 11:25:42,145 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:25:42,156 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:25:42,173 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:25:42,182 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:25:42,186 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:25:42,193 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:25:42,197 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:25:42,203 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:25:42,206 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:25:42,208 DEBUG - Couldn't find template in cache for "spark/partials/exception.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:42,209 DEBUG - TemplateLoader.findTemplateSource("spark/partials/exception_en_IN.ftl"): Not found
-2024-06-20 11:25:42,209 DEBUG - TemplateLoader.findTemplateSource("spark/partials/exception_en.ftl"): Not found
-2024-06-20 11:25:42,210 DEBUG - TemplateLoader.findTemplateSource("spark/partials/exception.ftl"): Found
-2024-06-20 11:25:42,210 DEBUG - Loading template for "spark/partials/exception.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/exception.ftl"
-2024-06-20 11:25:42,217 DEBUG - Couldn't find template in cache for "spark/partials/category.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:42,218 DEBUG - TemplateLoader.findTemplateSource("spark/partials/category_en_IN.ftl"): Not found
-2024-06-20 11:25:42,219 DEBUG - TemplateLoader.findTemplateSource("spark/partials/category_en.ftl"): Not found
-2024-06-20 11:25:42,219 DEBUG - TemplateLoader.findTemplateSource("spark/partials/category.ftl"): Found
-2024-06-20 11:25:42,219 DEBUG - Loading template for "spark/partials/category.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/category.ftl"
-2024-06-20 11:25:42,222 DEBUG - Couldn't find template in cache for "spark/partials/device.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:42,223 DEBUG - TemplateLoader.findTemplateSource("spark/partials/device_en_IN.ftl"): Not found
-2024-06-20 11:25:42,223 DEBUG - TemplateLoader.findTemplateSource("spark/partials/device_en.ftl"): Not found
-2024-06-20 11:25:42,224 DEBUG - TemplateLoader.findTemplateSource("spark/partials/device.ftl"): Found
-2024-06-20 11:25:42,224 DEBUG - Loading template for "spark/partials/device.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/device.ftl"
-2024-06-20 11:25:42,225 DEBUG - Couldn't find template in cache for "spark/partials/author.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:42,226 DEBUG - TemplateLoader.findTemplateSource("spark/partials/author_en_IN.ftl"): Not found
-2024-06-20 11:25:42,226 DEBUG - TemplateLoader.findTemplateSource("spark/partials/author_en.ftl"): Not found
-2024-06-20 11:25:42,227 DEBUG - TemplateLoader.findTemplateSource("spark/partials/author.ftl"): Found
-2024-06-20 11:25:42,227 DEBUG - Loading template for "spark/partials/author.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/author.ftl"
-2024-06-20 11:25:42,229 DEBUG - Couldn't find template in cache for "spark/partials/log.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:42,229 DEBUG - TemplateLoader.findTemplateSource("spark/partials/log_en_IN.ftl"): Not found
-2024-06-20 11:25:42,230 DEBUG - TemplateLoader.findTemplateSource("spark/partials/log_en.ftl"): Not found
-2024-06-20 11:25:42,230 DEBUG - TemplateLoader.findTemplateSource("spark/partials/log.ftl"): Found
-2024-06-20 11:25:42,230 DEBUG - Loading template for "spark/partials/log.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/log.ftl"
-2024-06-20 11:25:42,233 DEBUG - Couldn't find template in cache for "spark/partials/dashboard.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:42,234 DEBUG - TemplateLoader.findTemplateSource("spark/partials/dashboard_en_IN.ftl"): Not found
-2024-06-20 11:25:42,234 DEBUG - TemplateLoader.findTemplateSource("spark/partials/dashboard_en.ftl"): Not found
-2024-06-20 11:25:42,235 DEBUG - TemplateLoader.findTemplateSource("spark/partials/dashboard.ftl"): Found
-2024-06-20 11:25:42,235 DEBUG - Loading template for "spark/partials/dashboard.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/dashboard.ftl"
-2024-06-20 11:25:42,306 DEBUG - Couldn't find template in cache for "spark/partials/scripts.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:42,306 DEBUG - TemplateLoader.findTemplateSource("spark/partials/scripts_en_IN.ftl"): Not found
-2024-06-20 11:25:42,307 DEBUG - TemplateLoader.findTemplateSource("spark/partials/scripts_en.ftl"): Not found
-2024-06-20 11:25:42,307 DEBUG - TemplateLoader.findTemplateSource("spark/partials/scripts.ftl"): Found
-2024-06-20 11:25:42,307 DEBUG - Loading template for "spark/partials/scripts.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/scripts.ftl"
-2024-06-20 11:25:42,310 DEBUG - Couldn't find template in cache for "commons/commons-inject-js.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:25:42,311 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-js_en_IN.ftl"): Not found
-2024-06-20 11:25:42,312 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-js_en.ftl"): Not found
-2024-06-20 11:25:42,312 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-js.ftl"): Found
-2024-06-20 11:25:42,312 DEBUG - Loading template for "commons/commons-inject-js.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-inject-js.ftl"
-2024-06-20 11:30:14,245 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:30:14,276 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:30:14,698 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:30:14,698 DEBUG - Auth cache not set in the context
-2024-06-20 11:30:14,698 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:30:14,698 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:30:14,698 DEBUG - Attempt 1 to execute request
-2024-06-20 11:30:14,698 DEBUG - Sending request: GET /data/2.5/air_pollution?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-008&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:30:14,698 DEBUG -  >> "GET /data/2.5/air_pollution?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-008&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:30:14,698 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:14,698 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:30:14,698 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:30:14,698 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:30:14,698 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:30:14,698 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:30:14,698 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:30:14,698 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:30:14,698 DEBUG - >> GET /data/2.5/air_pollution?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-008&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:30:14,698 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:14,698 DEBUG - >> Server: openresty
-2024-06-20 11:30:14,698 DEBUG - >> Accept: */*
-2024-06-20 11:30:14,698 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:30:14,698 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:30:14,698 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:30:14,698 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:30:15,495 DEBUG -  << "HTTP/1.1 200 OK[\r][\n]"
-2024-06-20 11:30:15,511 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:30:15,511 DEBUG -  << "Date: Thu, 20 Jun 2024 06:00:16 GMT[\r][\n]"
-2024-06-20 11:30:15,511 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:15,511 DEBUG -  << "Content-Length: 186[\r][\n]"
-2024-06-20 11:30:15,511 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:30:15,511 DEBUG -  << "X-Cache-Key: /data/2.5/air_pollution?Identifier=TC-008&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
-2024-06-20 11:30:15,511 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:30:15,511 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:30:15,511 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:30:15,511 DEBUG -  << "[\r][\n]"
-2024-06-20 11:30:15,511 DEBUG - Receiving response: HTTP/1.1 200 OK
-2024-06-20 11:30:15,511 DEBUG - << HTTP/1.1 200 OK
-2024-06-20 11:30:15,511 DEBUG - << Server: openresty
-2024-06-20 11:30:15,511 DEBUG - << Date: Thu, 20 Jun 2024 06:00:16 GMT
-2024-06-20 11:30:15,511 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:15,511 DEBUG - << Content-Length: 186
-2024-06-20 11:30:15,511 DEBUG - << Connection: keep-alive
-2024-06-20 11:30:15,511 DEBUG - << X-Cache-Key: /data/2.5/air_pollution?Identifier=TC-008&lang=hi&lat=21.14&lon=78.48&units=metric
-2024-06-20 11:30:15,511 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:30:15,511 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:30:15,511 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:30:15,511 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:30:15,526 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:30:15,526 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:30:15,729 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:30:15,729 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:30:16,026 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:30:16,026 DEBUG - Auth cache not set in the context
-2024-06-20 11:30:16,026 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:30:16,026 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:30:16,026 DEBUG - Attempt 1 to execute request
-2024-06-20 11:30:16,026 DEBUG - Sending request: PUT /data/2.5/air_pollution?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-009&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:30:16,026 DEBUG -  >> "PUT /data/2.5/air_pollution?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-009&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:30:16,026 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:16,026 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:30:16,026 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:30:16,026 DEBUG -  >> "Content-Length: 0[\r][\n]"
-2024-06-20 11:30:16,026 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:30:16,026 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:30:16,026 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:30:16,026 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:30:16,026 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:30:16,026 DEBUG - >> PUT /data/2.5/air_pollution?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-009&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:30:16,026 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:16,026 DEBUG - >> Server: openresty
-2024-06-20 11:30:16,026 DEBUG - >> Accept: */*
-2024-06-20 11:30:16,026 DEBUG - >> Content-Length: 0
-2024-06-20 11:30:16,026 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:30:16,026 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:30:16,026 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:30:16,026 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:30:16,622 DEBUG -  << "HTTP/1.1 405 Method Not Allowed[\r][\n]"
-2024-06-20 11:30:16,622 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:30:16,622 DEBUG -  << "Date: Thu, 20 Jun 2024 06:00:17 GMT[\r][\n]"
-2024-06-20 11:30:16,622 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:16,637 DEBUG -  << "Content-Length: 40[\r][\n]"
-2024-06-20 11:30:16,637 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:30:16,637 DEBUG -  << "X-Cache-Key: /data/2.5/air_pollution?Identifier=TC-009&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
-2024-06-20 11:30:16,637 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:30:16,637 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:30:16,637 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:30:16,637 DEBUG -  << "[\r][\n]"
-2024-06-20 11:30:16,637 DEBUG - Receiving response: HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:30:16,637 DEBUG - << HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:30:16,637 DEBUG - << Server: openresty
-2024-06-20 11:30:16,637 DEBUG - << Date: Thu, 20 Jun 2024 06:00:17 GMT
-2024-06-20 11:30:16,637 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:16,637 DEBUG - << Content-Length: 40
-2024-06-20 11:30:16,637 DEBUG - << Connection: keep-alive
-2024-06-20 11:30:16,637 DEBUG - << X-Cache-Key: /data/2.5/air_pollution?Identifier=TC-009&lang=hi&lat=21.14&lon=78.48&units=metric
-2024-06-20 11:30:16,637 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:30:16,637 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:30:16,637 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:30:16,637 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:30:16,637 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:30:16,637 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:30:16,840 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:30:16,840 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:30:17,168 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:30:17,168 DEBUG - Auth cache not set in the context
-2024-06-20 11:30:17,168 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:30:17,168 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:30:17,168 DEBUG - Attempt 1 to execute request
-2024-06-20 11:30:17,168 DEBUG - Sending request: POST /data/2.5/air_pollution HTTP/1.1
-2024-06-20 11:30:17,168 DEBUG -  >> "POST /data/2.5/air_pollution HTTP/1.1[\r][\n]"
-2024-06-20 11:30:17,168 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:30:17,168 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:30:17,168 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:17,168 DEBUG -  >> "Content-Length: 97[\r][\n]"
-2024-06-20 11:30:17,168 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:30:17,168 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:30:17,168 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:30:17,168 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:30:17,168 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:30:17,168 DEBUG - >> POST /data/2.5/air_pollution HTTP/1.1
-2024-06-20 11:30:17,168 DEBUG - >> Server: openresty
-2024-06-20 11:30:17,168 DEBUG - >> Accept: */*
-2024-06-20 11:30:17,168 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:17,168 DEBUG - >> Content-Length: 97
-2024-06-20 11:30:17,168 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:30:17,168 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:30:17,168 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:30:17,168 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:30:17,184 DEBUG -  >> "appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-001&lon=78.48&units=metric&lang=hi&lat=21.14"
-2024-06-20 11:30:17,231 DEBUG -  << "HTTP/1.1 401 Unauthorized[\r][\n]"
-2024-06-20 11:30:17,231 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:30:17,231 DEBUG -  << "Date: Thu, 20 Jun 2024 06:00:18 GMT[\r][\n]"
-2024-06-20 11:30:17,231 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:17,247 DEBUG -  << "Content-Length: 108[\r][\n]"
-2024-06-20 11:30:17,247 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:30:17,247 DEBUG -  << "X-Cache-Key: /data/2.5/air_pollution?[\r][\n]"
-2024-06-20 11:30:17,247 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:30:17,247 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:30:17,247 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:30:17,247 DEBUG -  << "[\r][\n]"
-2024-06-20 11:30:17,247 DEBUG - Receiving response: HTTP/1.1 401 Unauthorized
-2024-06-20 11:30:17,247 DEBUG - << HTTP/1.1 401 Unauthorized
-2024-06-20 11:30:17,247 DEBUG - << Server: openresty
-2024-06-20 11:30:17,247 DEBUG - << Date: Thu, 20 Jun 2024 06:00:18 GMT
-2024-06-20 11:30:17,247 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:17,247 DEBUG - << Content-Length: 108
-2024-06-20 11:30:17,247 DEBUG - << Connection: keep-alive
-2024-06-20 11:30:17,247 DEBUG - << X-Cache-Key: /data/2.5/air_pollution?
-2024-06-20 11:30:17,247 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:30:17,247 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:30:17,247 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:30:17,247 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:30:17,247 DEBUG - Authentication required
-2024-06-20 11:30:17,247 DEBUG - api.openweathermap.org:443 requested authentication
-2024-06-20 11:30:17,247 DEBUG - Response contains no authentication challenges
-2024-06-20 11:30:17,247 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:30:17,247 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:30:17,481 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:30:17,481 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:30:17,762 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:30:17,762 DEBUG - Auth cache not set in the context
-2024-06-20 11:30:17,762 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:30:17,762 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:30:17,762 DEBUG - Attempt 1 to execute request
-2024-06-20 11:30:17,762 DEBUG - Sending request: GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-001&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:30:17,762 DEBUG -  >> "GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-001&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:30:17,762 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:17,762 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:30:17,762 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:30:17,762 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:30:17,762 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:30:17,762 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:30:17,762 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:30:17,762 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:30:17,762 DEBUG - >> GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-001&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:30:17,762 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:17,762 DEBUG - >> Server: openresty
-2024-06-20 11:30:17,762 DEBUG - >> Accept: */*
-2024-06-20 11:30:17,762 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:30:17,762 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:30:17,762 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:30:17,762 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:30:20,720 DEBUG -  << "HTTP/1.1 200 OK[\r][\n]"
-2024-06-20 11:30:20,720 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:30:20,720 DEBUG -  << "Date: Thu, 20 Jun 2024 06:00:21 GMT[\r][\n]"
-2024-06-20 11:30:20,720 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:20,720 DEBUG -  << "Content-Length: 507[\r][\n]"
-2024-06-20 11:30:20,720 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:30:20,720 DEBUG -  << "X-Cache-Key: /data/2.5/weather?Identifier=TC-001&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
-2024-06-20 11:30:20,720 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:30:20,720 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:30:20,736 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:30:20,736 DEBUG -  << "[\r][\n]"
-2024-06-20 11:30:20,736 DEBUG - Receiving response: HTTP/1.1 200 OK
-2024-06-20 11:30:20,736 DEBUG - << HTTP/1.1 200 OK
-2024-06-20 11:30:20,736 DEBUG - << Server: openresty
-2024-06-20 11:30:20,736 DEBUG - << Date: Thu, 20 Jun 2024 06:00:21 GMT
-2024-06-20 11:30:20,736 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:20,736 DEBUG - << Content-Length: 507
-2024-06-20 11:30:20,736 DEBUG - << Connection: keep-alive
-2024-06-20 11:30:20,736 DEBUG - << X-Cache-Key: /data/2.5/weather?Identifier=TC-001&lang=hi&lat=21.14&lon=78.48&units=metric
-2024-06-20 11:30:20,736 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:30:20,736 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:30:20,736 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:30:20,736 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:30:20,736 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:30:20,736 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:30:20,782 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:30:20,782 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:30:20,861 DEBUG - Connection 0.0.0.0:55456<->178.128.122.9:443 closed
-2024-06-20 11:30:20,861 DEBUG - Connection 0.0.0.0:55454<->178.128.122.9:443 closed
-2024-06-20 11:30:21,079 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:30:21,079 DEBUG - Auth cache not set in the context
-2024-06-20 11:30:21,079 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:30:21,079 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:30:21,079 DEBUG - Attempt 1 to execute request
-2024-06-20 11:30:21,079 DEBUG - Sending request: GET /data/2.5/weather?appid=xyz&Identifier=TC-002&lon=79.08&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:30:21,079 DEBUG -  >> "GET /data/2.5/weather?appid=xyz&Identifier=TC-002&lon=79.08&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:30:21,079 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:21,079 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:30:21,079 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:30:21,079 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:30:21,079 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:30:21,079 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:30:21,079 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:30:21,079 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:30:21,079 DEBUG - >> GET /data/2.5/weather?appid=xyz&Identifier=TC-002&lon=79.08&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:30:21,079 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:21,079 DEBUG - >> Server: openresty
-2024-06-20 11:30:21,079 DEBUG - >> Accept: */*
-2024-06-20 11:30:21,079 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:30:21,079 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:30:21,079 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:30:21,079 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:30:21,142 DEBUG -  << "HTTP/1.1 401 Unauthorized[\r][\n]"
-2024-06-20 11:30:21,142 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:30:21,142 DEBUG -  << "Date: Thu, 20 Jun 2024 06:00:22 GMT[\r][\n]"
-2024-06-20 11:30:21,142 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:21,142 DEBUG -  << "Content-Length: 108[\r][\n]"
-2024-06-20 11:30:21,142 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:30:21,142 DEBUG -  << "X-Cache-Key: /data/2.5/weather?Identifier=TC-002&lang=hi&lat=21.14&lon=79.08&units=metric[\r][\n]"
-2024-06-20 11:30:21,142 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:30:21,142 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:30:21,142 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:30:21,142 DEBUG -  << "[\r][\n]"
-2024-06-20 11:30:21,142 DEBUG - Receiving response: HTTP/1.1 401 Unauthorized
-2024-06-20 11:30:21,142 DEBUG - << HTTP/1.1 401 Unauthorized
-2024-06-20 11:30:21,142 DEBUG - << Server: openresty
-2024-06-20 11:30:21,142 DEBUG - << Date: Thu, 20 Jun 2024 06:00:22 GMT
-2024-06-20 11:30:21,142 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:21,142 DEBUG - << Content-Length: 108
-2024-06-20 11:30:21,142 DEBUG - << Connection: keep-alive
-2024-06-20 11:30:21,142 DEBUG - << X-Cache-Key: /data/2.5/weather?Identifier=TC-002&lang=hi&lat=21.14&lon=79.08&units=metric
-2024-06-20 11:30:21,142 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:30:21,142 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:30:21,142 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:30:21,142 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:30:21,142 DEBUG - Authentication required
-2024-06-20 11:30:21,142 DEBUG - api.openweathermap.org:443 requested authentication
-2024-06-20 11:30:21,142 DEBUG - Response contains no authentication challenges
-2024-06-20 11:30:21,142 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:30:21,142 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:30:21,330 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:30:21,330 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:30:21,595 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:30:21,595 DEBUG - Auth cache not set in the context
-2024-06-20 11:30:21,595 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:30:21,595 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:30:21,595 DEBUG - Attempt 1 to execute request
-2024-06-20 11:30:21,595 DEBUG - Sending request: GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-003&lon=104555566.9&units=standard&lang=ja&lat=350009.86 HTTP/1.1
-2024-06-20 11:30:21,595 DEBUG -  >> "GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-003&lon=104555566.9&units=standard&lang=ja&lat=350009.86 HTTP/1.1[\r][\n]"
-2024-06-20 11:30:21,595 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:21,595 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:30:21,595 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:30:21,595 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:30:21,595 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:30:21,595 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:30:21,595 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:30:21,595 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:30:21,595 DEBUG - >> GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-003&lon=104555566.9&units=standard&lang=ja&lat=350009.86 HTTP/1.1
-2024-06-20 11:30:21,595 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:21,595 DEBUG - >> Server: openresty
-2024-06-20 11:30:21,595 DEBUG - >> Accept: */*
-2024-06-20 11:30:21,595 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:30:21,595 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:30:21,595 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:30:21,595 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:30:21,658 DEBUG -  << "HTTP/1.1 400 Bad Request[\r][\n]"
-2024-06-20 11:30:21,658 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:30:21,658 DEBUG -  << "Date: Thu, 20 Jun 2024 06:00:22 GMT[\r][\n]"
-2024-06-20 11:30:21,658 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:21,658 DEBUG -  << "Content-Length: 40[\r][\n]"
-2024-06-20 11:30:21,658 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:30:21,658 DEBUG -  << "X-Cache-Key: /data/2.5/weather?Identifier=TC-003&lang=ja&lat=350009.86&lon=104555566.9&units=standard[\r][\n]"
-2024-06-20 11:30:21,658 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:30:21,658 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:30:21,658 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:30:21,658 DEBUG -  << "[\r][\n]"
-2024-06-20 11:30:21,658 DEBUG - Receiving response: HTTP/1.1 400 Bad Request
-2024-06-20 11:30:21,658 DEBUG - << HTTP/1.1 400 Bad Request
-2024-06-20 11:30:21,658 DEBUG - << Server: openresty
-2024-06-20 11:30:21,658 DEBUG - << Date: Thu, 20 Jun 2024 06:00:22 GMT
-2024-06-20 11:30:21,658 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:21,658 DEBUG - << Content-Length: 40
-2024-06-20 11:30:21,658 DEBUG - << Connection: keep-alive
-2024-06-20 11:30:21,658 DEBUG - << X-Cache-Key: /data/2.5/weather?Identifier=TC-003&lang=ja&lat=350009.86&lon=104555566.9&units=standard
-2024-06-20 11:30:21,658 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:30:21,658 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:30:21,658 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:30:21,658 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:30:21,658 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:30:21,658 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:30:21,767 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:30:21,767 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:30:22,049 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:30:22,049 DEBUG - Auth cache not set in the context
-2024-06-20 11:30:22,049 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:30:22,049 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:30:22,049 DEBUG - Attempt 1 to execute request
-2024-06-20 11:30:22,049 DEBUG - Sending request: GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-004&lon=104555566.9&units=metric&lang=hi&lat=350009.86 HTTP/1.1
-2024-06-20 11:30:22,049 DEBUG -  >> "GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-004&lon=104555566.9&units=metric&lang=hi&lat=350009.86 HTTP/1.1[\r][\n]"
-2024-06-20 11:30:22,049 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:22,049 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:30:22,049 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:30:22,049 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:30:22,049 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:30:22,049 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:30:22,049 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:30:22,049 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:30:22,049 DEBUG - >> GET /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-004&lon=104555566.9&units=metric&lang=hi&lat=350009.86 HTTP/1.1
-2024-06-20 11:30:22,049 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:22,049 DEBUG - >> Server: openresty
-2024-06-20 11:30:22,049 DEBUG - >> Accept: */*
-2024-06-20 11:30:22,064 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:30:22,064 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:30:22,064 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:30:22,064 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:30:22,111 DEBUG -  << "HTTP/1.1 400 Bad Request[\r][\n]"
-2024-06-20 11:30:22,111 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:30:22,111 DEBUG -  << "Date: Thu, 20 Jun 2024 06:00:23 GMT[\r][\n]"
-2024-06-20 11:30:22,111 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:22,111 DEBUG -  << "Content-Length: 40[\r][\n]"
-2024-06-20 11:30:22,111 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:30:22,111 DEBUG -  << "X-Cache-Key: /data/2.5/weather?Identifier=TC-004&lang=hi&lat=350009.86&lon=104555566.9&units=metric[\r][\n]"
-2024-06-20 11:30:22,111 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:30:22,111 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:30:22,111 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:30:22,111 DEBUG -  << "[\r][\n]"
-2024-06-20 11:30:22,111 DEBUG - Receiving response: HTTP/1.1 400 Bad Request
-2024-06-20 11:30:22,111 DEBUG - << HTTP/1.1 400 Bad Request
-2024-06-20 11:30:22,111 DEBUG - << Server: openresty
-2024-06-20 11:30:22,111 DEBUG - << Date: Thu, 20 Jun 2024 06:00:23 GMT
-2024-06-20 11:30:22,111 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:22,111 DEBUG - << Content-Length: 40
-2024-06-20 11:30:22,111 DEBUG - << Connection: keep-alive
-2024-06-20 11:30:22,111 DEBUG - << X-Cache-Key: /data/2.5/weather?Identifier=TC-004&lang=hi&lat=350009.86&lon=104555566.9&units=metric
-2024-06-20 11:30:22,111 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:30:22,111 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:30:22,111 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:30:22,111 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:30:22,111 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:30:22,111 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:30:22,252 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:30:22,252 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:30:22,534 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:30:22,534 DEBUG - Auth cache not set in the context
-2024-06-20 11:30:22,534 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:30:22,534 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:30:22,534 DEBUG - Attempt 1 to execute request
-2024-06-20 11:30:22,534 DEBUG - Sending request: PUT /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-005&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:30:22,534 DEBUG -  >> "PUT /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-005&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:30:22,534 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:22,534 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:30:22,534 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:30:22,534 DEBUG -  >> "Content-Length: 0[\r][\n]"
-2024-06-20 11:30:22,534 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:30:22,534 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:30:22,534 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:30:22,534 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:30:22,534 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:30:22,534 DEBUG - >> PUT /data/2.5/weather?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-005&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:30:22,534 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:22,534 DEBUG - >> Server: openresty
-2024-06-20 11:30:22,534 DEBUG - >> Accept: */*
-2024-06-20 11:30:22,534 DEBUG - >> Content-Length: 0
-2024-06-20 11:30:22,534 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:30:22,534 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:30:22,534 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:30:22,534 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:30:22,598 DEBUG -  << "HTTP/1.1 405 Method Not Allowed[\r][\n]"
-2024-06-20 11:30:22,598 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:30:22,598 DEBUG -  << "Date: Thu, 20 Jun 2024 06:00:23 GMT[\r][\n]"
-2024-06-20 11:30:22,598 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:22,598 DEBUG -  << "Content-Length: 40[\r][\n]"
-2024-06-20 11:30:22,598 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:30:22,598 DEBUG -  << "X-Cache-Key: /data/2.5/weather?Identifier=TC-005&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
-2024-06-20 11:30:22,598 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:30:22,598 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:30:22,598 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:30:22,598 DEBUG -  << "[\r][\n]"
-2024-06-20 11:30:22,598 DEBUG - Receiving response: HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:30:22,598 DEBUG - << HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:30:22,598 DEBUG - << Server: openresty
-2024-06-20 11:30:22,598 DEBUG - << Date: Thu, 20 Jun 2024 06:00:23 GMT
-2024-06-20 11:30:22,598 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:22,598 DEBUG - << Content-Length: 40
-2024-06-20 11:30:22,598 DEBUG - << Connection: keep-alive
-2024-06-20 11:30:22,598 DEBUG - << X-Cache-Key: /data/2.5/weather?Identifier=TC-005&lang=hi&lat=21.14&lon=78.48&units=metric
-2024-06-20 11:30:22,598 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:30:22,598 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:30:22,598 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:30:22,598 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:30:22,598 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:30:22,598 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:30:22,706 DEBUG - Connection 0.0.0.0:55458<->178.128.122.9:443 closed
-2024-06-20 11:30:22,706 DEBUG - Connection 0.0.0.0:55457<->178.128.122.9:443 closed
-2024-06-20 11:30:22,706 DEBUG - Connection 0.0.0.0:55459<->178.128.122.9:443 closed
-2024-06-20 11:30:22,737 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:30:22,737 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:30:23,019 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:30:23,019 DEBUG - Auth cache not set in the context
-2024-06-20 11:30:23,019 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:30:23,019 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:30:23,019 DEBUG - Attempt 1 to execute request
-2024-06-20 11:30:23,019 DEBUG - Sending request: GET /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-006&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:30:23,019 DEBUG -  >> "GET /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-006&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:30:23,019 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:23,019 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:30:23,019 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:30:23,019 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:30:23,019 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:30:23,019 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:30:23,019 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:30:23,019 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:30:23,019 DEBUG - >> GET /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-006&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:30:23,019 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:23,019 DEBUG - >> Server: openresty
-2024-06-20 11:30:23,019 DEBUG - >> Accept: */*
-2024-06-20 11:30:23,019 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:30:23,019 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:30:23,019 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:30:23,019 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:30:25,159 DEBUG -  << "HTTP/1.1 200 OK[\r][\n]"
-2024-06-20 11:30:25,159 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:30:25,159 DEBUG -  << "Date: Thu, 20 Jun 2024 06:00:26 GMT[\r][\n]"
-2024-06-20 11:30:25,159 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:25,159 DEBUG -  << "Content-Length: 17149[\r][\n]"
-2024-06-20 11:30:25,159 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:30:25,159 DEBUG -  << "X-Cache-Key: /data/2.5/forecast?Identifier=TC-006&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
-2024-06-20 11:30:25,159 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:30:25,159 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:30:25,159 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:30:25,159 DEBUG -  << "[\r][\n]"
-2024-06-20 11:30:25,159 DEBUG - Receiving response: HTTP/1.1 200 OK
-2024-06-20 11:30:25,159 DEBUG - << HTTP/1.1 200 OK
-2024-06-20 11:30:25,159 DEBUG - << Server: openresty
-2024-06-20 11:30:25,159 DEBUG - << Date: Thu, 20 Jun 2024 06:00:26 GMT
-2024-06-20 11:30:25,159 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:25,159 DEBUG - << Content-Length: 17149
-2024-06-20 11:30:25,159 DEBUG - << Connection: keep-alive
-2024-06-20 11:30:25,159 DEBUG - << X-Cache-Key: /data/2.5/forecast?Identifier=TC-006&lang=hi&lat=21.14&lon=78.48&units=metric
-2024-06-20 11:30:25,159 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:30:25,159 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:30:25,159 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:30:25,159 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:30:25,159 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:30:25,159 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:30:25,222 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
-2024-06-20 11:30:25,222 DEBUG - Connecting to api.openweathermap.org:443
-2024-06-20 11:30:25,503 DEBUG - CookieSpec selected: ignoreCookies
-2024-06-20 11:30:25,503 DEBUG - Auth cache not set in the context
-2024-06-20 11:30:25,503 DEBUG - Target auth state: UNCHALLENGED
-2024-06-20 11:30:25,503 DEBUG - Proxy auth state: UNCHALLENGED
-2024-06-20 11:30:25,503 DEBUG - Attempt 1 to execute request
-2024-06-20 11:30:25,503 DEBUG - Sending request: PUT /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-007&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:30:25,503 DEBUG -  >> "PUT /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-007&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
-2024-06-20 11:30:25,503 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:25,503 DEBUG -  >> "Server: openresty[\r][\n]"
-2024-06-20 11:30:25,503 DEBUG -  >> "Accept: */*[\r][\n]"
-2024-06-20 11:30:25,503 DEBUG -  >> "Content-Length: 0[\r][\n]"
-2024-06-20 11:30:25,503 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
-2024-06-20 11:30:25,503 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
-2024-06-20 11:30:25,503 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
-2024-06-20 11:30:25,503 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-2024-06-20 11:30:25,503 DEBUG -  >> "[\r][\n]"
-2024-06-20 11:30:25,503 DEBUG - >> PUT /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-007&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
-2024-06-20 11:30:25,503 DEBUG - >> Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:25,503 DEBUG - >> Server: openresty
-2024-06-20 11:30:25,503 DEBUG - >> Accept: */*
-2024-06-20 11:30:25,503 DEBUG - >> Content-Length: 0
-2024-06-20 11:30:25,503 DEBUG - >> Host: api.openweathermap.org
-2024-06-20 11:30:25,503 DEBUG - >> Connection: Keep-Alive
-2024-06-20 11:30:25,503 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
-2024-06-20 11:30:25,503 DEBUG - >> Accept-Encoding: gzip,deflate
-2024-06-20 11:30:25,566 DEBUG -  << "HTTP/1.1 405 Method Not Allowed[\r][\n]"
-2024-06-20 11:30:25,566 DEBUG -  << "Server: openresty[\r][\n]"
-2024-06-20 11:30:25,566 DEBUG -  << "Date: Thu, 20 Jun 2024 06:00:26 GMT[\r][\n]"
-2024-06-20 11:30:25,566 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
-2024-06-20 11:30:25,566 DEBUG -  << "Content-Length: 40[\r][\n]"
-2024-06-20 11:30:25,566 DEBUG -  << "Connection: keep-alive[\r][\n]"
-2024-06-20 11:30:25,566 DEBUG -  << "X-Cache-Key: /data/2.5/forecast?Identifier=TC-007&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
-2024-06-20 11:30:25,566 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
-2024-06-20 11:30:25,566 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
-2024-06-20 11:30:25,566 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
-2024-06-20 11:30:25,566 DEBUG -  << "[\r][\n]"
-2024-06-20 11:30:25,566 DEBUG - Receiving response: HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:30:25,566 DEBUG - << HTTP/1.1 405 Method Not Allowed
-2024-06-20 11:30:25,566 DEBUG - << Server: openresty
-2024-06-20 11:30:25,566 DEBUG - << Date: Thu, 20 Jun 2024 06:00:26 GMT
-2024-06-20 11:30:25,566 DEBUG - << Content-Type: application/json; charset=utf-8
-2024-06-20 11:30:25,566 DEBUG - << Content-Length: 40
-2024-06-20 11:30:25,566 DEBUG - << Connection: keep-alive
-2024-06-20 11:30:25,566 DEBUG - << X-Cache-Key: /data/2.5/forecast?Identifier=TC-007&lang=hi&lat=21.14&lon=78.48&units=metric
-2024-06-20 11:30:25,566 DEBUG - << Access-Control-Allow-Origin: *
-2024-06-20 11:30:25,566 DEBUG - << Access-Control-Allow-Credentials: true
-2024-06-20 11:30:25,566 DEBUG - << Access-Control-Allow-Methods: GET, POST
-2024-06-20 11:30:25,566 DEBUG - Connection can be kept alive indefinitely
-2024-06-20 11:30:25,566 DEBUG - Parsing response as: application/json; charset=utf-8
-2024-06-20 11:30:25,566 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-2024-06-20 11:30:25,644 DEBUG - Couldn't find template in cache for "spark/spark.spa.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,644 DEBUG - TemplateLoader.findTemplateSource("spark/spark.spa_en_IN.ftl"): Not found
-2024-06-20 11:30:25,644 DEBUG - TemplateLoader.findTemplateSource("spark/spark.spa_en.ftl"): Not found
-2024-06-20 11:30:25,644 DEBUG - TemplateLoader.findTemplateSource("spark/spark.spa.ftl"): Found
-2024-06-20 11:30:25,644 DEBUG - Loading template for "spark/spark.spa.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/spark.spa.ftl"
-2024-06-20 11:30:25,706 DEBUG - Couldn't find template in cache for "commons/commons-variables.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,706 DEBUG - TemplateLoader.findTemplateSource("commons/commons-variables_en_IN.ftl"): Not found
-2024-06-20 11:30:25,706 DEBUG - TemplateLoader.findTemplateSource("commons/commons-variables_en.ftl"): Not found
-2024-06-20 11:30:25,706 DEBUG - TemplateLoader.findTemplateSource("commons/commons-variables.ftl"): Found
-2024-06-20 11:30:25,706 DEBUG - Loading template for "commons/commons-variables.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-variables.ftl"
-2024-06-20 11:30:25,800 DEBUG - Couldn't find template in cache for "commons/commons-macros.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,800 DEBUG - TemplateLoader.findTemplateSource("commons/commons-macros_en_IN.ftl"): Not found
-2024-06-20 11:30:25,800 DEBUG - TemplateLoader.findTemplateSource("commons/commons-macros_en.ftl"): Not found
-2024-06-20 11:30:25,800 DEBUG - TemplateLoader.findTemplateSource("commons/commons-macros.ftl"): Found
-2024-06-20 11:30:25,800 DEBUG - Loading template for "commons/commons-macros.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-macros.ftl"
-2024-06-20 11:30:25,816 DEBUG - Couldn't find template in cache for "spark/macros/attributes.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,816 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attributes_en_IN.ftl"): Not found
-2024-06-20 11:30:25,816 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attributes_en.ftl"): Not found
-2024-06-20 11:30:25,816 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attributes.ftl"): Found
-2024-06-20 11:30:25,816 DEBUG - Loading template for "spark/macros/attributes.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/attributes.ftl"
-2024-06-20 11:30:25,816 DEBUG - Couldn't find template in cache for "spark/macros/log.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,816 DEBUG - TemplateLoader.findTemplateSource("spark/macros/log_en_IN.ftl"): Not found
-2024-06-20 11:30:25,816 DEBUG - TemplateLoader.findTemplateSource("spark/macros/log_en.ftl"): Not found
-2024-06-20 11:30:25,816 DEBUG - TemplateLoader.findTemplateSource("spark/macros/log.ftl"): Found
-2024-06-20 11:30:25,816 DEBUG - Loading template for "spark/macros/log.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/log.ftl"
-2024-06-20 11:30:25,816 DEBUG - Couldn't find template in cache for "spark/macros/recurse_nodes.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,816 DEBUG - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en_IN.ftl"): Not found
-2024-06-20 11:30:25,816 DEBUG - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en.ftl"): Not found
-2024-06-20 11:30:25,816 DEBUG - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes.ftl"): Found
-2024-06-20 11:30:25,816 DEBUG - Loading template for "spark/macros/recurse_nodes.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/recurse_nodes.ftl"
-2024-06-20 11:30:25,816 DEBUG - "spark/macros/log.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:30:25,816 DEBUG - Couldn't find template in cache for "spark/macros/attr-common.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,816 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attr-common_en_IN.ftl"): Not found
-2024-06-20 11:30:25,816 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attr-common_en.ftl"): Not found
-2024-06-20 11:30:25,831 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attr-common.ftl"): Found
-2024-06-20 11:30:25,831 DEBUG - Loading template for "spark/macros/attr-common.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/attr-common.ftl"
-2024-06-20 11:30:25,831 DEBUG - Couldn't find template in cache for "spark/partials/head.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,831 DEBUG - TemplateLoader.findTemplateSource("spark/partials/head_en_IN.ftl"): Not found
-2024-06-20 11:30:25,831 DEBUG - TemplateLoader.findTemplateSource("spark/partials/head_en.ftl"): Not found
-2024-06-20 11:30:25,831 DEBUG - TemplateLoader.findTemplateSource("spark/partials/head.ftl"): Found
-2024-06-20 11:30:25,831 DEBUG - Loading template for "spark/partials/head.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/head.ftl"
-2024-06-20 11:30:25,831 DEBUG - Couldn't find template in cache for "commons/commons-inject-css.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,831 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-css_en_IN.ftl"): Not found
-2024-06-20 11:30:25,831 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-css_en.ftl"): Not found
-2024-06-20 11:30:25,847 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-css.ftl"): Found
-2024-06-20 11:30:25,847 DEBUG - Loading template for "commons/commons-inject-css.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-inject-css.ftl"
-2024-06-20 11:30:25,847 DEBUG - Couldn't find template in cache for "spark/partials/navbar.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,847 DEBUG - TemplateLoader.findTemplateSource("spark/partials/navbar_en_IN.ftl"): Not found
-2024-06-20 11:30:25,847 DEBUG - TemplateLoader.findTemplateSource("spark/partials/navbar_en.ftl"): Not found
-2024-06-20 11:30:25,847 DEBUG - TemplateLoader.findTemplateSource("spark/partials/navbar.ftl"): Found
-2024-06-20 11:30:25,847 DEBUG - Loading template for "spark/partials/navbar.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/navbar.ftl"
-2024-06-20 11:30:25,862 DEBUG - Couldn't find template in cache for "spark/partials/sidenav.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,862 DEBUG - TemplateLoader.findTemplateSource("spark/partials/sidenav_en_IN.ftl"): Not found
-2024-06-20 11:30:25,862 DEBUG - TemplateLoader.findTemplateSource("spark/partials/sidenav_en.ftl"): Not found
-2024-06-20 11:30:25,862 DEBUG - TemplateLoader.findTemplateSource("spark/partials/sidenav.ftl"): Found
-2024-06-20 11:30:25,862 DEBUG - Loading template for "spark/partials/sidenav.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/sidenav.ftl"
-2024-06-20 11:30:25,878 DEBUG - Couldn't find template in cache for "spark/partials/test.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,878 DEBUG - TemplateLoader.findTemplateSource("spark/partials/test_en_IN.ftl"): Not found
-2024-06-20 11:30:25,878 DEBUG - TemplateLoader.findTemplateSource("spark/partials/test_en.ftl"): Not found
-2024-06-20 11:30:25,878 DEBUG - TemplateLoader.findTemplateSource("spark/partials/test.ftl"): Found
-2024-06-20 11:30:25,878 DEBUG - Loading template for "spark/partials/test.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/test.ftl"
-2024-06-20 11:30:25,894 DEBUG - Couldn't find template in cache for "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,894 DEBUG - TemplateLoader.findTemplateSource("spark/partials/standard-content_en_IN.ftl"): Not found
-2024-06-20 11:30:25,894 DEBUG - TemplateLoader.findTemplateSource("spark/partials/standard-content_en.ftl"): Not found
-2024-06-20 11:30:25,894 DEBUG - TemplateLoader.findTemplateSource("spark/partials/standard-content.ftl"): Found
-2024-06-20 11:30:25,894 DEBUG - Loading template for "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/standard-content.ftl"
-2024-06-20 11:30:25,909 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:30:25,909 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:30:25,909 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:30:25,925 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:30:25,925 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:30:25,925 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:30:25,925 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:30:25,925 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:30:25,925 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
-2024-06-20 11:30:25,925 DEBUG - Couldn't find template in cache for "spark/partials/exception.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,925 DEBUG - TemplateLoader.findTemplateSource("spark/partials/exception_en_IN.ftl"): Not found
-2024-06-20 11:30:25,925 DEBUG - TemplateLoader.findTemplateSource("spark/partials/exception_en.ftl"): Not found
-2024-06-20 11:30:25,925 DEBUG - TemplateLoader.findTemplateSource("spark/partials/exception.ftl"): Found
-2024-06-20 11:30:25,925 DEBUG - Loading template for "spark/partials/exception.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/exception.ftl"
-2024-06-20 11:30:25,941 DEBUG - Couldn't find template in cache for "spark/partials/category.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,941 DEBUG - TemplateLoader.findTemplateSource("spark/partials/category_en_IN.ftl"): Not found
-2024-06-20 11:30:25,941 DEBUG - TemplateLoader.findTemplateSource("spark/partials/category_en.ftl"): Not found
-2024-06-20 11:30:25,941 DEBUG - TemplateLoader.findTemplateSource("spark/partials/category.ftl"): Found
-2024-06-20 11:30:25,941 DEBUG - Loading template for "spark/partials/category.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/category.ftl"
-2024-06-20 11:30:25,941 DEBUG - Couldn't find template in cache for "spark/partials/device.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,941 DEBUG - TemplateLoader.findTemplateSource("spark/partials/device_en_IN.ftl"): Not found
-2024-06-20 11:30:25,941 DEBUG - TemplateLoader.findTemplateSource("spark/partials/device_en.ftl"): Not found
-2024-06-20 11:30:25,941 DEBUG - TemplateLoader.findTemplateSource("spark/partials/device.ftl"): Found
-2024-06-20 11:30:25,941 DEBUG - Loading template for "spark/partials/device.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/device.ftl"
-2024-06-20 11:30:25,941 DEBUG - Couldn't find template in cache for "spark/partials/author.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,941 DEBUG - TemplateLoader.findTemplateSource("spark/partials/author_en_IN.ftl"): Not found
-2024-06-20 11:30:25,941 DEBUG - TemplateLoader.findTemplateSource("spark/partials/author_en.ftl"): Not found
-2024-06-20 11:30:25,941 DEBUG - TemplateLoader.findTemplateSource("spark/partials/author.ftl"): Found
-2024-06-20 11:30:25,941 DEBUG - Loading template for "spark/partials/author.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/author.ftl"
-2024-06-20 11:30:25,941 DEBUG - Couldn't find template in cache for "spark/partials/log.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,941 DEBUG - TemplateLoader.findTemplateSource("spark/partials/log_en_IN.ftl"): Not found
-2024-06-20 11:30:25,941 DEBUG - TemplateLoader.findTemplateSource("spark/partials/log_en.ftl"): Not found
-2024-06-20 11:30:25,941 DEBUG - TemplateLoader.findTemplateSource("spark/partials/log.ftl"): Found
-2024-06-20 11:30:25,941 DEBUG - Loading template for "spark/partials/log.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/log.ftl"
-2024-06-20 11:30:25,941 DEBUG - Couldn't find template in cache for "spark/partials/dashboard.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,941 DEBUG - TemplateLoader.findTemplateSource("spark/partials/dashboard_en_IN.ftl"): Not found
-2024-06-20 11:30:25,941 DEBUG - TemplateLoader.findTemplateSource("spark/partials/dashboard_en.ftl"): Not found
-2024-06-20 11:30:25,941 DEBUG - TemplateLoader.findTemplateSource("spark/partials/dashboard.ftl"): Found
-2024-06-20 11:30:25,941 DEBUG - Loading template for "spark/partials/dashboard.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/dashboard.ftl"
-2024-06-20 11:30:25,972 DEBUG - Couldn't find template in cache for "spark/partials/scripts.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,972 DEBUG - TemplateLoader.findTemplateSource("spark/partials/scripts_en_IN.ftl"): Not found
-2024-06-20 11:30:25,972 DEBUG - TemplateLoader.findTemplateSource("spark/partials/scripts_en.ftl"): Not found
-2024-06-20 11:30:25,972 DEBUG - TemplateLoader.findTemplateSource("spark/partials/scripts.ftl"): Found
-2024-06-20 11:30:25,972 DEBUG - Loading template for "spark/partials/scripts.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/scripts.ftl"
-2024-06-20 11:30:25,972 DEBUG - Couldn't find template in cache for "commons/commons-inject-js.ftl"("en_IN", UTF-8, parsed); will try to load it.
-2024-06-20 11:30:25,972 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-js_en_IN.ftl"): Not found
-2024-06-20 11:30:25,972 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-js_en.ftl"): Not found
-2024-06-20 11:30:25,972 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-js.ftl"): Found
-2024-06-20 11:30:25,972 DEBUG - Loading template for "commons/commons-inject-js.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-inject-js.ftl"
+2024-06-21 20:37:17,394 DEBUG -  >> "GET /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-006&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
+2024-06-21 20:37:17,394 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+2024-06-21 20:37:17,394 DEBUG -  >> "Server: openresty[\r][\n]"
+2024-06-21 20:37:17,394 DEBUG -  >> "Accept: */*[\r][\n]"
+2024-06-21 20:37:17,394 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
+2024-06-21 20:37:17,395 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
+2024-06-21 20:37:17,395 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
+2024-06-21 20:37:17,395 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2024-06-21 20:37:17,395 DEBUG -  >> "[\r][\n]"
+2024-06-21 20:37:17,395 DEBUG - >> GET /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-006&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
+2024-06-21 20:37:17,395 DEBUG - >> Content-Type: application/json; charset=utf-8
+2024-06-21 20:37:17,396 DEBUG - >> Server: openresty
+2024-06-21 20:37:17,396 DEBUG - >> Accept: */*
+2024-06-21 20:37:17,396 DEBUG - >> Host: api.openweathermap.org
+2024-06-21 20:37:17,396 DEBUG - >> Connection: Keep-Alive
+2024-06-21 20:37:17,396 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
+2024-06-21 20:37:17,396 DEBUG - >> Accept-Encoding: gzip,deflate
+2024-06-21 20:37:17,514 DEBUG -  << "HTTP/1.1 200 OK[\r][\n]"
+2024-06-21 20:37:17,515 DEBUG -  << "Server: openresty[\r][\n]"
+2024-06-21 20:37:17,515 DEBUG -  << "Date: Fri, 21 Jun 2024 15:07:16 GMT[\r][\n]"
+2024-06-21 20:37:17,515 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2024-06-21 20:37:17,515 DEBUG -  << "Content-Length: 17117[\r][\n]"
+2024-06-21 20:37:17,515 DEBUG -  << "Connection: keep-alive[\r][\n]"
+2024-06-21 20:37:17,515 DEBUG -  << "X-Cache-Key: /data/2.5/forecast?Identifier=TC-006&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
+2024-06-21 20:37:17,515 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
+2024-06-21 20:37:17,515 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
+2024-06-21 20:37:17,515 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
+2024-06-21 20:37:17,515 DEBUG -  << "[\r][\n]"
+2024-06-21 20:37:17,515 DEBUG - Receiving response: HTTP/1.1 200 OK
+2024-06-21 20:37:17,515 DEBUG - << HTTP/1.1 200 OK
+2024-06-21 20:37:17,515 DEBUG - << Server: openresty
+2024-06-21 20:37:17,515 DEBUG - << Date: Fri, 21 Jun 2024 15:07:16 GMT
+2024-06-21 20:37:17,515 DEBUG - << Content-Type: application/json; charset=utf-8
+2024-06-21 20:37:17,515 DEBUG - << Content-Length: 17117
+2024-06-21 20:37:17,515 DEBUG - << Connection: keep-alive
+2024-06-21 20:37:17,515 DEBUG - << X-Cache-Key: /data/2.5/forecast?Identifier=TC-006&lang=hi&lat=21.14&lon=78.48&units=metric
+2024-06-21 20:37:17,515 DEBUG - << Access-Control-Allow-Origin: *
+2024-06-21 20:37:17,515 DEBUG - << Access-Control-Allow-Credentials: true
+2024-06-21 20:37:17,515 DEBUG - << Access-Control-Allow-Methods: GET, POST
+2024-06-21 20:37:17,515 DEBUG - Connection can be kept alive indefinitely
+2024-06-21 20:37:17,516 DEBUG - Parsing response as: application/json; charset=utf-8
+2024-06-21 20:37:17,516 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2024-06-21 20:37:17,650 DEBUG - Get connection for route {s}->https://api.openweathermap.org:443
+2024-06-21 20:37:17,650 DEBUG - Connecting to api.openweathermap.org:443
+2024-06-21 20:37:17,949 DEBUG - CookieSpec selected: ignoreCookies
+2024-06-21 20:37:17,950 DEBUG - Auth cache not set in the context
+2024-06-21 20:37:17,950 DEBUG - Target auth state: UNCHALLENGED
+2024-06-21 20:37:17,950 DEBUG - Proxy auth state: UNCHALLENGED
+2024-06-21 20:37:17,950 DEBUG - Attempt 1 to execute request
+2024-06-21 20:37:17,950 DEBUG - Sending request: PUT /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-007&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
+2024-06-21 20:37:17,951 DEBUG -  >> "PUT /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-007&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1[\r][\n]"
+2024-06-21 20:37:17,951 DEBUG -  >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+2024-06-21 20:37:17,951 DEBUG -  >> "Server: openresty[\r][\n]"
+2024-06-21 20:37:17,952 DEBUG -  >> "Accept: */*[\r][\n]"
+2024-06-21 20:37:17,952 DEBUG -  >> "Content-Length: 0[\r][\n]"
+2024-06-21 20:37:17,952 DEBUG -  >> "Host: api.openweathermap.org[\r][\n]"
+2024-06-21 20:37:17,952 DEBUG -  >> "Connection: Keep-Alive[\r][\n]"
+2024-06-21 20:37:17,952 DEBUG -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)[\r][\n]"
+2024-06-21 20:37:17,952 DEBUG -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2024-06-21 20:37:17,952 DEBUG -  >> "[\r][\n]"
+2024-06-21 20:37:17,952 DEBUG - >> PUT /data/2.5/forecast?appid=7e8b32da3782f0b3660cff9192acfdec&Identifier=TC-007&lon=78.48&units=metric&lang=hi&lat=21.14 HTTP/1.1
+2024-06-21 20:37:17,953 DEBUG - >> Content-Type: application/json; charset=utf-8
+2024-06-21 20:37:17,953 DEBUG - >> Server: openresty
+2024-06-21 20:37:17,953 DEBUG - >> Accept: */*
+2024-06-21 20:37:17,953 DEBUG - >> Content-Length: 0
+2024-06-21 20:37:17,953 DEBUG - >> Host: api.openweathermap.org
+2024-06-21 20:37:17,953 DEBUG - >> Connection: Keep-Alive
+2024-06-21 20:37:17,953 DEBUG - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.11)
+2024-06-21 20:37:17,953 DEBUG - >> Accept-Encoding: gzip,deflate
+2024-06-21 20:37:18,017 DEBUG -  << "HTTP/1.1 405 Method Not Allowed[\r][\n]"
+2024-06-21 20:37:18,017 DEBUG -  << "Server: openresty[\r][\n]"
+2024-06-21 20:37:18,017 DEBUG -  << "Date: Fri, 21 Jun 2024 15:07:17 GMT[\r][\n]"
+2024-06-21 20:37:18,017 DEBUG -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2024-06-21 20:37:18,017 DEBUG -  << "Content-Length: 40[\r][\n]"
+2024-06-21 20:37:18,017 DEBUG -  << "Connection: keep-alive[\r][\n]"
+2024-06-21 20:37:18,017 DEBUG -  << "X-Cache-Key: /data/2.5/forecast?Identifier=TC-007&lang=hi&lat=21.14&lon=78.48&units=metric[\r][\n]"
+2024-06-21 20:37:18,017 DEBUG -  << "Access-Control-Allow-Origin: *[\r][\n]"
+2024-06-21 20:37:18,017 DEBUG -  << "Access-Control-Allow-Credentials: true[\r][\n]"
+2024-06-21 20:37:18,017 DEBUG -  << "Access-Control-Allow-Methods: GET, POST[\r][\n]"
+2024-06-21 20:37:18,017 DEBUG -  << "[\r][\n]"
+2024-06-21 20:37:18,017 DEBUG - Receiving response: HTTP/1.1 405 Method Not Allowed
+2024-06-21 20:37:18,017 DEBUG - << HTTP/1.1 405 Method Not Allowed
+2024-06-21 20:37:18,017 DEBUG - << Server: openresty
+2024-06-21 20:37:18,018 DEBUG - << Date: Fri, 21 Jun 2024 15:07:17 GMT
+2024-06-21 20:37:18,018 DEBUG - << Content-Type: application/json; charset=utf-8
+2024-06-21 20:37:18,018 DEBUG - << Content-Length: 40
+2024-06-21 20:37:18,018 DEBUG - << Connection: keep-alive
+2024-06-21 20:37:18,018 DEBUG - << X-Cache-Key: /data/2.5/forecast?Identifier=TC-007&lang=hi&lat=21.14&lon=78.48&units=metric
+2024-06-21 20:37:18,018 DEBUG - << Access-Control-Allow-Origin: *
+2024-06-21 20:37:18,018 DEBUG - << Access-Control-Allow-Credentials: true
+2024-06-21 20:37:18,018 DEBUG - << Access-Control-Allow-Methods: GET, POST
+2024-06-21 20:37:18,018 DEBUG - Connection can be kept alive indefinitely
+2024-06-21 20:37:18,019 DEBUG - Parsing response as: application/json; charset=utf-8
+2024-06-21 20:37:18,019 DEBUG - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2024-06-21 20:37:18,129 DEBUG - Connection 0.0.0.0:59838<->178.128.122.9:443 closed
+2024-06-21 20:37:18,132 DEBUG - Couldn't find template in cache for "spark/spark.spa.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,133 DEBUG - TemplateLoader.findTemplateSource("spark/spark.spa_en_IN.ftl"): Not found
+2024-06-21 20:37:18,135 DEBUG - TemplateLoader.findTemplateSource("spark/spark.spa_en.ftl"): Not found
+2024-06-21 20:37:18,137 DEBUG - TemplateLoader.findTemplateSource("spark/spark.spa.ftl"): Found
+2024-06-21 20:37:18,137 DEBUG - Loading template for "spark/spark.spa.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/spark.spa.ftl"
+2024-06-21 20:37:18,245 DEBUG - Couldn't find template in cache for "commons/commons-variables.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,246 DEBUG - TemplateLoader.findTemplateSource("commons/commons-variables_en_IN.ftl"): Not found
+2024-06-21 20:37:18,246 DEBUG - TemplateLoader.findTemplateSource("commons/commons-variables_en.ftl"): Not found
+2024-06-21 20:37:18,246 DEBUG - TemplateLoader.findTemplateSource("commons/commons-variables.ftl"): Found
+2024-06-21 20:37:18,246 DEBUG - Loading template for "commons/commons-variables.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-variables.ftl"
+2024-06-21 20:37:18,404 DEBUG - Couldn't find template in cache for "commons/commons-macros.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,404 DEBUG - TemplateLoader.findTemplateSource("commons/commons-macros_en_IN.ftl"): Not found
+2024-06-21 20:37:18,404 DEBUG - TemplateLoader.findTemplateSource("commons/commons-macros_en.ftl"): Not found
+2024-06-21 20:37:18,405 DEBUG - TemplateLoader.findTemplateSource("commons/commons-macros.ftl"): Found
+2024-06-21 20:37:18,405 DEBUG - Loading template for "commons/commons-macros.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-macros.ftl"
+2024-06-21 20:37:18,415 DEBUG - Couldn't find template in cache for "spark/macros/attributes.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,415 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attributes_en_IN.ftl"): Not found
+2024-06-21 20:37:18,415 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attributes_en.ftl"): Not found
+2024-06-21 20:37:18,416 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attributes.ftl"): Found
+2024-06-21 20:37:18,416 DEBUG - Loading template for "spark/macros/attributes.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/attributes.ftl"
+2024-06-21 20:37:18,418 DEBUG - Couldn't find template in cache for "spark/macros/log.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,419 DEBUG - TemplateLoader.findTemplateSource("spark/macros/log_en_IN.ftl"): Not found
+2024-06-21 20:37:18,420 DEBUG - TemplateLoader.findTemplateSource("spark/macros/log_en.ftl"): Not found
+2024-06-21 20:37:18,420 DEBUG - TemplateLoader.findTemplateSource("spark/macros/log.ftl"): Found
+2024-06-21 20:37:18,420 DEBUG - Loading template for "spark/macros/log.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/log.ftl"
+2024-06-21 20:37:18,423 DEBUG - Couldn't find template in cache for "spark/macros/recurse_nodes.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,424 DEBUG - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en_IN.ftl"): Not found
+2024-06-21 20:37:18,425 DEBUG - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en.ftl"): Not found
+2024-06-21 20:37:18,425 DEBUG - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes.ftl"): Found
+2024-06-21 20:37:18,425 DEBUG - Loading template for "spark/macros/recurse_nodes.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/recurse_nodes.ftl"
+2024-06-21 20:37:18,430 DEBUG - "spark/macros/log.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+2024-06-21 20:37:18,430 DEBUG - Couldn't find template in cache for "spark/macros/attr-common.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,430 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attr-common_en_IN.ftl"): Not found
+2024-06-21 20:37:18,431 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attr-common_en.ftl"): Not found
+2024-06-21 20:37:18,431 DEBUG - TemplateLoader.findTemplateSource("spark/macros/attr-common.ftl"): Found
+2024-06-21 20:37:18,431 DEBUG - Loading template for "spark/macros/attr-common.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/macros/attr-common.ftl"
+2024-06-21 20:37:18,443 DEBUG - Couldn't find template in cache for "spark/partials/head.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,444 DEBUG - TemplateLoader.findTemplateSource("spark/partials/head_en_IN.ftl"): Not found
+2024-06-21 20:37:18,444 DEBUG - TemplateLoader.findTemplateSource("spark/partials/head_en.ftl"): Not found
+2024-06-21 20:37:18,445 DEBUG - TemplateLoader.findTemplateSource("spark/partials/head.ftl"): Found
+2024-06-21 20:37:18,445 DEBUG - Loading template for "spark/partials/head.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/head.ftl"
+2024-06-21 20:37:18,451 DEBUG - Couldn't find template in cache for "commons/commons-inject-css.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,451 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-css_en_IN.ftl"): Not found
+2024-06-21 20:37:18,452 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-css_en.ftl"): Not found
+2024-06-21 20:37:18,453 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-css.ftl"): Found
+2024-06-21 20:37:18,453 DEBUG - Loading template for "commons/commons-inject-css.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-inject-css.ftl"
+2024-06-21 20:37:18,456 DEBUG - Couldn't find template in cache for "spark/partials/navbar.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,456 DEBUG - TemplateLoader.findTemplateSource("spark/partials/navbar_en_IN.ftl"): Not found
+2024-06-21 20:37:18,456 DEBUG - TemplateLoader.findTemplateSource("spark/partials/navbar_en.ftl"): Not found
+2024-06-21 20:37:18,457 DEBUG - TemplateLoader.findTemplateSource("spark/partials/navbar.ftl"): Found
+2024-06-21 20:37:18,457 DEBUG - Loading template for "spark/partials/navbar.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/navbar.ftl"
+2024-06-21 20:37:18,475 DEBUG - Couldn't find template in cache for "spark/partials/sidenav.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,476 DEBUG - TemplateLoader.findTemplateSource("spark/partials/sidenav_en_IN.ftl"): Not found
+2024-06-21 20:37:18,476 DEBUG - TemplateLoader.findTemplateSource("spark/partials/sidenav_en.ftl"): Not found
+2024-06-21 20:37:18,477 DEBUG - TemplateLoader.findTemplateSource("spark/partials/sidenav.ftl"): Found
+2024-06-21 20:37:18,477 DEBUG - Loading template for "spark/partials/sidenav.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/sidenav.ftl"
+2024-06-21 20:37:18,497 DEBUG - Couldn't find template in cache for "spark/partials/test.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,498 DEBUG - TemplateLoader.findTemplateSource("spark/partials/test_en_IN.ftl"): Not found
+2024-06-21 20:37:18,499 DEBUG - TemplateLoader.findTemplateSource("spark/partials/test_en.ftl"): Not found
+2024-06-21 20:37:18,499 DEBUG - TemplateLoader.findTemplateSource("spark/partials/test.ftl"): Found
+2024-06-21 20:37:18,499 DEBUG - Loading template for "spark/partials/test.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/test.ftl"
+2024-06-21 20:37:18,533 DEBUG - Couldn't find template in cache for "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,534 DEBUG - TemplateLoader.findTemplateSource("spark/partials/standard-content_en_IN.ftl"): Not found
+2024-06-21 20:37:18,535 DEBUG - TemplateLoader.findTemplateSource("spark/partials/standard-content_en.ftl"): Not found
+2024-06-21 20:37:18,537 DEBUG - TemplateLoader.findTemplateSource("spark/partials/standard-content.ftl"): Found
+2024-06-21 20:37:18,538 DEBUG - Loading template for "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/standard-content.ftl"
+2024-06-21 20:37:18,560 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+2024-06-21 20:37:18,570 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+2024-06-21 20:37:18,583 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+2024-06-21 20:37:18,592 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+2024-06-21 20:37:18,595 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+2024-06-21 20:37:18,603 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+2024-06-21 20:37:18,609 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+2024-06-21 20:37:18,612 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+2024-06-21 20:37:18,615 DEBUG - "spark/partials/standard-content.ftl"("en_IN", UTF-8, parsed) cached copy not yet stale; using cached.
+2024-06-21 20:37:18,617 DEBUG - Couldn't find template in cache for "spark/partials/exception.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,617 DEBUG - TemplateLoader.findTemplateSource("spark/partials/exception_en_IN.ftl"): Not found
+2024-06-21 20:37:18,619 DEBUG - TemplateLoader.findTemplateSource("spark/partials/exception_en.ftl"): Not found
+2024-06-21 20:37:18,619 DEBUG - TemplateLoader.findTemplateSource("spark/partials/exception.ftl"): Found
+2024-06-21 20:37:18,620 DEBUG - Loading template for "spark/partials/exception.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/exception.ftl"
+2024-06-21 20:37:18,627 DEBUG - Couldn't find template in cache for "spark/partials/category.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,627 DEBUG - TemplateLoader.findTemplateSource("spark/partials/category_en_IN.ftl"): Not found
+2024-06-21 20:37:18,627 DEBUG - TemplateLoader.findTemplateSource("spark/partials/category_en.ftl"): Not found
+2024-06-21 20:37:18,628 DEBUG - TemplateLoader.findTemplateSource("spark/partials/category.ftl"): Found
+2024-06-21 20:37:18,628 DEBUG - Loading template for "spark/partials/category.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/category.ftl"
+2024-06-21 20:37:18,629 DEBUG - Couldn't find template in cache for "spark/partials/device.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,629 DEBUG - TemplateLoader.findTemplateSource("spark/partials/device_en_IN.ftl"): Not found
+2024-06-21 20:37:18,630 DEBUG - TemplateLoader.findTemplateSource("spark/partials/device_en.ftl"): Not found
+2024-06-21 20:37:18,630 DEBUG - TemplateLoader.findTemplateSource("spark/partials/device.ftl"): Found
+2024-06-21 20:37:18,630 DEBUG - Loading template for "spark/partials/device.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/device.ftl"
+2024-06-21 20:37:18,631 DEBUG - Couldn't find template in cache for "spark/partials/author.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,632 DEBUG - TemplateLoader.findTemplateSource("spark/partials/author_en_IN.ftl"): Not found
+2024-06-21 20:37:18,632 DEBUG - TemplateLoader.findTemplateSource("spark/partials/author_en.ftl"): Not found
+2024-06-21 20:37:18,632 DEBUG - TemplateLoader.findTemplateSource("spark/partials/author.ftl"): Found
+2024-06-21 20:37:18,632 DEBUG - Loading template for "spark/partials/author.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/author.ftl"
+2024-06-21 20:37:18,634 DEBUG - Couldn't find template in cache for "spark/partials/log.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,635 DEBUG - TemplateLoader.findTemplateSource("spark/partials/log_en_IN.ftl"): Not found
+2024-06-21 20:37:18,636 DEBUG - TemplateLoader.findTemplateSource("spark/partials/log_en.ftl"): Not found
+2024-06-21 20:37:18,637 DEBUG - TemplateLoader.findTemplateSource("spark/partials/log.ftl"): Found
+2024-06-21 20:37:18,637 DEBUG - Loading template for "spark/partials/log.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/log.ftl"
+2024-06-21 20:37:18,639 DEBUG - Couldn't find template in cache for "spark/partials/dashboard.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,640 DEBUG - TemplateLoader.findTemplateSource("spark/partials/dashboard_en_IN.ftl"): Not found
+2024-06-21 20:37:18,640 DEBUG - TemplateLoader.findTemplateSource("spark/partials/dashboard_en.ftl"): Not found
+2024-06-21 20:37:18,641 DEBUG - TemplateLoader.findTemplateSource("spark/partials/dashboard.ftl"): Found
+2024-06-21 20:37:18,641 DEBUG - Loading template for "spark/partials/dashboard.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/dashboard.ftl"
+2024-06-21 20:37:18,700 DEBUG - Couldn't find template in cache for "spark/partials/scripts.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,701 DEBUG - TemplateLoader.findTemplateSource("spark/partials/scripts_en_IN.ftl"): Not found
+2024-06-21 20:37:18,701 DEBUG - TemplateLoader.findTemplateSource("spark/partials/scripts_en.ftl"): Not found
+2024-06-21 20:37:18,702 DEBUG - TemplateLoader.findTemplateSource("spark/partials/scripts.ftl"): Found
+2024-06-21 20:37:18,702 DEBUG - Loading template for "spark/partials/scripts.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/spark/partials/scripts.ftl"
+2024-06-21 20:37:18,703 DEBUG - Couldn't find template in cache for "commons/commons-inject-js.ftl"("en_IN", UTF-8, parsed); will try to load it.
+2024-06-21 20:37:18,704 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-js_en_IN.ftl"): Not found
+2024-06-21 20:37:18,705 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-js_en.ftl"): Not found
+2024-06-21 20:37:18,705 DEBUG - TemplateLoader.findTemplateSource("commons/commons-inject-js.ftl"): Found
+2024-06-21 20:37:18,705 DEBUG - Loading template for "commons/commons-inject-js.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/DELL/.m2/repository/com/aventstack/extentreports/5.1.1/extentreports-5.1.1.jar!/com/aventstack/extentreports/templates/commons/commons-inject-js.ftl"

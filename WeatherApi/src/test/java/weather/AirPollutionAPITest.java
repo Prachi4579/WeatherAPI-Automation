@@ -1,7 +1,4 @@
 package weather;
-
-
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Listeners;
@@ -15,8 +12,8 @@ public class AirPollutionAPITest extends Parameter {
 
 	private static final Logger logger = LoggerFactory.getLogger(AirPollutionAPITest.class);
 
-	@Test(testName = "Verify AirPollution Endpoint returning 200 OK while sending request with GET method", groups = {
-			"TC-008", "smoke", "sanity" })
+	//Verify AirPollution Endpoint returning 200 OK while sending request with GET method
+	@Test(testName="Verify AirPollution Endpoint returning 200 OK while sending request with GET method", groups = {"TC-008","smoke", "sanity" })
 	public void verifyAirPollutionEndpoint() {
 		setupParams("TC-008");
 		Response resp = request.get(getConfiguration("airpollution_endpoint"));

@@ -15,8 +15,9 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class ExtentReportNG {
 	
 	public static ExtentReports extent;
-	
-	public static  ExtentReports getReportObject() {
+
+
+    public static ExtentReports getReportObject() {
 		extent = new ExtentReports();
 
 		DateTimeFormatter date = DateTimeFormatter.ofPattern("dd-MM-yyyy");
@@ -40,16 +41,13 @@ public class ExtentReportNG {
 		
 		return extent;
 		}
-
-	public void onFinish() {
+    
+    public void onFinish() {
 		// TODO Auto-generated method stub
 		extent.setSystemInfo("Tester", "Prachi Sharma");
 		extent.setSystemInfo("OS", "Windows11");
 		
 	}
 
-	
-	
-	
 
 }
