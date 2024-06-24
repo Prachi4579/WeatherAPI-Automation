@@ -15,7 +15,7 @@ public class AirPollutionAPITest extends Parameter {
 	//Verify AirPollution Endpoint returning 200 OK while sending request with GET method
 	@Test(testName="Verify AirPollution Endpoint returning 200 OK while sending request with GET method", groups = {"TC-008","smoke", "sanity" })
 	public void verifyAirPollutionEndpoint() {
-		setupParams("TC-008");
+		setupParams("TC-008");  
 		Response resp = request.get(getConfiguration("airpollution_endpoint"));
 		assertResponse(resp, 200);
 
