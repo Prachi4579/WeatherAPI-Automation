@@ -43,7 +43,7 @@ public class Parameter extends ExcelReaderUtils {
 	private static final Logger logger = LoggerFactory.getLogger(WeatherAPITest.class);
 	RequestSpecification request;
 	Map<String, Object> headerParam = new HashMap<String, Object>();
-	String apiKey = PropertiesReader.getEndPoint().getProperty("apikey");
+//	String apiKey = PropertiesReader.getEndPoint().getProperty("apikey");
 
 	public Map<String, Map<String, String>> getAPIWeatherTestData() {
 		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
