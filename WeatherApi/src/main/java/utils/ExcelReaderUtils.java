@@ -66,7 +66,7 @@ public class ExcelReaderUtils{
 	public static void main(String[] args) {
 		
 		String dataExcelPath = System.getProperty("user.dir")+"/src/test/resources/DataExcelRead.xlsx";
-		String sheetName = "WeatherAPITestParameters";
+		String sheetName = "ZipCityIDParameters";
 		getWeatherAPIData(dataExcelPath, sheetName);
 	}
 }

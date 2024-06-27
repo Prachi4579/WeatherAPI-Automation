@@ -29,6 +29,19 @@
 					<include name="forecast_5Day3HourPUTMethod"></include>
 				</methods>
 			</class>
+			<class name="weather.APIRequestBYCityIDCountryNameZipCode">
+				<methods>
+					<include name="weatherByZipCode"></include>
+					<include name="forecast_5Day3HourByZipCode"></include>
+					<include name="weatherByCityID"></include>
+					<include name="forecast_5Day3HourByCityID"></include>
+					<include name="weatherByCityNameCountryCode"></include>
+					<include name="weatherByCityName"></include>
+					<include name="forecast_5Day3HourByCityName"></include>
+					
+				</methods>
+			</class>
+			
 		</classes>
 	</test>
 </suite>
