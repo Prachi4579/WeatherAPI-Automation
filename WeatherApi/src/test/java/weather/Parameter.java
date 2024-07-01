@@ -16,7 +16,7 @@ import report.ListenertestNG;
 import resources.ExtentReportNG;
 import utils.ExcelReaderUtils;
 
-public class Parameter extends ExcelReaderUtils {
+public class Parameter extends ExcelReaderUtils  {
 
 	RequestSpecification request;
 	Map<String, Object> headerParam = new HashMap<String, Object>();
