@@ -2,3 +2,8 @@
 /report/
 /.classpath
 /.project
+/test-output/
+/log4j.log
+/log4j.log.1
+/log4j.log.2
+/log4j.log.3

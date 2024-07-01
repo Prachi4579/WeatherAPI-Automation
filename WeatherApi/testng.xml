@@ -11,8 +11,7 @@
 					<include name="verifyAirPollutionEndpoint"></include>
 					<include name="verifyPutCallAirPollutionEndpoint"></include>
 					<include name="verifyPostCallAirPollutionEndpoint"></include>
-
-				</methods>
+					</methods>
 			</class>
 			<class name="weather.WeatherAPITest">
 				<methods>
@@ -21,26 +20,22 @@
 					<include name="currentWeatherInValidLatitude"></include>
 					<include name="currentWeatherInValidLongitude"></include>
 					<include name="currentWeatherPUTMethod"></include>
+					<include name="weatherByZipCode"></include>
+					<include name="weatherByCityID"></include>
+					<include name="weatherByCityNameCountryCode"></include>
+					<include name="weatherByCityName"></include>
+
 				</methods>
 			</class>
 			<class name="weather.Forecast5Day3hourTest">
 				<methods>
 					<include name="forecast_5Day3Hour"></include>
 					<include name="forecast_5Day3HourPUTMethod"></include>
-				</methods>
-			</class>
-			<class name="weather.APIRequestBYCityIDCountryNameZipCode">
-				<methods>
-					<include name="weatherByZipCode"></include>
 					<include name="forecast_5Day3HourByZipCode"></include>
-					<include name="weatherByCityID"></include>
 					<include name="forecast_5Day3HourByCityID"></include>
-					<include name="weatherByCityNameCountryCode"></include>
-					<include name="weatherByCityName"></include>
 					<include name="forecast_5Day3HourByCityName"></include>
-					
 				</methods>
-			</class>
+				</class>
 			
 		</classes>
 	</test>

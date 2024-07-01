@@ -1,25 +1,14 @@
 package weather;
 
-import static io.restassured.RestAssured.given;
-
 import java.io.IOException;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import report.ListenertestNG;
-import utils.PropertiesReader;
+
 @Listeners(ListenertestNG.class)
 public class Forecast5Day3hourTest extends Parameter {
 
-	private static final Logger logger = LoggerFactory.getLogger(Forecast5Day3hourTest.class);
 	@Test(testName = "Verify 5Days3hourForecast Endpoint returning 200 OK while sending request with GET method" , groups = {"TC-006","smoke","sanity"})
 	public  void forecast_5Day3Hour() throws IOException {
 		setupParams("TC-006");
@@ -34,5 +23,27 @@ public class Forecast5Day3hourTest extends Parameter {
 		Response resp = request.put(getConfiguration("forecast_endpoint"));
 		assertResponse(resp, 405);
 	}
+	
+	@Test(testName = "5Day3Hour Forecast by Zip Code returning 200 OK while sending request with GET method" , groups = {"TC_012"})
+	public  void forecast_5Day3HourByZipCode() {
+		setupParams("TC-012");
+		Response resp = request.get(getConfiguration("forecast_endpoint"));
+		assertResponse(resp, 200);
+	}
 
+	@Test(testName = "5Day3Hour Forecast by city ID returning 200 OK while sending request with GET method" , groups = {"TC_014"})
+	public  void forecast_5Day3HourByCityID(){
+
+		setupParams("TC-014");
+		Response resp = request.get(getConfiguration("forecast_endpoint"));
+		assertResponse(resp, 200);
+			}
+	
+	@Test(testName = "5Day3Hour Forecast by city Name returning 200 OK while sending request with GET method" , groups = {"TC_017"})
+	public  void forecast_5Day3HourByCityName(){
+
+		setupParams("TC-017");
+		Response resp = request.get(getConfiguration("forecast_endpoint"));
+		assertResponse(resp, 200);
+	}
 }
