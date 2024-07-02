@@ -14,7 +14,10 @@ public class AirPollutionAPITest extends Parameter {
 		Response resp = request.get(getConfiguration("airpollution_endpoint"));
 		assertResponse(resp, 200);
 		// json path validations
-		resp.jsonPath().get("");  // actual
+		double latitude,longitude;
+		latitude=resp.jsonPath().get("coord.lon");
+		longitude=resp.jsonPath().get("coord.lat");
+		
 		// 
 	}
 

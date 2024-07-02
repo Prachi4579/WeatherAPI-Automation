@@ -2,7 +2,16 @@ package weather;
 
 import io.restassured.response.Response;
 import report.ListenertestNG;
+
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -15,6 +24,22 @@ public class WeatherAPITest extends Parameter {
 		setupParams("TC-001");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp, 200);
+		
+		
+		
+		String countryName=resp.jsonPath().get("sys.country");
+		assertEquals(countryName, "IN");
+		
+		String cityName=resp.jsonPath().get("name");
+		assertEquals(cityName,"हैदराबाद");
+		
+		long cityID=resp.jsonPath().get("id");
+		assertEquals(cityID,1269843 );
+		
+		double latitude,longitude;
+		latitude=resp.jsonPath().get("coord.lon");
+		longitude=resp.jsonPath().get("coord.lat");
+		
 	}
 
 	@Test(testName = "Verify Current Weather GET-Endpoint returning 401 Unauthorized-Invalid key" , groups = {"TC-002","smoke","sanity"})
@@ -56,6 +81,10 @@ public class WeatherAPITest extends Parameter {
 		setupParams("TC-011");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp, 200);
+		
+		String cityName=resp.jsonPath().get("name");
+		assertEquals(cityName,"New York");
+		
 
 	}
 
@@ -64,6 +93,12 @@ public class WeatherAPITest extends Parameter {
 		setupParams("TC-013");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp,200);
+		
+		String cityName=resp.jsonPath().get("name");
+		assertEquals(cityName,"Pune");
+		String countryName=resp.jsonPath().get("sys.country");
+		assertEquals(countryName, "IN");
+
 	}
 
 	@Test(testName = "Weather request by city name,country code returning 200 OK while sending request with GET method" , groups = {"TC_015"})
@@ -71,6 +106,10 @@ public class WeatherAPITest extends Parameter {
 		setupParams("TC-015");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp, 200);
+		
+
+		long cityID=resp.jsonPath().get("id");
+		assertEquals(cityID,1275971);
 
 	}
 
