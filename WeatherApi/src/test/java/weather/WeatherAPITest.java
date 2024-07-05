@@ -2,22 +2,26 @@ package weather;
 
 import io.restassured.response.Response;
 import report.ListenertestNG;
+import utils.ExcelReaderUtils;
 
 import static org.testng.Assert.assertEquals;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 @Listeners(ListenertestNG.class)
 public class WeatherAPITest extends Parameter {
-
+	ResponseValidation r=new ResponseValidation();
 	@Test(testName = "Verify Current Weather GET-Endpoint returning 200 OK -valid API key" , groups = {"TC_001","smoke","sanity"})
 	public  void currentWeatherValidKey(){
 
@@ -39,6 +43,12 @@ public class WeatherAPITest extends Parameter {
 		double latitude,longitude;
 		latitude=resp.jsonPath().get("coord.lon");
 		longitude=resp.jsonPath().get("coord.lat");
+		assertEquals(latitude, 21.14);
+		assertEquals(longitude, 78.48);
+		
+		
+		
+		
 		
 	}
 
@@ -114,10 +124,22 @@ public class WeatherAPITest extends Parameter {
 	}
 
 	@Test(testName = "Weather request by city name returning 200 OK while sending request with GET method" , groups = {"TC_016"})
-	public  void weatherByCityName(){
+	public  void weatherByCityName() throws IOException{
 		setupParams("TC-016");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp, 200);
+		
+		Map<String, Map<String, String>> expectedValues = ResponseValidation.getWeatherAPIData1("/path/to/excel/file.xlsx", "TC-001");
+
+        Map<String, Object> actualValues = new HashMap<>();
+        actualValues.put("sys.country", resp.jsonPath().get("sys.country"));
+        actualValues.put("name", resp.jsonPath().get("name"));
+        actualValues.put("id", resp.jsonPath().get("id"));
+        actualValues.put("coord.lon", resp.jsonPath().get("coord.lon"));
+        actualValues.put("coord.lat", resp.jsonPath().get("coord.lat"));
+
+        r.assertParameters(actualValues, expectedValues);
+		
 
 	}
 

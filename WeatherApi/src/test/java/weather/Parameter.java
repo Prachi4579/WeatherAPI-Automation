@@ -1,5 +1,7 @@
 package weather;
 
+import static org.testng.Assert.assertEquals;
+
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -34,6 +36,11 @@ public class Parameter extends ExcelReaderUtils  {
 		testData.putAll(wtestData);
 		wtestData = getWeatherAPIData(dataExcelPath, "CityNameCountryParameters");
 		testData.putAll(wtestData);
+		wtestData = getWeatherAPIData(dataExcelPath, "ForecastValidations");
+		testData.putAll(wtestData);
+		wtestData = getWeatherAPIData(dataExcelPath, "CurrentWeatherValidations");
+		testData.putAll(wtestData);
+		
 
 		return testData;
 	}
@@ -83,6 +90,12 @@ public class Parameter extends ExcelReaderUtils  {
 			lg.test1.fail("Response code not match , Actual : " + res.getStatusCode() + " , expected : " + expected);
 		}
 		Assert.assertEquals(res.getStatusCode(), expected);
+		
+	
+		
+		
+		
+		
 	}
 
 	@BeforeSuite
