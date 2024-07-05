@@ -28,26 +28,25 @@ public class WeatherAPITest extends Parameter {
 		setupParams("TC-001");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp, 200);
+		 
 		
 		
+//		String countryName=resp.jsonPath().get("sys.country");
+//		assertEquals(countryName, "IN");
+//		
+//		String cityName=resp.jsonPath().get("name");
+//		assertEquals(cityName,"हैदराबाद");
+//		
+//		long cityID=resp.jsonPath().get("id");
+//		assertEquals(cityID,1269843 );
+//		
+//		double latitude,longitude;
+//		latitude=resp.jsonPath().get("coord.lon");
+//		longitude=resp.jsonPath().get("coord.lat");
+//		assertEquals(latitude, 21.14);
+//		assertEquals(longitude, 78.48);
 		
-		String countryName=resp.jsonPath().get("sys.country");
-		assertEquals(countryName, "IN");
-		
-		String cityName=resp.jsonPath().get("name");
-		assertEquals(cityName,"हैदराबाद");
-		
-		long cityID=resp.jsonPath().get("id");
-		assertEquals(cityID,1269843 );
-		
-		double latitude,longitude;
-		latitude=resp.jsonPath().get("coord.lon");
-		longitude=resp.jsonPath().get("coord.lat");
-		assertEquals(latitude, 21.14);
-		assertEquals(longitude, 78.48);
-		
-		
-		
+		validateResponse(resp, "TC-001");
 		
 		
 	}
@@ -91,10 +90,7 @@ public class WeatherAPITest extends Parameter {
 		setupParams("TC-011");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp, 200);
-		
-		String cityName=resp.jsonPath().get("name");
-		assertEquals(cityName,"New York");
-		
+		validateResponse(resp, "TC-011");
 
 	}
 
@@ -104,11 +100,11 @@ public class WeatherAPITest extends Parameter {
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp,200);
 		
-		String cityName=resp.jsonPath().get("name");
-		assertEquals(cityName,"Pune");
-		String countryName=resp.jsonPath().get("sys.country");
-		assertEquals(countryName, "IN");
-
+//		String cityName=resp.jsonPath().get("name");
+//		assertEquals(cityName,"Pune");
+//		String countryName=resp.jsonPath().get("sys.country");
+//		assertEquals(countryName, "IN");
+		validateResponse(resp, "TC-013");
 	}
 
 	@Test(testName = "Weather request by city name,country code returning 200 OK while sending request with GET method" , groups = {"TC_015"})
@@ -118,9 +114,9 @@ public class WeatherAPITest extends Parameter {
 		assertResponse(resp, 200);
 		
 
-		long cityID=resp.jsonPath().get("id");
-		assertEquals(cityID,1275971);
-
+//		long cityID=resp.jsonPath().get("id");
+//		assertEquals(cityID,1275971);
+		validateResponse(resp, "TC-015");
 	}
 
 	@Test(testName = "Weather request by city name returning 200 OK while sending request with GET method" , groups = {"TC_016"})
@@ -128,17 +124,8 @@ public class WeatherAPITest extends Parameter {
 		setupParams("TC-016");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp, 200);
+		validateResponse(resp, "TC-016");
 		
-		Map<String, Map<String, String>> expectedValues = ResponseValidation.getWeatherAPIData1("/path/to/excel/file.xlsx", "TC-001");
-
-        Map<String, Object> actualValues = new HashMap<>();
-        actualValues.put("sys.country", resp.jsonPath().get("sys.country"));
-        actualValues.put("name", resp.jsonPath().get("name"));
-        actualValues.put("id", resp.jsonPath().get("id"));
-        actualValues.put("coord.lon", resp.jsonPath().get("coord.lon"));
-        actualValues.put("coord.lat", resp.jsonPath().get("coord.lat"));
-
-        r.assertParameters(actualValues, expectedValues);
 		
 
 	}

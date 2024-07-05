@@ -27,24 +27,30 @@ public class Forecast5Day3hourTest extends Parameter {
 		Response resp = request.get(getConfiguration("forecast_endpoint"));
 		assertResponse(resp, 200);
 		
-		ArrayList<String> listOfDates=resp.jsonPath().get("list.dt_txt");
-		int lengthOfList=listOfDates.size();
-		System.out.println(listOfDates);
-		LocalDateTime firstDateInResult = LocalDateTime.parse( listOfDates.get(0),DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-		LocalDateTime LastDateInResult = LocalDateTime.parse( listOfDates.get(lengthOfList-1),DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-		System.out.println(LastDateInResult+"-------"+firstDateInResult);
-		LocalDate firstDate = firstDateInResult.toLocalDate();
-		LocalDate lastDate = LastDateInResult.toLocalDate();
+//		ArrayList<String> listOfDates=resp.jsonPath().get("list.dt_txt");
+//		int lengthOfList=listOfDates.size();
+//		System.out.println(listOfDates);
+//		LocalDateTime firstDateInResult = LocalDateTime.parse( listOfDates.get(0),DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+//		LocalDateTime LastDateInResult = LocalDateTime.parse( listOfDates.get(lengthOfList-1),DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+//		System.out.println(LastDateInResult+"-------"+firstDateInResult);
+//		LocalDate firstDate = firstDateInResult.toLocalDate();
+//		LocalDate lastDate = LastDateInResult.toLocalDate();
+//
+//		long daysBetween = ChronoUnit.DAYS.between(firstDate, lastDate);
+//		assertEquals(daysBetween, 5);
+//		
+//		
+//		String countryName=resp.jsonPath().get("city.country");
+//		assertEquals(countryName, "IN");
+//		
+//		String cityName=resp.jsonPath().get("city.name");
+//		assertEquals(cityName,"हैदराबाद");
+		
+	
+	validateResponse(resp, "TC-006");
 
-		long daysBetween = ChronoUnit.DAYS.between(firstDate, lastDate);
-		assertEquals(daysBetween, 5);
 		
 		
-		String countryName=resp.jsonPath().get("city.country");
-		assertEquals(countryName, "IN");
-		
-		String cityName=resp.jsonPath().get("city.name");
-		assertEquals(cityName,"हैदराबाद");
 	}
 
 
@@ -60,6 +66,7 @@ public class Forecast5Day3hourTest extends Parameter {
 		setupParams("TC-012");
 		Response resp = request.get(getConfiguration("forecast_endpoint"));
 		assertResponse(resp, 200);
+		validateResponse(resp, "TC-012");
 	}
 
 	@Test(testName = "5Day3Hour Forecast by city ID returning 200 OK while sending request with GET method" , groups = {"TC_014"})
@@ -68,6 +75,7 @@ public class Forecast5Day3hourTest extends Parameter {
 		setupParams("TC-014");
 		Response resp = request.get(getConfiguration("forecast_endpoint"));
 		assertResponse(resp, 200);
+		validateResponse(resp, "TC-014");
 	}
 
 	@Test(testName = "5Day3Hour Forecast by city Name returning 200 OK while sending request with GET method" , groups = {"TC_017"})
@@ -76,5 +84,6 @@ public class Forecast5Day3hourTest extends Parameter {
 		setupParams("TC-017");
 		Response resp = request.get(getConfiguration("forecast_endpoint"));
 		assertResponse(resp, 200);
+		validateResponse(resp, "TC-017");
 	}
 }

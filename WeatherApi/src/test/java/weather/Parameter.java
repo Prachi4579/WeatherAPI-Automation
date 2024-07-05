@@ -23,6 +23,8 @@ public class Parameter extends ExcelReaderUtils  {
 	RequestSpecification request;
 	Map<String, Object> headerParam = new HashMap<String, Object>();
 	Map<String, Map<String, String>> testData = null;
+	static Map<String, Map<String, String>> testData1 = null;
+
 
 
 	public Map<String, Map<String, String>> loadTestdata() {
@@ -36,21 +38,17 @@ public class Parameter extends ExcelReaderUtils  {
 		testData.putAll(wtestData);
 		wtestData = getWeatherAPIData(dataExcelPath, "CityNameCountryParameters");
 		testData.putAll(wtestData);
-		wtestData = getWeatherAPIData(dataExcelPath, "ForecastValidations");
-		testData.putAll(wtestData);
-		wtestData = getWeatherAPIData(dataExcelPath, "CurrentWeatherValidations");
-		testData.putAll(wtestData);
-		
+
 
 		return testData;
 	}
 
-	public String getConfiguration(String key) {
+	public  String getConfiguration(String key) {
 		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
 		String sheetName = "Configuration";
 		Map<String, Map<String, String>> testData = getWeatherAPIData(dataExcelPath, sheetName);
 		if(!key.equals("appid")) {
-			lg.test1.info("Target Resource - " + RestAssured.baseURI+testData.get(key).get("paramValue"));
+			//			lg.test1.info("Target Resource - " + RestAssured.baseURI+testData.get(key).get("paramValue"));
 		}
 		return testData.get(key).get("paramValue");
 
@@ -83,31 +81,53 @@ public class Parameter extends ExcelReaderUtils  {
 	}
 
 	public static void assertResponse(Response res, int expected) {
-		
+
 		if (res.getStatusCode() == expected) {
 			lg.test1.pass("Response code match , Actual : " + res.getStatusCode() + " , expected : " + expected);
 		} else {
 			lg.test1.fail("Response code not match , Actual : " + res.getStatusCode() + " , expected : " + expected);
 		}
 		Assert.assertEquals(res.getStatusCode(), expected);
-		
-	
-		
-		
-		
-		
 	}
 
-	@BeforeSuite
-	public static void suiteSetUp() {
-		ExtentReportNG.getReportObject();
-	}
+	public static void validateResponse(Response resp,String testCaseId) {
+		Map<String, Map<String, String>> testData1 = new HashMap<>();
+		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
 
-	@AfterSuite
-	public static void suiteTearDown() {
-		ExtentReportNG ex = new ExtentReportNG();
-		ex.extent.setSystemInfo("Tester", "Prachi Sharma");
-		ex.extent.setSystemInfo("OS", "Windows11");
-		ex.extent.flush();
-	}
-}
+		Map<String, Map<String, String>> qtestData = getWeatherAPIData(dataExcelPath, "ForecastValidations");
+		testData1.putAll(qtestData);
+
+		Map<String, String> expectedValues = testData1.get(testCaseId);
+		 if (expectedValues != null) {
+	            for (Map.Entry<String, String> entry : expectedValues.entrySet()) {
+	                String key = entry.getKey();
+	                String expectedValue = entry.getValue();
+	                
+	                if (!key.equals("Identifier") && expectedValue != null && !expectedValue.isEmpty()) { 
+	                    String actualValue = resp.jsonPath().getString(key);
+	                    assertEquals(actualValue, expectedValue, "Mismatch for key: " + key);
+	                    lg.test1.pass("Match for key: " + key + " - Expected: " + expectedValue + ", Actual: " + actualValue);
+	                }
+            }
+        } else {
+            System.out.println("Test case ID " + testCaseId + " not found in the test data.");
+            lg.test1.fail("Mismatch for key: ");
+        }
+    }
+
+
+
+
+			@BeforeSuite
+			public static void suiteSetUp() {
+				ExtentReportNG.getReportObject();
+			}
+
+			@AfterSuite
+			public static void suiteTearDown() {
+				ExtentReportNG ex = new ExtentReportNG();
+				ex.extent.setSystemInfo("Tester", "Prachi Sharma");
+				ex.extent.setSystemInfo("OS", "Windows11");
+				ex.extent.flush();
+			}
+		}

@@ -20,13 +20,21 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.Assert;
 
+import io.restassured.response.Response;
+
 public class ResponseValidation {
 
-public static void main(String[] args) throws FileNotFoundException, IOException {
-
+public static void main(String[] args)  {
+	
 		Map<String,Map<String,String>> mp  = new HashMap<String,Map<String,String>>();		
 		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
-		Workbook workbook = new XSSFWorkbook(new FileInputStream(new File(dataExcelPath)));
+		Workbook workbook = null;
+		try {
+			workbook = new XSSFWorkbook(new FileInputStream(new File(dataExcelPath)));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Sheet sh = workbook.getSheet("ForecastValidations");
 		String testcaseId = null;
 	
@@ -51,26 +59,14 @@ public static void main(String[] args) throws FileNotFoundException, IOException
 	}
 			mp.put(rowMp.get("Identifier"), rowMp);
 	
-			if(rowMp.get("Identifier")==testcaseId)
-			{}
-			System.out.println(rowMp);
+			System.out.println(rowMp.get("city.name"));
+//			assertEquals((resp.jsonPath().get("id")),(rowMp.get("city.name")) );
+//			
 		}
 	
 		}
 		
-		
 
-	public Map<String, Map<String, String>> responseValidation() throws FileNotFoundException, IOException {
-		Map<String, Map<String, String>> testData = new HashMap<String, Map<String, String>>();
-		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
-		Map<String, Map<String, String>> wtestData;
-		
-		assertEquals(false, false);
-		
-		
-		
-		return testData;
-	}
    
 }
 
