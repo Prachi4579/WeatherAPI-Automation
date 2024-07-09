@@ -15,8 +15,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class ExtentReportNG {
 	
 	public static ExtentReports extent;
-
-
+    
+	public static boolean cicdExecution = true;
     public static ExtentReports getReportObject() {
 		extent = new ExtentReports();
 
@@ -25,10 +25,16 @@ public class ExtentReportNG {
 		LocalDateTime localDateTime = LocalDateTime.now();
 		String formattedDate = date.format(localDateTime);
 		String formattedTime = time.format(localDateTime);
-
-		String dateFolderPath = System.getProperty("user.dir") + "/report/" + formattedDate;
-		String timeFolderPath = dateFolderPath + "/" + formattedTime+"Report";
-		String reportPath = timeFolderPath + "/Report.html";
+		String dateFolderPath = System.getProperty("user.dir") + "/report/";
+		new File(dateFolderPath).mkdirs();
+		String reportPath = "";
+		if(cicdExecution) {
+			reportPath = dateFolderPath  + "Report.html";
+		}else {
+			 dateFolderPath = dateFolderPath  + formattedDate;
+			 String timeFolderPath = dateFolderPath + "/" + formattedTime+"Report";
+			 reportPath = timeFolderPath + "/Report.html";
+		}
 		ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
 
 		spark.config().setTheme(Theme.STANDARD);

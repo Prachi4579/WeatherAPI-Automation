@@ -21,34 +21,16 @@ import org.testng.annotations.Test;
 
 @Listeners(ListenertestNG.class)
 public class WeatherAPITest extends Parameter {
-	ResponseValidation r=new ResponseValidation();
+
 	@Test(testName = "Verify Current Weather GET-Endpoint returning 200 OK -valid API key" , groups = {"TC_001","smoke","sanity"})
 	public  void currentWeatherValidKey(){
 
 		setupParams("TC-001");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp, 200);
-		 
-		
-		
-//		String countryName=resp.jsonPath().get("sys.country");
-//		assertEquals(countryName, "IN");
-//		
-//		String cityName=resp.jsonPath().get("name");
-//		assertEquals(cityName,"हैदराबाद");
-//		
-//		long cityID=resp.jsonPath().get("id");
-//		assertEquals(cityID,1269843 );
-//		
-//		double latitude,longitude;
-//		latitude=resp.jsonPath().get("coord.lon");
-//		longitude=resp.jsonPath().get("coord.lat");
-//		assertEquals(latitude, 21.14);
-//		assertEquals(longitude, 78.48);
-		
 		validateResponse(resp, "TC-001");
-		
-		
+
+
 	}
 
 	@Test(testName = "Verify Current Weather GET-Endpoint returning 401 Unauthorized-Invalid key" , groups = {"TC-002","smoke","sanity"})
@@ -99,11 +81,6 @@ public class WeatherAPITest extends Parameter {
 		setupParams("TC-013");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp,200);
-		
-//		String cityName=resp.jsonPath().get("name");
-//		assertEquals(cityName,"Pune");
-//		String countryName=resp.jsonPath().get("sys.country");
-//		assertEquals(countryName, "IN");
 		validateResponse(resp, "TC-013");
 	}
 
@@ -112,10 +89,6 @@ public class WeatherAPITest extends Parameter {
 		setupParams("TC-015");
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp, 200);
-		
-
-//		long cityID=resp.jsonPath().get("id");
-//		assertEquals(cityID,1275971);
 		validateResponse(resp, "TC-015");
 	}
 
@@ -125,8 +98,8 @@ public class WeatherAPITest extends Parameter {
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp, 200);
 		validateResponse(resp, "TC-016");
-		
-		
+
+
 
 	}
 

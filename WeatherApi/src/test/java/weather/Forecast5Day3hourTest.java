@@ -26,31 +26,22 @@ public class Forecast5Day3hourTest extends Parameter {
 		setupParams("TC-006");
 		Response resp = request.get(getConfiguration("forecast_endpoint"));
 		assertResponse(resp, 200);
-		
-//		ArrayList<String> listOfDates=resp.jsonPath().get("list.dt_txt");
-//		int lengthOfList=listOfDates.size();
-//		System.out.println(listOfDates);
-//		LocalDateTime firstDateInResult = LocalDateTime.parse( listOfDates.get(0),DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-//		LocalDateTime LastDateInResult = LocalDateTime.parse( listOfDates.get(lengthOfList-1),DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-//		System.out.println(LastDateInResult+"-------"+firstDateInResult);
-//		LocalDate firstDate = firstDateInResult.toLocalDate();
-//		LocalDate lastDate = LastDateInResult.toLocalDate();
-//
-//		long daysBetween = ChronoUnit.DAYS.between(firstDate, lastDate);
-//		assertEquals(daysBetween, 5);
-//		
-//		
-//		String countryName=resp.jsonPath().get("city.country");
-//		assertEquals(countryName, "IN");
-//		
-//		String cityName=resp.jsonPath().get("city.name");
-//		assertEquals(cityName,"हैदराबाद");
-		
-	
-	validateResponse(resp, "TC-006");
 
-		
-		
+		ArrayList<String> listOfDates=resp.jsonPath().get("list.dt_txt");
+		int lengthOfList=listOfDates.size();
+		System.out.println(listOfDates);
+		LocalDateTime firstDateInResult = LocalDateTime.parse( listOfDates.get(0),DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+		LocalDateTime LastDateInResult = LocalDateTime.parse( listOfDates.get(lengthOfList-1),DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+		System.out.println(LastDateInResult+"-------"+firstDateInResult);
+		LocalDate firstDate = firstDateInResult.toLocalDate();
+		LocalDate lastDate = LastDateInResult.toLocalDate();
+
+		long daysBetween = ChronoUnit.DAYS.between(firstDate, lastDate);
+		assertEquals(daysBetween, 5);
+		validateResponse(resp, "TC-006");
+
+
+
 	}
 
 

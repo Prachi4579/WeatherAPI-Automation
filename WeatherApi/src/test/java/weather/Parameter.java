@@ -96,38 +96,40 @@ public class Parameter extends ExcelReaderUtils  {
 
 		Map<String, Map<String, String>> qtestData = getWeatherAPIData(dataExcelPath, "ForecastValidations");
 		testData1.putAll(qtestData);
+		Map<String, Map<String, String>> qtestData2 = getWeatherAPIData(dataExcelPath, "CurrentWeatherValidations");
+		testData1.putAll(qtestData2);
 
 		Map<String, String> expectedValues = testData1.get(testCaseId);
-		 if (expectedValues != null) {
-	            for (Map.Entry<String, String> entry : expectedValues.entrySet()) {
-	                String key = entry.getKey();
-	                String expectedValue = entry.getValue();
-	                
-	                if (!key.equals("Identifier") && expectedValue != null && !expectedValue.isEmpty()) { 
-	                    String actualValue = resp.jsonPath().getString(key);
-	                    assertEquals(actualValue, expectedValue, "Mismatch for key: " + key);
-	                    lg.test1.pass("Match for key: " + key + " - Expected: " + expectedValue + ", Actual: " + actualValue);
-	                }
-            }
-        } else {
-            System.out.println("Test case ID " + testCaseId + " not found in the test data.");
-            lg.test1.fail("Mismatch for key: ");
-        }
-    }
+		if (expectedValues != null) {
+			for (Map.Entry<String, String> entry : expectedValues.entrySet()) {
+				String key = entry.getKey();
+				String expectedValue = entry.getValue();
 
-
-
-
-			@BeforeSuite
-			public static void suiteSetUp() {
-				ExtentReportNG.getReportObject();
+				if (!key.equals("Identifier") && expectedValue != null && !expectedValue.isEmpty()) { 
+					String actualValue = resp.jsonPath().getString(key);
+					assertEquals(actualValue, expectedValue, "Mismatch for key: " + key);
+					lg.test1.pass("Match for key: " + key + " - Expected: " + expectedValue + ", Actual: " + actualValue);
+				}
 			}
-
-			@AfterSuite
-			public static void suiteTearDown() {
-				ExtentReportNG ex = new ExtentReportNG();
-				ex.extent.setSystemInfo("Tester", "Prachi Sharma");
-				ex.extent.setSystemInfo("OS", "Windows11");
-				ex.extent.flush();
-			}
+		} else {
+			System.out.println("Test case ID " + testCaseId + " not found in the test data.");
+			lg.test1.fail("Mismatch for key: ");
 		}
+	}
+
+
+
+
+	@BeforeSuite
+	public static void suiteSetUp() {
+		ExtentReportNG.getReportObject();
+	}
+
+	@AfterSuite
+	public static void suiteTearDown() {
+		ExtentReportNG ex = new ExtentReportNG();
+		ex.extent.setSystemInfo("Tester", "Prachi Sharma");
+		ex.extent.setSystemInfo("OS", "Windows11");
+		ex.extent.flush();
+	}
+}
