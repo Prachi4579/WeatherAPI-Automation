@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 
@@ -17,8 +18,17 @@ import utils.PropertiesReader;
 public class ExtentReportNG {
 	
 	public static ExtentReports extent;
-	static Boolean cicdExecution = Boolean.parseBoolean(PropertiesReader.getEndPoint().getProperty("cicdExecutionFlag"));
-//	public static boolean cicdExecution = true;
+	public static boolean cicdExecution;
+	static {
+        Properties properties = PropertiesReader.getEndPoint();
+		if (properties != null) {
+		    cicdExecution = Boolean.parseBoolean(properties.getProperty("cicdExecutionFlag"));
+		} else {
+		    cicdExecution = true; // Default value if properties are not available
+		}
+    }
+
+	
     public static ExtentReports getReportObject() {
 		extent = new ExtentReports();
 
