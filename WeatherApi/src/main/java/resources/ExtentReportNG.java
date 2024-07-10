@@ -12,11 +12,13 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import utils.PropertiesReader;
+
 public class ExtentReportNG {
 	
 	public static ExtentReports extent;
-    
-	public static boolean cicdExecution = true;
+	static Boolean cicdExecution = Boolean.parseBoolean(PropertiesReader.getEndPoint().getProperty("cicdExecutionFlag"));
+//	public static boolean cicdExecution = true;
     public static ExtentReports getReportObject() {
 		extent = new ExtentReports();
 

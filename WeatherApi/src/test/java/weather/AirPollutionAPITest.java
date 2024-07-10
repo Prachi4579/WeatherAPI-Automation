@@ -13,12 +13,7 @@ public class AirPollutionAPITest extends Parameter {
 		setupParams("TC-008"); 
 		Response resp = request.get(getConfiguration("airpollution_endpoint"));
 		assertResponse(resp, 200);
-		// json path validations
-		double latitude,longitude;
-		latitude=resp.jsonPath().get("coord.lon");
-		longitude=resp.jsonPath().get("coord.lat");
 		
-		// 
 	}
 
 	@Test(testName = "Verify AirPollution Endpoint returning Method not allowed 405 while sending request with PUT method", groups = {
