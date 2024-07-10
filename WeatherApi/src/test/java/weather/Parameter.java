@@ -91,15 +91,15 @@ public class Parameter extends ExcelReaderUtils  {
 	}
 
 	public static void validateResponse(Response resp,String testCaseId) {
-		Map<String, Map<String, String>> testData1 = new HashMap<>();
+		Map<String, Map<String, String>> responseParametersWithData = new HashMap<>();
 		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
 
-		Map<String, Map<String, String>> qtestData = getWeatherAPIData(dataExcelPath, "ForecastValidations");
-		testData1.putAll(qtestData);
-		Map<String, Map<String, String>> qtestData2 = getWeatherAPIData(dataExcelPath, "CurrentWeatherValidations");
-		testData1.putAll(qtestData2);
+		Map<String, Map<String, String>> forecastData = getWeatherAPIData(dataExcelPath, "ForecastValidations");
+		responseParametersWithData.putAll(forecastData);
+		Map<String, Map<String, String>> currentWeatherData = getWeatherAPIData(dataExcelPath, "CurrentWeatherValidations");
+		responseParametersWithData.putAll(currentWeatherData);
 
-		Map<String, String> expectedValues = testData1.get(testCaseId);
+		Map<String, String> expectedValues = responseParametersWithData.get(testCaseId);
 		if (expectedValues != null) {
 			for (Map.Entry<String, String> entry : expectedValues.entrySet()) {
 				String key = entry.getKey();
@@ -116,9 +116,6 @@ public class Parameter extends ExcelReaderUtils  {
 			lg.test1.fail("Mismatch for key: ");
 		}
 	}
-
-
-
 
 	@BeforeSuite
 	public static void suiteSetUp() {
