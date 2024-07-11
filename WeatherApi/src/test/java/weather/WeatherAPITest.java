@@ -34,7 +34,7 @@ public class WeatherAPITest extends Parameter {
 		Response resp = request.get(getConfiguration("weather_endpoint"));
 		assertResponse(resp, 200);
 		validateResponse(resp, "TC-001");
-
+	
 
 	}
 

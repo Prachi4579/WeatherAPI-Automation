@@ -34,6 +34,7 @@ public class Parameter extends ExcelReaderUtils  {
 		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
 		Map<String, Map<String, String>> wtestData = getWeatherAPIData(dataExcelPath, "WeatherAPITestParameters");
 		testData.putAll(wtestData);
+		logger.debug("API Weather Test Data: {}", testData);
 		wtestData = getWeatherAPIData(dataExcelPath, "ZipParameters");
 		testData.putAll(wtestData);
 		wtestData = getWeatherAPIData(dataExcelPath, "CityIDParameters");
