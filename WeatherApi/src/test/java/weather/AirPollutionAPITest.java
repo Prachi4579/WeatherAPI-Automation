@@ -25,12 +25,12 @@ public class AirPollutionAPITest extends Parameter {
 		
 	}
 
-//	@Test(testName = "Verify AirPollution Post method Data", groups = { "TC-01", "smoke", "sanity" })
-//	public void verifyPostCallAirPollutionEndpoint() {
-//		setupParams("TC-001");
-//		Response resp = request.post(getConfiguration("airpollution_endpoint"));
-//		assertResponse(resp, 405);
-//	}
+	@Test(testName = "Verify AirPollution Post method Data", groups = { "TC-01", "smoke", "sanity" })
+	public void verifyPostCallAirPollutionEndpoint() {
+		setupParams("TC-001");
+		Response resp = request.post(getConfiguration("airpollution_endpoint"));
+		assertResponse(resp, 405);
+	}
 
 }
 	

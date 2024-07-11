@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import org.apache.poi.ss.formula.functions.Days;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import io.restassured.response.Response;
@@ -20,6 +22,7 @@ import report.ListenertestNG;
 
 @Listeners(ListenertestNG.class)
 public class Forecast5Day3hourTest extends Parameter {
+	private static final Logger logger = LoggerFactory.getLogger(Forecast5Day3hourTest.class);
 
 	@Test(testName = "Verify 5Days3hourForecast Endpoint returning 200 OK while sending request with GET method" , groups = {"TC-006","smoke","sanity"})
 	public  void forecast_5Day3Hour() throws IOException {

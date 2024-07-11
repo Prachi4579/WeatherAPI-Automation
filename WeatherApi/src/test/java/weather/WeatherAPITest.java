@@ -16,11 +16,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 @Listeners(ListenertestNG.class)
 public class WeatherAPITest extends Parameter {
+
+	private static final Logger logger = LoggerFactory.getLogger(WeatherAPITest.class);
+	
 
 	@Test(testName = "Verify Current Weather GET-Endpoint returning 200 OK -valid API key" , groups = {"TC_001","smoke","sanity"})
 	public  void currentWeatherValidKey(){

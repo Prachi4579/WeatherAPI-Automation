@@ -7,7 +7,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -17,15 +18,15 @@ import utils.PropertiesReader;
 
 public class ExtentReportNG {
 	
+	private static final Logger logger = LoggerFactory.getLogger(ExtentReportNG.class);
 	public static ExtentReports extent;
 	public static boolean cicdExecution;
 	static {
         Properties properties = PropertiesReader.getEndPoint();
+        cicdExecution = false;
 		if (properties != null) {
 		    cicdExecution = Boolean.parseBoolean(properties.getProperty("cicdExecutionFlag"));
-		} else {
-		    cicdExecution = true; // Default value if properties are not available
-		}
+		} 
     }
 
 	
