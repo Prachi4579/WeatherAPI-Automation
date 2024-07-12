@@ -34,7 +34,7 @@ public class Parameter extends ExcelReaderUtils  {
 		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
 		Map<String, Map<String, String>> wtestData = getWeatherAPIData(dataExcelPath, "WeatherAPITestParameters");
 		testData.putAll(wtestData);
-		logger.debug("API Weather Test Data: {}", testData);
+		
 		wtestData = getWeatherAPIData(dataExcelPath, "ZipParameters");
 		testData.putAll(wtestData);
 		wtestData = getWeatherAPIData(dataExcelPath, "CityIDParameters");
@@ -53,10 +53,8 @@ public class Parameter extends ExcelReaderUtils  {
 
 		Map<String, Map<String, String>> testData = getWeatherAPIData(dataExcelPath, sheetName);
 		if(!key.equals("appid")) {
-			//			lg.test1.info("Target Resource - " + RestAssured.baseURI+testData.get(key).get("paramValue"));
 		}
 		return testData.get(key).get("paramValue");
-
 	}
 
 	@BeforeClass
@@ -76,7 +74,6 @@ public class Parameter extends ExcelReaderUtils  {
 		lg.onTestStart(method.getName());
 		lg.test1.getStatus();
 		lg.test1.info("base URI " + RestAssured.baseURI);
-
 	}
 
 	public void setupParams(String testcaseId) {

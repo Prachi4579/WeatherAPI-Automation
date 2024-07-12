@@ -1,38 +1,32 @@
 package resources;
 
 import java.io.File;
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Properties;
-
-import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-
 import utils.PropertiesReader;
 
 public class ExtentReportNG {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(ExtentReportNG.class);
 	public static ExtentReports extent;
 	public static boolean cicdExecution;
+	static Properties properties ;
 	static {
-        Properties properties = PropertiesReader.getEndPoint();
-        cicdExecution = false;
+		properties = PropertiesReader.getEndPoint();
+		cicdExecution = false;
 		if (properties != null) {
-		    cicdExecution = Boolean.parseBoolean(properties.getProperty("cicdExecutionFlag"));
+			cicdExecution = Boolean.parseBoolean(properties.getProperty("cicdExecutionFlag"));
 		} 
-    }
-
-	
-    public static ExtentReports getReportObject() {
+		logger.info("cicdExecution : " + cicdExecution);
+	}
+	public static ExtentReports getReportObject() {
 		extent = new ExtentReports();
-
 		DateTimeFormatter date = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 		DateTimeFormatter time = DateTimeFormatter.ofPattern("hh_mm_a");
 		LocalDateTime localDateTime = LocalDateTime.now();
@@ -40,33 +34,26 @@ public class ExtentReportNG {
 		String formattedTime = time.format(localDateTime);
 		String dateFolderPath = System.getProperty("user.dir") + "/report/";
 		new File(dateFolderPath).mkdirs();
-		String reportPath = "";
+		String reportPath ="";
 		if(cicdExecution) {
-			reportPath = dateFolderPath  + "Report.html";
+			reportPath = dateFolderPath  +  PropertiesReader.reportMetaData().getProperty("reportname");
 		}else {
-			 dateFolderPath = dateFolderPath  + formattedDate;
-			 String timeFolderPath = dateFolderPath + "/" + formattedTime+"Report";
-			 reportPath = timeFolderPath + "/Report.html";
+			dateFolderPath = dateFolderPath  + formattedDate;
+			String timeFolderPath = dateFolderPath + "/" + formattedTime+"Report";
+			reportPath = timeFolderPath + "/" + PropertiesReader.reportMetaData().getProperty("reportname");
 		}
 		ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
-
 		spark.config().setTheme(Theme.STANDARD);
-		spark.config().setDocumentTitle("Weather Automation Report");
-		spark.config().setReportName("Weather API Test Report");
-
+		spark.config().setDocumentTitle("");
+		spark.config().setReportName("");
 		extent.attachReporter(spark);
 		ExtentReports extent = new ExtentReports();
 		extent.attachReporter(spark);
-		
 		return extent;
-		}
-    
-    public void onFinish() {
-		// TODO Auto-generated method stub
+	}
+	public void onFinish() {
+
 		extent.setSystemInfo("Tester", "Prachi Sharma");
 		extent.setSystemInfo("OS", "Windows11");
-		
 	}
-
-
 }

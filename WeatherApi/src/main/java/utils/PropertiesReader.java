@@ -15,4 +15,15 @@ public class PropertiesReader {
 			return null;
 		}
 	}
+	
+		public static Properties reportMetaData() {
+		try {
+			Properties prop=new Properties();
+			prop.load(new FileInputStream(new File(System.getProperty("user.dir")+"/src/main/resources/reportmetadata.properties")));
+			return prop;		
+		} catch (Exception e) {
+			return null;
+		}
+	}
+	
 }
