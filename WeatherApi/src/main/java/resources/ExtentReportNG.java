@@ -37,23 +37,24 @@ public class ExtentReportNG {
 		String reportPath ="";
 		if(cicdExecution) {
 			reportPath = dateFolderPath  +  PropertiesReader.reportMetaData().getProperty("reportname");
+			logger.info(reportPath);
 		}else {
 			dateFolderPath = dateFolderPath  + formattedDate;
 			String timeFolderPath = dateFolderPath + "/" + formattedTime+"Report";
 			reportPath = timeFolderPath + "/" + PropertiesReader.reportMetaData().getProperty("reportname");
+			logger.info(timeFolderPath);
 		}
 		ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
 		spark.config().setTheme(Theme.STANDARD);
-		spark.config().setDocumentTitle("");
-		spark.config().setReportName("");
+		spark.config().setDocumentTitle(PropertiesReader.reportMetaData().getProperty("documenttitle"));
+		spark.config().setReportName(PropertiesReader.reportMetaData().getProperty("setreportname"));
 		extent.attachReporter(spark);
 		ExtentReports extent = new ExtentReports();
 		extent.attachReporter(spark);
+		logger.info(extent.toString());
 		return extent;
 	}
 	public void onFinish() {
-
-		extent.setSystemInfo("Tester", "Prachi Sharma");
-		extent.setSystemInfo("OS", "Windows11");
+		
 	}
-}
+	}

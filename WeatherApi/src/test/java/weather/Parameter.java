@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,10 +21,11 @@ import io.restassured.specification.RequestSpecification;
 import report.ListenertestNG;
 import resources.ExtentReportNG;
 import utils.ExcelReaderUtils;
+import utils.PropertiesReader;
 
 public class Parameter extends ExcelReaderUtils  {
 	private static final Logger logger = LoggerFactory.getLogger(Parameter.class);
-
+	static Properties properties= PropertiesReader.getEndPoint();
 	RequestSpecification request;
 	Map<String, Object> headerParam = new HashMap<String, Object>();
 	Map<String, Map<String, String>> testData = null;
@@ -130,8 +132,8 @@ public class Parameter extends ExcelReaderUtils  {
 	@AfterSuite
 	public static void suiteTearDown() {
 		ExtentReportNG ex = new ExtentReportNG();
-		ex.extent.setSystemInfo("Tester", "Prachi Sharma");
-		ex.extent.setSystemInfo("OS", "Windows11");
+		ex.extent.setSystemInfo(properties.getProperty("systeminfokey_1"),properties.getProperty( "systeminfovalue_1"));
+		ex.extent.setSystemInfo(properties.getProperty("systeminfokey_2"),properties.getProperty( "systeminfovalue_2"));
 		ex.extent.flush();
 	}
 }

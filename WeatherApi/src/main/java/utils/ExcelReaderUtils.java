@@ -14,12 +14,16 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.apache.poi.ss.usermodel.Workbook; 
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelReaderUtils{
-	public static Map<String,Map<String,String>> getWeatherAPIData(String excelSheetPath, String sheetName)  {
+	private static final Logger logger = LoggerFactory.getLogger(ExcelReaderUtils.class);
 
+	public static Map<String,Map<String,String>> getWeatherAPIData(String excelSheetPath, String sheetName)  {
+		
 		try {
 			Map<String,Map<String,String>> mp  = new HashMap<String,Map<String,String>>();		
 			Workbook workbook = new XSSFWorkbook(new FileInputStream(new File(excelSheetPath)));
@@ -30,7 +34,9 @@ public class ExcelReaderUtils{
 			List<String> headerValues = new ArrayList<String>();
 			for(int i = 0; i < columns ; i++) {
 				headerValues.add(headerRow.getCell(i).getStringCellValue());
+				
 			}
+			logger.info(headerValues.toString());
 			int totalRows = sh.getLastRowNum();
 
 			for(int i = 1; i <= totalRows; i++) {
@@ -44,6 +50,7 @@ public class ExcelReaderUtils{
 					rowMp.put(headerValues.get(j), cellData);
 				}
 				mp.put(rowMp.get("Identifier"), rowMp);
+				logger.info(mp.toString());
 			}
 			return mp;
 		}catch(Exception e) {

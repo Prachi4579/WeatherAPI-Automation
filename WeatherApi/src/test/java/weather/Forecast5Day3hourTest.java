@@ -42,9 +42,6 @@ public class Forecast5Day3hourTest extends Parameter {
 		long daysBetween = ChronoUnit.DAYS.between(firstDate, lastDate);
 		assertEquals(daysBetween, 5);
 		validateResponse(resp, "TC-006");
-
-
-
 	}
 
 
