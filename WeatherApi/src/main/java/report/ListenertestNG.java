@@ -15,16 +15,17 @@ public class ListenertestNG extends ExtentReportNG implements ITestListener
 	public void onTestStart(String string) {
 		System.out.println("\n*** Test Suite " + string + " started ***");
 		test1 = extent.createTest(string);
+		logger.info("test1 is",test1);
 	}
 	public void onTestSuccess(ITestResult result) {
 		test1.log(Status.PASS,"*** Test Suite " + result.getMethod().getMethodName() + " successful ***");
-		logger.info(result.getMethod().getMethodName());
+		logger.info("onTestSuccess",result.getMethod().getMethodName());
 	}
 	@Override
 	public void onTestFailure(ITestResult result) {
 		test1.log(Status.FAIL,"*** Test Suite " + result.getMethod().getMethodName() + " failure ***");
 		test1.fail(result.getThrowable());
-		logger.debug( result.getMethod().getMethodName());
+		logger.debug( "onTestFailure",result.getMethod().getMethodName());
 	}
 	@Override
 	public void onFinish() {

@@ -51,7 +51,7 @@ public class ExtentReportNG {
 		extent.attachReporter(spark);
 		ExtentReports extent = new ExtentReports();
 		extent.attachReporter(spark);
-		logger.info(extent.toString());
+		logger.info("extent.. ",extent);
 		return extent;
 	}
 	public void onFinish() {
