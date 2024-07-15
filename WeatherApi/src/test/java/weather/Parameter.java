@@ -33,30 +33,31 @@ public class Parameter extends ExcelReaderUtils  {
 	public Map<String, Map<String, String>> loadTestdata() {
 		testData = new HashMap<String, Map<String, String>>();
 		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
-		logger.trace("Data Excel path: {}", dataExcelPath);
+		logger.info("Data Excel path: {}", dataExcelPath);
 
 		Map<String, Map<String, String>> sheetTestData = getWeatherAPIData(dataExcelPath, "WeatherAPITestParameters");
 		testData.putAll(sheetTestData);
-		logger.trace("Loaded WeatherAPITestParameters data: {}", sheetTestData);
-		
+		logger.info("Loaded WeatherAPITestParameters data: {}", sheetTestData);
+
 		sheetTestData = getWeatherAPIData(dataExcelPath, "ZipParameters");
 		testData.putAll(sheetTestData);
-		logger.trace("Loaded ZipParameters data: {}", sheetTestData);
+		logger.info("Loaded ZipParameters data: {}", sheetTestData);
 
 		sheetTestData = getWeatherAPIData(dataExcelPath, "CityIDParameters");
 		testData.putAll(sheetTestData);
-		logger.trace("Loaded CityIDParameters data: {}", sheetTestData);
+		logger.info("Loaded CityIDParameters data: {}", sheetTestData);
 
 		sheetTestData = getWeatherAPIData(dataExcelPath, "CityNameCountryParameters");
 		testData.putAll(sheetTestData);
 		logger.trace("Loaded CityNameCountryParameters data: {}", sheetTestData);
+
 
 		logger.debug("API Weather Test Data: {}", testData);
 		return testData;
 	}
 
 	public  String getConfiguration(String key) {
-		logger.trace("Getting configuration for key: {}", key);
+		logger.trace("Getting key: {}", key);
 		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
 		String sheetName = "Configuration";
 		logger.trace("Configuration sheet name: {}", sheetName);
@@ -70,7 +71,7 @@ public class Parameter extends ExcelReaderUtils  {
 
 	@BeforeClass
 	public void goToURL() throws IOException {
-        logger.trace("Setting up base URI and headers.");
+		logger.trace("Setting up base URI and headers.");
 		RestAssured.baseURI = "https://api.openweathermap.org";
 		headerParam.put("Content-Type", "application/json; charset=utf-8");
 		headerParam.put("Server", "openresty");
@@ -110,7 +111,8 @@ public class Parameter extends ExcelReaderUtils  {
 		logger.trace("Validating response for test case ID: {}", testCaseId);
 		Map<String, Map<String, String>> responseParametersWithData = new HashMap<>();
 		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
-		logger.trace("Loading weather API data from Excel: {}", dataExcelPath);
+		logger.trace("Loading data from Excel: {}", dataExcelPath);
+		logger.trace("this is a TRACE msg");
 
 		Map<String, Map<String, String>> forecastData = getWeatherAPIData(dataExcelPath, "ForecastValidations");
 		responseParametersWithData.putAll(forecastData);
@@ -146,7 +148,6 @@ public class Parameter extends ExcelReaderUtils  {
 
 	@AfterSuite
 	public static void suiteTearDown() {
-		logger.trace("Tearing down test suite.");
 		ExtentReportNG ex = new ExtentReportNG();
 		ex.extent.setSystemInfo(properties.getProperty("systeminfokey_1"),properties.getProperty( "systeminfovalue_1"));
 		ex.extent.setSystemInfo(properties.getProperty("systeminfokey_2"),properties.getProperty( "systeminfovalue_2"));

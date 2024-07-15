@@ -24,6 +24,7 @@ public class ExtentReportNG {
 			cicdExecution = Boolean.parseBoolean(properties.getProperty("cicdExecutionFlag"));
 		} 
 		logger.info("cicdExecution : " + cicdExecution);
+		logger.trace("trace msg");
 	}
 	public static ExtentReports getReportObject() {
 		extent = new ExtentReports();

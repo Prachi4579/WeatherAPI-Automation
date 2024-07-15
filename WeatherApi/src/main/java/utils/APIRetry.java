@@ -11,15 +11,12 @@ public class APIRetry implements IRetryAnalyzer {
     int retryFrequency = 5;
     @Override
     public boolean retry(ITestResult result) {
-        logger.trace("Retrying test {} with status {} for the {} time(s).",
-                     result.getName(), result.getStatus(), count + 1);
-
-        if (count < retryFrequency) {
+         if (count < retryFrequency) {
             count++;
-            logger.trace("Retry count increased to {}", count);
+            logger.trace("Retry count {}", count);
             return true;
         }
-        logger.trace("Maximum retry limit for test {}", result.getName());
+        logger.trace("Maximum retry limit {}", result.getName());
         return false;
     }
 }
