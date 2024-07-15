@@ -1,5 +1,4 @@
 package weather;
-
 import io.restassured.response.Response;
 import report.ListenertestNG;
 import utils.ExcelReaderUtils;

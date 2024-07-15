@@ -7,7 +7,6 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -34,33 +33,44 @@ public class Parameter extends ExcelReaderUtils  {
 	public Map<String, Map<String, String>> loadTestdata() {
 		testData = new HashMap<String, Map<String, String>>();
 		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
-		Map<String, Map<String, String>> wtestData = getWeatherAPIData(dataExcelPath, "WeatherAPITestParameters");
-		testData.putAll(wtestData);
-		
-		wtestData = getWeatherAPIData(dataExcelPath, "ZipParameters");
-		testData.putAll(wtestData);
-		wtestData = getWeatherAPIData(dataExcelPath, "CityIDParameters");
-		testData.putAll(wtestData);
-		wtestData = getWeatherAPIData(dataExcelPath, "CityNameCountryParameters");
-		testData.putAll(wtestData);
-		logger.debug("API Weather Test Data: {}", testData);
+		logger.trace("Data Excel path: {}", dataExcelPath);
 
+		Map<String, Map<String, String>> sheetTestData = getWeatherAPIData(dataExcelPath, "WeatherAPITestParameters");
+		testData.putAll(sheetTestData);
+		logger.trace("Loaded WeatherAPITestParameters data: {}", sheetTestData);
+		
+		sheetTestData = getWeatherAPIData(dataExcelPath, "ZipParameters");
+		testData.putAll(sheetTestData);
+		logger.trace("Loaded ZipParameters data: {}", sheetTestData);
+
+		sheetTestData = getWeatherAPIData(dataExcelPath, "CityIDParameters");
+		testData.putAll(sheetTestData);
+		logger.trace("Loaded CityIDParameters data: {}", sheetTestData);
+
+		sheetTestData = getWeatherAPIData(dataExcelPath, "CityNameCountryParameters");
+		testData.putAll(sheetTestData);
+		logger.trace("Loaded CityNameCountryParameters data: {}", sheetTestData);
+
+		logger.debug("API Weather Test Data: {}", testData);
 		return testData;
 	}
 
 	public  String getConfiguration(String key) {
+		logger.trace("Getting configuration for key: {}", key);
 		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
 		String sheetName = "Configuration";
-		logger.debug(sheetName);
+		logger.trace("Configuration sheet name: {}", sheetName);
 
 		Map<String, Map<String, String>> testData = getWeatherAPIData(dataExcelPath, sheetName);
 		if(!key.equals("appid")) {
+			logger.trace("Key is not appid: {}", key);
 		}
 		return testData.get(key).get("paramValue");
 	}
 
 	@BeforeClass
 	public void goToURL() throws IOException {
+        logger.trace("Setting up base URI and headers.");
 		RestAssured.baseURI = "https://api.openweathermap.org";
 		headerParam.put("Content-Type", "application/json; charset=utf-8");
 		headerParam.put("Server", "openresty");
@@ -71,6 +81,7 @@ public class Parameter extends ExcelReaderUtils  {
 
 	@BeforeMethod
 	public void setup(Method method) {
+		logger.trace("Setting up request for method: {}", method.getName());
 		request = RestAssured.given();
 		request.headers(headerParam);
 		lg.onTestStart(method.getName());
@@ -79,14 +90,14 @@ public class Parameter extends ExcelReaderUtils  {
 	}
 
 	public void setupParams(String testcaseId) {
+		logger.trace("Setting up parameters for test case ID: {}", testcaseId);
 		request.param("appid", getConfiguration("appid"));
 		request.params(testData.get(testcaseId));
 		lg.test1.info("Param added " +testData.get(testcaseId));
 	}
 
 	public static void assertResponse(Response res, int expected) {
-//		logger.info("Response code : " +res.getStatusCode());
-
+		logger.trace("Asserting response. Expected: {}, Actual: {}", expected, res.getStatusCode());
 		if (res.getStatusCode() == expected) {
 			lg.test1.pass("Response code match , Actual : " + res.getStatusCode() + " , expected : " + expected);
 		} else {
@@ -96,16 +107,20 @@ public class Parameter extends ExcelReaderUtils  {
 	}
 
 	public static void validateResponse(Response resp,String testCaseId) {
+		logger.trace("Validating response for test case ID: {}", testCaseId);
 		Map<String, Map<String, String>> responseParametersWithData = new HashMap<>();
 		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
-        logger.info("Loading weather API data from Excel: {}", dataExcelPath);
+		logger.trace("Loading weather API data from Excel: {}", dataExcelPath);
 
 		Map<String, Map<String, String>> forecastData = getWeatherAPIData(dataExcelPath, "ForecastValidations");
 		responseParametersWithData.putAll(forecastData);
+		logger.trace("Loaded ForecastValidations data: {}", forecastData);
+
 		Map<String, Map<String, String>> currentWeatherData = getWeatherAPIData(dataExcelPath, "CurrentWeatherValidations");
 		responseParametersWithData.putAll(currentWeatherData);
-
+		logger.trace("Loaded CurrentWeatherValidations data: {}", currentWeatherData);
 		Map<String, String> expectedValues = responseParametersWithData.get(testCaseId);
+
 		if (expectedValues != null) {
 			for (Map.Entry<String, String> entry : expectedValues.entrySet()) {
 				String key = entry.getKey();
@@ -115,7 +130,7 @@ public class Parameter extends ExcelReaderUtils  {
 					String actualValue = resp.jsonPath().getString(key);
 					assertEquals(actualValue, expectedValue, "Mismatch for key: " + key);
 					lg.test1.pass("Match for key: " + key + " - Expected: " + expectedValue + ", Actual: " + actualValue);
-                    logger.info("Match for key: {} - Expected: {}, Actual: {}", key, expectedValue, actualValue);
+					logger.info("Match for key: {} - Expected: {}, Actual: {}", key, expectedValue, actualValue);
 				}
 			}
 		} else {
@@ -131,6 +146,7 @@ public class Parameter extends ExcelReaderUtils  {
 
 	@AfterSuite
 	public static void suiteTearDown() {
+		logger.trace("Tearing down test suite.");
 		ExtentReportNG ex = new ExtentReportNG();
 		ex.extent.setSystemInfo(properties.getProperty("systeminfokey_1"),properties.getProperty( "systeminfovalue_1"));
 		ex.extent.setSystemInfo(properties.getProperty("systeminfokey_2"),properties.getProperty( "systeminfovalue_2"));

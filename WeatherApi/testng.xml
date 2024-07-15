@@ -2,6 +2,7 @@
 <suite name="ListenerExecution">
 	<listeners>
         <listener class-name="report.ListenertestNG"></listener>
+        <listener class-name="utils.AnnotationTransformer"/>
     </listeners>
 
 	<test name="ExecutingListeners" >   <!--parallel="classes" thread-count="10"-->

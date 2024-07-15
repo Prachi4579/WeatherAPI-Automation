@@ -23,20 +23,25 @@ public class ExcelReaderUtils{
 	private static final Logger logger = LoggerFactory.getLogger(ExcelReaderUtils.class);
 
 	public static Map<String,Map<String,String>> getWeatherAPIData(String excelSheetPath, String sheetName)  {
-		
+		Workbook workbook = null;
 		try {
-			Map<String,Map<String,String>> mp  = new HashMap<String,Map<String,String>>();		
-			Workbook workbook = new XSSFWorkbook(new FileInputStream(new File(excelSheetPath)));
+			logger.trace("Opening Excel file: " + excelSheetPath);
+			Map<String, Map<String, String>> mp = new HashMap<String, Map<String, String>>();
+			workbook = new XSSFWorkbook(new FileInputStream(new File(excelSheetPath)));
+
+			logger.trace("Accessing sheet: " + sheetName);
 			Sheet sh = workbook.getSheet(sheetName);
 
 			Row headerRow = sh.getRow(0);
 			int columns = headerRow.getLastCellNum();
 			List<String> headerValues = new ArrayList<String>();
+			logger.trace("Adding Header Values");
 			for(int i = 0; i < columns ; i++) {
+				logger.trace(" i : " + i);			
 				headerValues.add(headerRow.getCell(i).getStringCellValue());
-				
+
 			}
-			logger.info(headerValues.toString());
+			logger.trace(headerValues.toString());
 			int totalRows = sh.getLastRowNum();
 
 			for(int i = 1; i <= totalRows; i++) {
@@ -50,12 +55,22 @@ public class ExcelReaderUtils{
 					rowMp.put(headerValues.get(j), cellData);
 				}
 				mp.put(rowMp.get("Identifier"), rowMp);
-				logger.info(mp.toString());
+				logger.trace(mp.toString());
 			}
 			return mp;
 		}catch(Exception e) {
+			logger.error(e.getMessage());
+
 			e.printStackTrace();
 			return null;
+		}finally {
+			if(workbook != null) {
+				try {
+					workbook.close();
+				}catch(Exception e) {
+					logger.error(e.getMessage());
+				}
+			}
 		}
 	}
 }
