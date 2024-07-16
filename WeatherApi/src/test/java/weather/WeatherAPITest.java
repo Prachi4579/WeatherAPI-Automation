@@ -23,6 +23,14 @@ import org.testng.annotations.Test;
 @Listeners(ListenertestNG.class)
 public class WeatherAPITest extends Parameter {
 	private static final Logger logger = LoggerFactory.getLogger(WeatherAPITest.class);
+	
+	public static void main(String[] args) {
+		logger.trace("trace");
+		logger.info("info");
+		logger.debug("debug");
+		logger.error("error");
+	}
+	
 	@Test(testName = "Verify Current Weather GET-Endpoint returning 200 OK -valid API key" , groups = {"TC_001","smoke","sanity"})
 	public  void currentWeatherValidKey(){
 
