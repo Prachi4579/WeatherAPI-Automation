@@ -14,6 +14,7 @@ public class ListenertestNG extends ExtentReportNG implements ITestListener
 	public static ExtentTest test1;
 	public void onTestStart(String string) {
 		System.out.println("\n*** Test Suite " + string + " started ***");
+
 		test1 = extent.createTest(string);
 		}
 	public void onTestSuccess(ITestResult result) {
