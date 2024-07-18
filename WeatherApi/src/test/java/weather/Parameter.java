@@ -1,7 +1,10 @@
 package weather;
 
 import static org.testng.Assert.assertEquals;
-
+import pojo.Coordinates;
+import pojoweatherAPI.Sys;
+import pojoweatherAPI.Weather;
+import pojoweatherAPI.WeatherSerializationResponse;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -17,6 +20,9 @@ import org.testng.annotations.BeforeSuite;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import pojo.Coordinates;
+import pojoweatherAPI.Sys;
+import pojoweatherAPI.WeatherSerializationResponse;
 import report.ListenertestNG;
 import resources.ExtentReportNG;
 import utils.ExcelReaderUtils;
@@ -108,19 +114,17 @@ public class Parameter extends ExcelReaderUtils  {
 	}
 
 	public static void validateResponse(Response resp,String testCaseId) {
-		logger.trace("Validating response for test case ID: {}", testCaseId);
+
+
 		Map<String, Map<String, String>> responseParametersWithData = new HashMap<>();
 		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
-		logger.trace("Loading data from Excel: {}", dataExcelPath);
-		logger.trace("this is a TRACE msg");
+
 
 		Map<String, Map<String, String>> forecastData = getWeatherAPIData(dataExcelPath, "ForecastValidations");
 		responseParametersWithData.putAll(forecastData);
-		logger.trace("Loaded ForecastValidations data: {}", forecastData);
 
 		Map<String, Map<String, String>> currentWeatherData = getWeatherAPIData(dataExcelPath, "CurrentWeatherValidations");
 		responseParametersWithData.putAll(currentWeatherData);
-		logger.trace("Loaded CurrentWeatherValidations data: {}", currentWeatherData);
 		Map<String, String> expectedValues = responseParametersWithData.get(testCaseId);
 
 		if (expectedValues != null) {
@@ -142,6 +146,43 @@ public class Parameter extends ExcelReaderUtils  {
 		}
 	}
 
+	public static void deserializationDataAssertion(Response resp,String testCaseId) {
+
+	        String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
+	        Map<String, Map<String, String>> dataForValidation = getWeatherAPIData(dataExcelPath, "CombinedDataDeserialization");
+	        logger.debug("Data for validation: {}", dataForValidation);
+
+	        Map<String, String> expectedValues = dataForValidation.get(testCaseId);
+	        if (expectedValues == null) {
+	            logger.error("No data found for test case ID: {}", testCaseId);
+	            throw new IllegalArgumentException("No data found for test case ID: " + testCaseId);
+	        }
+
+	        WeatherSerializationResponse weatherResponse = resp.jsonPath().getObject("", WeatherSerializationResponse.class);
+	        Sys sys = weatherResponse.getSys();
+	        Coordinates coord = weatherResponse.getCoord();
+
+	        assertEquals(sys.getCountry(), expectedValues.get("Country"));
+	        lg.test1.pass(" - Expected: " + expectedValues.get("Country") + ", Actual: " + sys.getCountry());
+	        
+	        assertEquals(String.valueOf(coord.getLat()), expectedValues.get("lat"));
+	        lg.test1.pass(" - Expected: " + expectedValues.get("lat") + ", Actual: " + String.valueOf(coord.getLat()));
+	        
+	        assertEquals(String.valueOf(coord.getLon()), expectedValues.get("lon"));
+	        lg.test1.pass(" - Expected: " +  expectedValues.get("lon") + ", Actual: " + String.valueOf(coord.getLon()));
+	        
+	        assertEquals(String.valueOf(weatherResponse.getTimezone()), expectedValues.get("Timezone"));
+	        lg.test1.pass(" - Expected: " + expectedValues.get("Timezone") + ", Actual: " + String.valueOf(weatherResponse.getTimezone()));
+	        
+	        assertEquals(String.valueOf(weatherResponse.getId()), expectedValues.get("id"));
+	        lg.test1.pass(" - Expected: " + expectedValues.get("id") + ", Actual: " +String.valueOf(weatherResponse.getId()));
+	        
+	        assertEquals(weatherResponse.getName(), expectedValues.get("City_name"));
+	        lg.test1.pass(" - Expected: " + expectedValues.get("City_name") + ", Actual: " + weatherResponse.getName());
+
+	            }
+	
+	
 	@BeforeSuite
 	public static void suiteSetUp() {
 		ExtentReportNG.getReportObject();
@@ -153,5 +194,8 @@ public class Parameter extends ExcelReaderUtils  {
 		ex.extent.setSystemInfo(properties.getProperty("systeminfokey_1"),properties.getProperty( "systeminfovalue_1"));
 		ex.extent.setSystemInfo(properties.getProperty("systeminfokey_2"),properties.getProperty( "systeminfovalue_2"));
 		ex.extent.flush();
+	}
+	public static void main(String[] args) {
+		
 	}
 }

@@ -2,6 +2,8 @@ package pojoweatherAPI;
 
 import java.util.Date;
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import pojo.Coordinates;
 
@@ -14,7 +16,11 @@ public class WeatherSerializationResponse {
     private int visibility;
     private Wind wind;
     private Clouds clouds;
-    private long dt;
+    
+    @JsonIgnore 
+    private Rain rain;
+
+	private long dt;
     private Sys sys;
     private int timezone;
     private int id;
@@ -38,6 +44,14 @@ public class WeatherSerializationResponse {
 	}
 	public void setBase(String base) {
 		this.base = base;
+	}
+	@JsonIgnore 
+    public Rain getRain() {
+		return rain;
+	}
+	@JsonIgnore 
+	public void setRain(Rain rain) {
+		this.rain = rain;
 	}
 	public MainWeather getMain() {
 		return main;

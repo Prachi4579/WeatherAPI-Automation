@@ -7,7 +7,6 @@ public class GetAirPollutionData {
 	private Coordinates coord;
 	private ArrayList<List> list;
 	
-
 	public Coordinates getCoord() {
 		return coord;
 	}

@@ -38,10 +38,11 @@ public class ExcelReaderUtils{
 			logger.trace("Adding Header Values");
 			for(int i = 0; i < columns ; i++) {
 				logger.trace(" i : " + i);			
-				headerValues.add(headerRow.getCell(i).getStringCellValue());
+				headerValues.add(headerRow.getCell(i).getStringCellValue().trim());
 
 			}
 			logger.trace(headerValues.toString());
+			System.out.println(headerValues);
 			int totalRows = sh.getLastRowNum();
 
 			for(int i = 1; i <= totalRows; i++) {
@@ -55,8 +56,9 @@ public class ExcelReaderUtils{
 					rowMp.put(headerValues.get(j), cellData);
 				}
 				mp.put(rowMp.get("Identifier"), rowMp);
-				logger.trace(mp.toString());
+				System.out.println(rowMp);
 			}
+			
 			return mp;
 		}catch(Exception e) {
 			logger.error(e.getMessage());
@@ -73,5 +75,21 @@ public class ExcelReaderUtils{
 			}
 		}
 	}
+
+public static void main(String[] args) {
+    String excelSheetPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
+    String sheetName = "CombinedDataDeserialization";
+
+    Map<String, Map<String, String>> data = getWeatherAPIData(excelSheetPath, sheetName);
+    if (data != null) {
+        for (Map.Entry<String, Map<String, String>> entry : data.entrySet()) {
+            System.out.println("Identifier: " + entry.getKey());
+            for (Map.Entry<String, String> rowEntry : entry.getValue().entrySet()) {
+                System.out.println(rowEntry.getKey() + ": " + rowEntry.getValue());
+            }
+            System.out.println();
+        }
+    }
+}
 }
 
