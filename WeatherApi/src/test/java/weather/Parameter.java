@@ -18,7 +18,6 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-
 import forecastpojo.City;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -118,10 +117,8 @@ public class Parameter extends ExcelReaderUtils  {
 
 	public static void validateResponse(Response resp,String testCaseId) {
 
-
 		Map<String, Map<String, String>> responseParametersWithData = new HashMap<>();
 		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
-
 
 		Map<String, Map<String, String>> forecastData = getWeatherAPIData(dataExcelPath, "ForecastValidations");
 		responseParametersWithData.putAll(forecastData);
@@ -151,71 +148,69 @@ public class Parameter extends ExcelReaderUtils  {
 
 	public static void deserializationDataAssertion(Response resp,String testCaseId) {
 
-	        String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
-	        Map<String, Map<String, String>> dataForValidation = getWeatherAPIData(dataExcelPath, "CombinedDataDeserialization");
-	        logger.debug("Data for validation: {}", dataForValidation);
+		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
+		Map<String, Map<String, String>> dataForValidation = getWeatherAPIData(dataExcelPath, "CombinedDataDeserialization");
+		logger.debug("Data for validation: {}", dataForValidation);
 
-	        Map<String, String> expectedValues = dataForValidation.get(testCaseId);
-	        if (expectedValues == null) {
-	            logger.error("No data found for test case ID: {}", testCaseId);
-	            throw new IllegalArgumentException("No data found for test case ID: " + testCaseId);
-	        }
+		Map<String, String> expectedValues = dataForValidation.get(testCaseId);
+		if (expectedValues == null) {
+			logger.error("No data found for test case ID: {}", testCaseId);
+			throw new IllegalArgumentException("No data found for test case ID: " + testCaseId);
+		}
 
-	        WeatherSerializationResponse weatherResponse = resp.jsonPath().getObject("", WeatherSerializationResponse.class);
-	        Sys sys = weatherResponse.getSys();
-	        Coordinates coord = weatherResponse.getCoord();
+		WeatherSerializationResponse weatherResponse = resp.jsonPath().getObject("", WeatherSerializationResponse.class);
+		Sys sys = weatherResponse.getSys();
+		Coordinates coord = weatherResponse.getCoord();
 
-	        assertEquals(sys.getCountry(), expectedValues.get("Country"));
-	        lg.test1.pass(" - Expected : " + expectedValues.get("Country") + ", Actual: " + sys.getCountry());
-	        
-	        assertEquals(String.valueOf(coord.getLat()), expectedValues.get("lat"));
-	        lg.test1.pass(" - Expected: " + expectedValues.get("lat") + ", Actual: " + String.valueOf(coord.getLat()));
-	        
-	        assertEquals(String.valueOf(coord.getLon()), expectedValues.get("lon"));
-	        lg.test1.pass(" - Expected: " +  expectedValues.get("lon") + ", Actual: " + String.valueOf(coord.getLon()));
-	        
-	        assertEquals(String.valueOf(weatherResponse.getTimezone()), expectedValues.get("Timezone"));
-	        lg.test1.pass(" - Expected: " + expectedValues.get("Timezone") + ", Actual: " + String.valueOf(weatherResponse.getTimezone()));
-	        
-	        assertEquals(String.valueOf(weatherResponse.getId()), expectedValues.get("id"));
-	        lg.test1.pass(" - Expected: " + expectedValues.get("id") + ", Actual: " +String.valueOf(weatherResponse.getId()));
-	        
-	        assertEquals(weatherResponse.getName(), expectedValues.get("City_name"));
-	        lg.test1.pass(" - Expected: " + expectedValues.get("City_name") + ", Actual: " + weatherResponse.getName());
-	        }
-	     //---------------------------------------------------------------------------------------------------------------/  
-	        
+		assertEquals(sys.getCountry(), expectedValues.get("Country"));
+		lg.test1.pass(" Expected Country : " + expectedValues.get("Country") + ", Actual Country: " + sys.getCountry());
+
+		assertEquals(String.valueOf(coord.getLat()), expectedValues.get("lat"));
+		lg.test1.pass(" - Expected Latitude: " + expectedValues.get("lat") + ", Actual Latitude: " + String.valueOf(coord.getLat()));
+
+		assertEquals(String.valueOf(coord.getLon()), expectedValues.get("lon"));
+		lg.test1.pass(" - Expected Longitude: " +  expectedValues.get("lon") + ", Actual Longitude: " + String.valueOf(coord.getLon()));
+
+		assertEquals(String.valueOf(weatherResponse.getTimezone()), expectedValues.get("Timezone"));
+		lg.test1.pass(" - Expected Timezone: " + expectedValues.get("Timezone") + ", Actual Timezone: " + String.valueOf(weatherResponse.getTimezone()));
+
+		assertEquals(String.valueOf(weatherResponse.getId()), expectedValues.get("id"));
+		lg.test1.pass(" - Expected CityID: " + expectedValues.get("id") + ", Actual CityID: " +String.valueOf(weatherResponse.getId()));
+
+		assertEquals(weatherResponse.getName(), expectedValues.get("City_name"));
+		lg.test1.pass(" - Expected City name: " + expectedValues.get("City_name") + ", Actual City name: " + weatherResponse.getName());
+	}
+	//---------------------------------------------------------------------------------------------------------------/  
+
 	public static void deserializationForecastAssertion(Response resp,String testCaseId) {
 
-        String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
-        Map<String, Map<String, String>> dataForValidation = getWeatherAPIData(dataExcelPath, "CombinedDataDeserialization");
-        logger.debug("Data for validation: {}", dataForValidation);
+		String dataExcelPath = System.getProperty("user.dir") + "/src/test/resources/DataExcelRead.xlsx";
+		Map<String, Map<String, String>> dataForValidation = getWeatherAPIData(dataExcelPath, "CombinedDataDeserialization");
+		logger.debug("Data for validation: {}", dataForValidation);
 
-        Map<String, String> expectedValues = dataForValidation.get(testCaseId);
-        if (expectedValues == null) {
-            logger.error("No data found for test case ID: {}", testCaseId);
-            throw new IllegalArgumentException("No data found for test case ID: " + testCaseId);
-        }
+		Map<String, String> expectedValues = dataForValidation.get(testCaseId);
+		if (expectedValues == null) {
+			logger.error("No data found for test case ID: {}", testCaseId);
+			throw new IllegalArgumentException("No data found for test case ID: " + testCaseId);
+		}
 
-	        City city=resp.jsonPath().getObject("city", City.class);
-	        assertEquals(city.getCountry(), expectedValues.get("Country"));
-	        lg.test1.pass(" - Expected : " + expectedValues.get("Country") + ", Actual: " + city.getCountry());
-	        
-	        assertEquals(String.valueOf(city.getCoord().getLat()), expectedValues.get("lat"));
-	        lg.test1.pass(" - Expected: " + expectedValues.get("lat") + ", Actual: " + String.valueOf(city.getCoord().getLat()));
-	        
-	        assertEquals(String.valueOf(city.getCoord().getLon()), expectedValues.get("lon"));
-	        lg.test1.pass(" - Expected: " +  expectedValues.get("lon") + ", Actual: " + String.valueOf(city.getCoord().getLon()));
-	        
-	        assertEquals(String.valueOf(city.getTimezone()), expectedValues.get("Timezone"));
-	        lg.test1.pass(" - Expected: " + expectedValues.get("Timezone") + ", Actual: " + String.valueOf(city.getTimezone()));
-	        
-	        assertEquals(String.valueOf(city.getId()), expectedValues.get("id"));
-	        lg.test1.pass(" - Expected: " + expectedValues.get("id") + ", Actual: " +String.valueOf(city.getId()));
+		City city=resp.jsonPath().getObject("city", City.class);
+		assertEquals(city.getCountry(), expectedValues.get("Country"));
+		lg.test1.pass(" - Expected Country : " + expectedValues.get("Country") + ", Actual Country: " + city.getCountry());
 
-	            }
-	
-	
+		assertEquals(String.valueOf(city.getCoord().getLat()), expectedValues.get("lat"));
+		lg.test1.pass(" - Expected Latitude: " + expectedValues.get("lat") + ", Actual Latitude: " + String.valueOf(city.getCoord().getLat()));
+
+		assertEquals(String.valueOf(city.getCoord().getLon()), expectedValues.get("lon"));
+		lg.test1.pass(" - Expected Longitude: " +  expectedValues.get("lon") + ", Actual Longitude: " + String.valueOf(city.getCoord().getLon()));
+
+		assertEquals(String.valueOf(city.getTimezone()), expectedValues.get("Timezone"));
+		lg.test1.pass(" - Expected Timezone: " + expectedValues.get("Timezone") + ", Actual Timezone: " + String.valueOf(city.getTimezone()));
+
+		assertEquals(String.valueOf(city.getId()), expectedValues.get("id"));
+		lg.test1.pass(" - Expected CityID: " + expectedValues.get("id") + ", Actual CityID: " +String.valueOf(city.getId()));
+	}
+
 	@BeforeSuite
 	public static void suiteSetUp() {
 		ExtentReportNG.getReportObject();
@@ -228,7 +223,5 @@ public class Parameter extends ExcelReaderUtils  {
 		ex.extent.setSystemInfo(properties.getProperty("systeminfokey_2"),properties.getProperty( "systeminfovalue_2"));
 		ex.extent.flush();
 	}
-	public static void main(String[] args) {
-		
-	}
+	
 }

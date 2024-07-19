@@ -9,32 +9,32 @@
 		<classes>
 			<class name="weather.AirPollutionAPITest">
 				<methods>
-					<include name="verifyAirPollutionEndpoint"></include>
-					<include name="verifyPutCallAirPollutionEndpoint"></include>
-					<include name="verifyPostCallAirPollutionEndpoint"></include>
+					<include name="verify_airpollution_endpoint_200_valid_payload_GET_method"></include>
+					<include name="verify_airpollution_endpoint_405_valid_payload_PUT_method"></include>
+					<include name="verify_airpollution_endpoint_405_valid_payload_POST_method"></include>
 					</methods>
 			</class>
 			<class name="weather.WeatherAPITest">
 				<methods>
-					<include name="currentWeatherValidKey"></include>
-					<include name="currentWeatherInValidKey"></include>
-					<include name="currentWeatherInValidLatitude"></include>
-					<include name="currentWeatherInValidLongitude"></include>
-					<include name="currentWeatherPUTMethod"></include>
-					<include name="weatherByZipCode"></include>
-					<include name="weatherByCityID"></include>
-					<include name="weatherByCityNameCountryCode"></include>
-					<include name="weatherByCityName"></include>
+					<include name="verify_CurrentWeather_Endpoint_200_valid_payload_GET_method"></include>
+					<include name="verify_CurrentWeather_Endpoint_401_Invalid_payload_GET_method"></include>
+					<include name="verify_CurrentWeather_Endpoint_400_Invalid_Latitude_payload_GET_method"></include>
+					<include name="verify_CurrentWeather_Endpoint_400_Invalid_Longitude_payload_GET_method"></include>
+					<include name="verify_CurrentWeather_Endpoint_405_valid_payload_PUT_method"></include>
+					<include name="verify_CurrentWeatherRequest_ByZipCode_Endpoint_200_valid_payload_GET_method"></include>
+					<include name="verify_CurrentWeatherRequest_ByCityID_Endpoint_200_valid_payload_GET_method"></include>
+					<include name="verify_CurrentWeatherRequest_ByCityName_CountryCode_Endpoint_200_valid_payload_GET_method"></include>
+					<include name="verify_CurrentWeatherRequest_ByCityName_Endpoint_200_valid_payload_GET_method"></include>
 
 				</methods>
 			</class>
 			<class name="weather.Forecast5Day3hourTest">
 				<methods>
-					<include name="forecast_5Day3Hour"></include>
-					<include name="forecast_5Day3HourPUTMethod"></include>
-					<include name="forecast_5Day3HourByZipCode"></include>
-					<include name="forecast_5Day3HourByCityID"></include>
-					<include name="forecast_5Day3HourByCityName"></include>
+					<include name="verify_5Days3hourForecast_endpoint_200_valid_payload_GET_method"></include>
+					<include name="verify_5Days3hourForecast_endpoint_405_valid_payload_PUT_method"></include>
+					<include name="verify_5Days3hourForecast_ByZipCode_endpoint_200_valid_payload_GET_method"></include>
+					<include name="verify_5Days3hourForecast_ByCityID_endpoint_200_valid_payload_GET_method"></include>
+					<include name="verify_5Days3hourForecast_ByCityName_endpoint_200_valid_payload_GET_method"></include>
 				</methods>
 				</class>
 			
