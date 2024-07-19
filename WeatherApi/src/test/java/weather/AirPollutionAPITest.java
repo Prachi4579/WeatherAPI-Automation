@@ -1,4 +1,5 @@
 package weather;
+import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import io.restassured.response.Response;
@@ -15,14 +16,10 @@ public class AirPollutionAPITest extends Parameter {
 		Response resp = request.get(getConfiguration("airpollution_endpoint"));
 		assertResponse(resp, 200);
 		
-		
-		
-		
-//		GetAirPollutionData getAirResponseData = resp.as(GetAirPollutionData.class);
-//        // Validation with lat, log
-//        System.out.println("Latitude: " + getAirResponseData.getCoord().getLat());
-//        System.out.println("Number of entries in the list: " + getAirResponseData.getList().size());
-//
+				GetAirPollutionData getAirResponseData = resp.as(GetAirPollutionData.class);
+				Assert.assertEquals(getAirResponseData.getCoord().getLat(),33.6025, "Latitudes matched");
+				Assert.assertEquals(getAirResponseData.getCoord().getLon(),131.17, "Longitudes matched");
+      
 //        for (pojo.List item : getAirResponseData.getList()) {
 //            Components components = item.getComponents();
 //            System.out.println("AQI: " + item.getMain().getAqi());
