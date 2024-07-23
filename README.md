@@ -59,6 +59,10 @@ I have divided the project into 3 branches in accordance with framework levels.
 - Sends GET, PUT, and POST requests to API endpoints.
 - Asserts that the response status code matches the expected value.
   
+## Project Tree
+
+The project is structured as follows:
+
 WeatherAPI/
 ├── src/
 │ ├── main/
@@ -85,6 +89,7 @@ WeatherAPI/
 ├── pom.xml
 ├── testng.xml
 └── README.md
+
 #### Description
 
 - **src/**: This is the main source directory.
