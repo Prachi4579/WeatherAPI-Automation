@@ -128,4 +128,4 @@ The project includes a Postman collection for testing the Weather API. You can f
 
 ## Contributing
 
-Contributions are welcome! Please create a pull request or raise issues for any bugs or enhancements.
+Contributions are welcome! Please create a pull request or raise issues at prachi4579@gmail.com for any bugs or enhancements.
