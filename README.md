@@ -121,6 +121,10 @@ I have divided the project into 3 branches in accordance with framework levels.
 ### Jenkins Integration
 
 - Configure Jenkins to execute the tests by setting up a job and triggering the Maven goals.
+  
+  ## Postman Collection
+
+The project includes a Postman collection for testing the Weather API. You can find the collection file at `WeatherApi/PostmanCollection/WeatherAPI.postman_collection.json`.
 
 ## Contributing
 
