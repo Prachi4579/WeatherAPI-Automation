@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "0f2e0232-adb1-483b-9f70-772b2060d47c",
+		"name": "WeatherAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26976866"
+	},
+	"item": [
+		{
+			"name": "CurrentWeather",
+			"item": [
+				{
+					"name": "WeatherRequest_Based_on_lat_lon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?lat=17.38&lon=78.48&appid=7e8b32da3782f0b3660cff9192acfdec&lang=fr",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "17.38"
+								},
+								{
+									"key": "lon",
+									"value": "78.48"
+								},
+								{
+									"key": "appid",
+									"value": "7e8b32da3782f0b3660cff9192acfdec"
+								},
+								{
+									"key": "lang",
+									"value": "fr"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC011 Weather request by ZIP code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?zip=10001&appid={{ApiKey}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "zip",
+									"value": "10001"
+								},
+								{
+									"key": "appid",
+									"value": "{{ApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC013 Weather request by city ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?id=1259229&appid={{ApiKey}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1259229"
+								},
+								{
+									"key": "appid",
+									"value": "{{ApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC015 Weather request by city name,country code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?q=Bhilai,IN&appid={{ApiKey}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Bhilai,IN"
+								},
+								{
+									"key": "appid",
+									"value": "{{ApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC016 Weather request by city name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?q=Pune&appid={{ApiKey}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Pune"
+								},
+								{
+									"key": "appid",
+									"value": "{{ApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Weather request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?lat=79.08&lon=21.14&appid={{ApiKey}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "79.08"
+								},
+								{
+									"key": "lon",
+									"value": "21.14"
+								},
+								{
+									"key": "appid",
+									"value": "{{ApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Weather request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.openweathermap.org/data/2.5/weather?lat=17.38&lon=78.48&appid=7e8b32da3782f0b3660cff9192acfdec&lang=fr",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "17.38"
+								},
+								{
+									"key": "lon",
+									"value": "78.48"
+								},
+								{
+									"key": "appid",
+									"value": "7e8b32da3782f0b3660cff9192acfdec"
+								},
+								{
+									"key": "lang",
+									"value": "fr"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Forecast_3hour5Day",
+			"item": [
+				{
+					"name": "forecast_5D_3H_based_on_lat_lon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/forecast?lat=17.38&lon=78.48&appid=7e8b32da3782f0b3660cff9192acfdec&lang=hi&units=metric",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "17.38"
+								},
+								{
+									"key": "lon",
+									"value": "78.48"
+								},
+								{
+									"key": "appid",
+									"value": "7e8b32da3782f0b3660cff9192acfdec"
+								},
+								{
+									"key": "lang",
+									"value": "hi"
+								},
+								{
+									"key": "units",
+									"value": "metric"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC012-5Day3Hour Forecast by Zip Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/forecast?zip=411027,IN&appid={{ApiKey}}",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "zip",
+									"value": "411027,IN"
+								},
+								{
+									"key": "appid",
+									"value": "{{ApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC014-5Day3Hour Forecast by city ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/forecast?id=1261481&appid={{ApiKey}}",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1261481"
+								},
+								{
+									"key": "appid",
+									"value": "{{ApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC017-5Day3Hour Forecast by city Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/forecast?q=Pune&appid={{ApiKey}}",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"forecast"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Pune"
+								},
+								{
+									"key": "appid",
+									"value": "{{ApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AirPollution",
+			"item": [
+				{
+					"name": "AirpollutionPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/air_pollution?lat=18.52&lon=73.86&appid=7e8b32da3782f0b3660cff9192acfdec",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"air_pollution"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "18.52"
+								},
+								{
+									"key": "lon",
+									"value": "73.86"
+								},
+								{
+									"key": "appid",
+									"value": "7e8b32da3782f0b3660cff9192acfdec"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AirPollutionPostMethod",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/air_pollution?lat=18.52&lon=73.86&appid=7e8b32da3782f0b3660cff9192acfdec&lang=fa&units=metric",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"air_pollution"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "18.52"
+								},
+								{
+									"key": "lon",
+									"value": "73.86"
+								},
+								{
+									"key": "appid",
+									"value": "7e8b32da3782f0b3660cff9192acfdec"
+								},
+								{
+									"key": "lang",
+									"value": "fa"
+								},
+								{
+									"key": "units",
+									"value": "metric"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TC008-air_pollution_based_on_lat_lon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://api.openweathermap.org/data/2.5/air_pollution?lat=19.07&lon=72.88&appid=7e8b32da3782f0b3660cff9192acfdec&units=metric",
+							"protocol": "http",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"air_pollution"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "19.07"
+								},
+								{
+									"key": "lon",
+									"value": "72.88"
+								},
+								{
+									"key": "appid",
+									"value": "7e8b32da3782f0b3660cff9192acfdec"
+								},
+								{
+									"key": "units",
+									"value": "metric"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
