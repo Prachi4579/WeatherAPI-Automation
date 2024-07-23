@@ -158,6 +158,9 @@ The project is structured as follows:
 
 The project includes a Postman collection for testing the Weather API. You can find the collection file at `WeatherApi/PostmanCollection/WeatherAPI.postman_collection.json`.
 
+## Credits
+Thanks to TechElliptica Education(https://techelliptica.com) for their contributions.
+
 ## Contributing
 
 Contributions are welcome! Please create a pull request or raise issues at prachi4579@gmail.com for any bugs or enhancements.
