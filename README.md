@@ -58,6 +58,58 @@ I have divided the project into 3 branches in accordance with framework levels.
 - Reads test data from Excel.
 - Sends GET, PUT, and POST requests to API endpoints.
 - Asserts that the response status code matches the expected value.
+  
+WeatherAPI/
+├── src/
+│ ├── main/
+│ ├── test/
+│ │ ├── java/
+│ │ │ └── weather/
+│ │ │ ├── AirPollutionAPITest.java
+│ │ │ ├── Forecast5Day3HourTest.java
+│ │ │ ├── Parameter.java
+│ │ │ └── WeatherAPITest.java
+│ │ └── resources/
+│ │ ├── DataExcelRead.xlsx
+│ │ └── log4j.properties
+│ ├── java/
+│ │ └── api/
+│ │ └── utils/
+│ │ ├── ExcelReaderUtils.java
+│ │ ├── PropertiesReader.java
+│ │ └── ExtentReportNG.java
+│ └── resources/
+│ └── log4j.properties
+├── .gitignore
+├── GroupTest.xml
+├── pom.xml
+├── testng.xml
+└── README.md
+#### Description
+
+- **src/**: This is the main source directory.
+  - **main/**: This directory is reserved for future expansion, currently empty.
+  - **test/**: Contains all the test-related files.
+    - **java/weather/**: This directory holds the test classes.
+      - `AirPollutionAPITest.java`: Test class for Air Pollution API.
+      - `Forecast5Day3HourTest.java`: Test class for the 5 Day / 3 Hour Forecast API.
+      - `Parameter.java`: Class for handling test parameters.
+      - `WeatherAPITest.java`: Test class for Current Weather Data API.
+    - **resources/**: Contains the resource files for tests.
+      - `DataExcelRead.xlsx`: Excel file used for reading test data.
+      - `log4j.properties`: Log4j configuration file.
+  - **java/api/utils/**: This directory contains utility classes.
+    - `ExcelReaderUtils.java`: Utility class for reading Excel files.
+    - `PropertiesReader.java`: Utility class for reading properties files.
+    - `ExtentReportNG.java`: Utility class for generating Extent Reports.
+  - **resources/**: Contains resource files used by the main application, including Log4j configuration.
+    - `log4j.properties`: Log4j configuration file for logging.
+
+- **.gitignore**: Specifies files and directories to be ignored by Git.
+- **GroupTest.xml**: TestNG group configuration file.
+- **pom.xml**: Maven configuration file for managing project dependencies and build configuration.
+- **testng.xml**: TestNG configuration file for specifying test suites and test configurations.
+- **README.md**: The readme file that you are currently reading.
 
 ### Branch 2: Level 2 - Response Content Validation
 
