@@ -63,32 +63,7 @@ I have divided the project into 3 branches in accordance with framework levels.
 
 The project is structured as follows:
 
-WeatherAPI/
-├── src/
-│ ├── main/
-│ ├── test/
-│ │ ├── java/
-│ │ │ └── weather/
-│ │ │ ├── AirPollutionAPITest.java
-│ │ │ ├── Forecast5Day3HourTest.java
-│ │ │ ├── Parameter.java
-│ │ │ └── WeatherAPITest.java
-│ │ └── resources/
-│ │ ├── DataExcelRead.xlsx
-│ │ └── log4j.properties
-│ ├── java/
-│ │ └── api/
-│ │ └── utils/
-│ │ ├── ExcelReaderUtils.java
-│ │ ├── PropertiesReader.java
-│ │ └── ExtentReportNG.java
-│ └── resources/
-│ └── log4j.properties
-├── .gitignore
-├── GroupTest.xml
-├── pom.xml
-├── testng.xml
-└── README.md
+![image](https://github.com/user-attachments/assets/98003eaa-67bf-4139-824f-1e965f6e0282)
 
 #### Description
 
